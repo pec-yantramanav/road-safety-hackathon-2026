@@ -1,0 +1,138 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: roadwatch-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: roadwatch
+      POSTGRES_USER: roadwatch
+      POSTGRES_PASSWORD: dev123
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - roadwatch-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: roadwatch-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - roadwatch-net
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:25.0
+    container_name: roadwatch-keycloak
+    command: start-dev --import-realm
+    ports:
+      - "8180:8080"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    volumes:
+      - ./keycloak/realm-export.json:/opt/keycloak/data/import/realm.json
+    networks:
+      - roadwatch-net
+
+  kong:
+    image: kong:3.7
+    container_name: roadwatch-kong
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /kong/kong.yml
+      KONG_PROXY_LISTEN: "0.0.0.0:8000"
+    volumes:
+      - ./kong/kong.yml:/kong/kong.yml
+    depends_on:
+      - keycloak
+    networks:
+      - roadwatch-net
+
+  citizen-core-api:
+    build:
+      context: ./citizen-core-api
+      dockerfile: Dockerfile
+    container_name: citizen-core-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/roadwatch
+      SPRING_DATASOURCE_USERNAME: roadwatch
+      SPRING_DATASOURCE_PASSWORD: dev123
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8080/realms/roadwatch
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://keycloak:8080/realms/roadwatch/protocol/openid-connect/certs
+      ROADWATCH_AI_SERVICE_URL: http://citizen-ai-service:8100
+    depends_on:
+      - postgres
+      - keycloak
+    networks:
+      - roadwatch-net
+
+  crm-core-api:
+    build:
+      context: ./crm-core-api
+      dockerfile: Dockerfile
+    container_name: crm-core-api
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/roadwatch
+      SPRING_DATASOURCE_USERNAME: roadwatch
+      SPRING_DATASOURCE_PASSWORD: dev123
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8080/realms/roadwatch
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://keycloak:8080/realms/roadwatch/protocol/openid-connect/certs
+      ROADWATCH_AI_SERVICE_URL: http://crm-ai-service:8101
+    depends_on:
+      - postgres
+      - keycloak
+    networks:
+      - roadwatch-net
+
+  citizen-ai-service:
+    build:
+      context: ./citizen-ai-service
+      dockerfile: Dockerfile
+    container_name: citizen-ai-service
+    ports:
+      - "8100:8100"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://roadwatch:dev123@postgres:5432/roadwatch
+      REDIS_URL: redis://redis:6379/0
+      CORE_API_BASE_URL: http://citizen-core-api:8080
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - roadwatch-net
+
+  crm-ai-service:
+    build:
+      context: ./crm-ai-service
+      dockerfile: Dockerfile
+    container_name: crm-ai-service
+    ports:
+      - "8101:8101"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://roadwatch:dev123@postgres:5432/roadwatch
+      REDIS_URL: redis://redis:6379/1
+      CORE_API_BASE_URL: http://crm-core-api:8081
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - roadwatch-net
+
+volumes:
+  pgdata:
+
+networks:
+  roadwatch-net:
+    driver: bridge

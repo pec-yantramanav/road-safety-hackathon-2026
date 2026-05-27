@@ -1,0 +1,121 @@
+{
+  "id": "roadwatch",
+  "realm": "roadwatch",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "CITIZEN",
+        "description": "Citizen role for filing complaints"
+      },
+      {
+        "name": "CONTRACTOR",
+        "description": "Contractor role for viewing and resolving work orders"
+      },
+      {
+        "name": "JE",
+        "description": "Junior Engineer"
+      },
+      {
+        "name": "AE",
+        "description": "Assistant Engineer"
+      },
+      {
+        "name": "EE",
+        "description": "Executive Engineer"
+      },
+      {
+        "name": "SE",
+        "description": "Superintending Engineer"
+      },
+      {
+        "name": "CE",
+        "description": "Chief Engineer"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "citizen-app",
+      "enabled": true,
+      "publicClient": true,
+      "directAccessGrantsEnabled": true,
+      "webOrigins": ["*"],
+      "redirectUris": ["*"]
+    },
+    {
+      "clientId": "crm-web",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "crm-client-secret-12345",
+      "directAccessGrantsEnabled": true,
+      "webOrigins": ["*"],
+      "redirectUris": ["*"]
+    },
+    {
+      "clientId": "internal-services",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "internal-services-secret-12345",
+      "serviceAccountsEnabled": true,
+      "directAccessGrantsEnabled": false
+    }
+  ],
+  "users": [
+    {
+      "username": "officer_je",
+      "enabled": true,
+      "email": "je@roadwatch.gov",
+      "firstName": "Junior",
+      "lastName": "Engineer",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "dev123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["JE"],
+      "attributes": {
+        "jurisdiction_id": ["447192dc-e3a5-4e78-bc4a-9eb4c5c76ab1"],
+        "authority_type": ["MUNICIPAL"],
+        "officer_role": ["JE"]
+      }
+    },
+    {
+      "username": "officer_ee",
+      "enabled": true,
+      "email": "ee@roadwatch.gov",
+      "firstName": "Executive",
+      "lastName": "Engineer",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "dev123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["EE"],
+      "attributes": {
+        "jurisdiction_id": ["b9b9a674-ec0a-4fb4-bbab-fb605eb8716b"],
+        "authority_type": ["MUNICIPAL"],
+        "officer_role": ["EE"]
+      }
+    },
+    {
+      "username": "contractor_1",
+      "enabled": true,
+      "email": "contractor@infra.com",
+      "firstName": "Rahul",
+      "lastName": "Contractor",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "dev123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["CONTRACTOR"]
+    }
+  ]
+}

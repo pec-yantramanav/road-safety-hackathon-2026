@@ -1,7 +1,52 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {},
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "microservices_architecture",
+        "label": "Microservices Core Services",
+        "nodes": [
+          "citizen_core_api",
+          "crm_core_api",
+          "citizen_ai_service",
+          "crm_ai_service"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "docs/Design Docs/hld_roadwatch.md"
+      },
+      {
+        "id": "authentication_and_authorization_flow",
+        "label": "Secure Authentication and RBAC Flow",
+        "nodes": [
+          "keycloak",
+          "kong_api_gateway",
+          "role_based_access_control_rls",
+          "crm_core_api"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "docs/Design Docs/hld_roadwatch.md"
+      },
+      {
+        "id": "grievance_resolution_loop",
+        "label": "End-to-End Citizen Grievance Loop",
+        "nodes": [
+          "agentic_ai_chat_interface",
+          "master_ticket_clustering",
+          "grievance_escalation_pipeline",
+          "pow_validation_pipeline"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "docs/plan.md"
+      }
+    ]
+  },
   "nodes": [
     {
       "label": "Meri Sadak (PMGSY)",
@@ -12,9 +57,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "competitor_analysis_meri_sadak",
-      "community": 0,
-      "norm_label": "meri sadak (pmgsy)"
+      "community": 3,
+      "norm_label": "meri sadak (pmgsy)",
+      "id": "competitor_analysis_meri_sadak"
     },
     {
       "label": "NHAI Portals & Rajmargyatra App",
@@ -25,9 +70,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "competitor_analysis_nhai_portals",
-      "community": 1,
-      "norm_label": "nhai portals & rajmargyatra app"
+      "community": 6,
+      "norm_label": "nhai portals & rajmargyatra app",
+      "id": "competitor_analysis_nhai_portals"
     },
     {
       "label": "Municipal Corporation Apps",
@@ -38,9 +83,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "competitor_analysis_municipal_apps",
-      "community": 4,
-      "norm_label": "municipal corporation apps"
+      "community": 8,
+      "norm_label": "municipal corporation apps",
+      "id": "competitor_analysis_municipal_apps"
     },
     {
       "label": "CPGRAMS",
@@ -51,9 +96,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "competitor_analysis_cpgrams",
-      "community": 5,
-      "norm_label": "cpgrams"
+      "community": 9,
+      "norm_label": "cpgrams",
+      "id": "competitor_analysis_cpgrams"
     },
     {
       "label": "Civic Platforms",
@@ -64,9 +109,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "competitor_analysis_civic_platforms",
-      "community": 6,
-      "norm_label": "civic platforms"
+      "community": 10,
+      "norm_label": "civic platforms",
+      "id": "competitor_analysis_civic_platforms"
     },
     {
       "label": "Secretary, MoRTH",
@@ -77,9 +122,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_secretary_morth",
-      "community": 7,
-      "norm_label": "secretary, morth"
+      "community": 11,
+      "norm_label": "secretary, morth",
+      "id": "crm_user_personas_secretary_morth"
     },
     {
       "label": "Chairman, NHAI",
@@ -90,9 +135,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_chairman_nhai",
-      "community": 8,
-      "norm_label": "chairman, nhai"
+      "community": 12,
+      "norm_label": "chairman, nhai",
+      "id": "crm_user_personas_chairman_nhai"
     },
     {
       "label": "Project Director (NHAI)",
@@ -103,9 +148,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_project_director",
-      "community": 9,
-      "norm_label": "project director (nhai)"
+      "community": 13,
+      "norm_label": "project director (nhai)",
+      "id": "crm_user_personas_project_director"
     },
     {
       "label": "General Manager (NHAI)",
@@ -116,9 +161,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_general_manager",
-      "community": 10,
-      "norm_label": "general manager (nhai)"
+      "community": 14,
+      "norm_label": "general manager (nhai)",
+      "id": "crm_user_personas_general_manager"
     },
     {
       "label": "Chief Engineer (BRO)",
@@ -129,9 +174,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_chief_engineer_bro",
-      "community": 11,
-      "norm_label": "chief engineer (bro)"
+      "community": 15,
+      "norm_label": "chief engineer (bro)",
+      "id": "crm_user_personas_chief_engineer_bro"
     },
     {
       "label": "Chief Engineer (PWD)",
@@ -142,9 +187,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_chief_engineer_pwd",
-      "community": 12,
-      "norm_label": "chief engineer (pwd)"
+      "community": 16,
+      "norm_label": "chief engineer (pwd)",
+      "id": "crm_user_personas_chief_engineer_pwd"
     },
     {
       "label": "Superintending Engineer (SE)",
@@ -155,9 +200,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_superintending_engineer",
-      "community": 13,
-      "norm_label": "superintending engineer (se)"
+      "community": 17,
+      "norm_label": "superintending engineer (se)",
+      "id": "crm_user_personas_superintending_engineer"
     },
     {
       "label": "Executive Engineer (EE)",
@@ -168,9 +213,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_executive_engineer",
-      "community": 14,
-      "norm_label": "executive engineer (ee)"
+      "community": 18,
+      "norm_label": "executive engineer (ee)",
+      "id": "crm_user_personas_executive_engineer"
     },
     {
       "label": "Assistant Engineer (AE)",
@@ -181,9 +226,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_assistant_engineer",
-      "community": 15,
-      "norm_label": "assistant engineer (ae)"
+      "community": 19,
+      "norm_label": "assistant engineer (ae)",
+      "id": "crm_user_personas_assistant_engineer"
     },
     {
       "label": "Junior Engineer (JE)",
@@ -194,9 +239,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_junior_engineer_pwd",
-      "community": 16,
-      "norm_label": "junior engineer (je)"
+      "community": 20,
+      "norm_label": "junior engineer (je)",
+      "id": "crm_user_personas_junior_engineer_pwd"
     },
     {
       "label": "Municipal Commissioner",
@@ -207,9 +252,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_municipal_commissioner",
-      "community": 17,
-      "norm_label": "municipal commissioner"
+      "community": 21,
+      "norm_label": "municipal commissioner",
+      "id": "crm_user_personas_municipal_commissioner"
     },
     {
       "label": "City Engineer",
@@ -220,9 +265,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_city_engineer",
-      "community": 18,
-      "norm_label": "city engineer"
+      "community": 22,
+      "norm_label": "city engineer",
+      "id": "crm_user_personas_city_engineer"
     },
     {
       "label": "Ward Engineer",
@@ -233,9 +278,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_ward_engineer",
-      "community": 19,
-      "norm_label": "ward engineer"
+      "community": 23,
+      "norm_label": "ward engineer",
+      "id": "crm_user_personas_ward_engineer"
     },
     {
       "label": "Junior Engineer (Municipal)",
@@ -246,9 +291,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_junior_engineer_municipal",
-      "community": 20,
-      "norm_label": "junior engineer (municipal)"
+      "community": 24,
+      "norm_label": "junior engineer (municipal)",
+      "id": "crm_user_personas_junior_engineer_municipal"
     },
     {
       "label": "District Collector",
@@ -259,9 +304,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_district_collector",
-      "community": 21,
-      "norm_label": "district collector"
+      "community": 25,
+      "norm_label": "district collector",
+      "id": "crm_user_personas_district_collector"
     },
     {
       "label": "CEO, Zilla Parishad",
@@ -272,9 +317,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_ceo_zilla_parishad",
-      "community": 22,
-      "norm_label": "ceo, zilla parishad"
+      "community": 26,
+      "norm_label": "ceo, zilla parishad",
+      "id": "crm_user_personas_ceo_zilla_parishad"
     },
     {
       "label": "Block Development Officer",
@@ -285,9 +330,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_block_development_officer",
-      "community": 23,
-      "norm_label": "block development officer"
+      "community": 27,
+      "norm_label": "block development officer",
+      "id": "crm_user_personas_block_development_officer"
     },
     {
       "label": "Sarpanch",
@@ -298,9 +343,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_sarpanch",
-      "community": 24,
-      "norm_label": "sarpanch"
+      "community": 28,
+      "norm_label": "sarpanch",
+      "id": "crm_user_personas_sarpanch"
     },
     {
       "label": "Gram Panchayat Secretary",
@@ -311,9 +356,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_gram_panchayat_secretary",
-      "community": 25,
-      "norm_label": "gram panchayat secretary"
+      "community": 29,
+      "norm_label": "gram panchayat secretary",
+      "id": "crm_user_personas_gram_panchayat_secretary"
     },
     {
       "label": "PIU Engineer (PMGSY)",
@@ -324,9 +369,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_piu_engineer",
-      "community": 26,
-      "norm_label": "piu engineer (pmgsy)"
+      "community": 30,
+      "norm_label": "piu engineer (pmgsy)",
+      "id": "crm_user_personas_piu_engineer"
     },
     {
       "label": "Contractor",
@@ -337,9 +382,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_contractor",
-      "community": 27,
-      "norm_label": "contractor"
+      "community": 31,
+      "norm_label": "contractor",
+      "id": "crm_user_personas_contractor"
     },
     {
       "label": "Consultant / PMC",
@@ -350,9 +395,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_consultant",
-      "community": 28,
-      "norm_label": "consultant / pmc"
+      "community": 32,
+      "norm_label": "consultant / pmc",
+      "id": "crm_user_personas_consultant"
     },
     {
       "label": "Citizen (General)",
@@ -363,9 +408,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_citizen_general",
-      "community": 29,
-      "norm_label": "citizen (general)"
+      "community": 33,
+      "norm_label": "citizen (general)",
+      "id": "crm_user_personas_citizen_general"
     },
     {
       "label": "Citizen (Anonymous)",
@@ -376,9 +421,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_citizen_anonymous",
-      "community": 30,
-      "norm_label": "citizen (anonymous)"
+      "community": 34,
+      "norm_label": "citizen (anonymous)",
+      "id": "crm_user_personas_citizen_anonymous"
     },
     {
       "label": "IVR Caller",
@@ -389,9 +434,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "crm_user_personas_ivr_caller",
-      "community": 31,
-      "norm_label": "ivr caller"
+      "community": 35,
+      "norm_label": "ivr caller",
+      "id": "crm_user_personas_ivr_caller"
     },
     {
       "label": "RoadWatch Authority Portal (Gov-Infra CRM)",
@@ -402,9 +447,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "plan_roadwatch_authority_portal",
-      "community": 0,
-      "norm_label": "roadwatch authority portal (gov-infra crm)"
+      "community": 3,
+      "norm_label": "roadwatch authority portal (gov-infra crm)",
+      "id": "plan_roadwatch_authority_portal"
     },
     {
       "label": "RoadWatch Citizen App",
@@ -415,9 +460,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "plan_roadwatch_citizen_app",
-      "community": 1,
-      "norm_label": "roadwatch citizen app"
+      "community": 6,
+      "norm_label": "roadwatch citizen app",
+      "id": "plan_roadwatch_citizen_app"
     },
     {
       "label": "NHAI",
@@ -428,9 +473,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "road_authority_nhai",
-      "community": 32,
-      "norm_label": "nhai"
+      "community": 36,
+      "norm_label": "nhai",
+      "id": "road_authority_nhai"
     },
     {
       "label": "BRO",
@@ -441,9 +486,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "road_authority_bro",
-      "community": 33,
-      "norm_label": "bro"
+      "community": 37,
+      "norm_label": "bro",
+      "id": "road_authority_bro"
     },
     {
       "label": "State PWD",
@@ -454,9 +499,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "road_authority_state_pwd",
-      "community": 34,
-      "norm_label": "state pwd"
+      "community": 38,
+      "norm_label": "state pwd",
+      "id": "road_authority_state_pwd"
     },
     {
       "label": "Zilla Parishad",
@@ -467,9 +512,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "road_authority_zilla_parishad",
-      "community": 35,
-      "norm_label": "zilla parishad"
+      "community": 39,
+      "norm_label": "zilla parishad",
+      "id": "road_authority_zilla_parishad"
     },
     {
       "label": "Municipal Corporation",
@@ -480,9 +525,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "road_authority_municipal_corporation",
-      "community": 36,
-      "norm_label": "municipal corporation"
+      "community": 40,
+      "norm_label": "municipal corporation",
+      "id": "road_authority_municipal_corporation"
     },
     {
       "label": "Smart City SPV",
@@ -493,9 +538,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "road_authority_smart_city_spv",
-      "community": 37,
-      "norm_label": "smart city spv"
+      "community": 41,
+      "norm_label": "smart city spv",
+      "id": "road_authority_smart_city_spv"
     },
     {
       "label": "SRRDA",
@@ -506,9 +551,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "road_authority_srrda",
-      "community": 38,
-      "norm_label": "srrda"
+      "community": 42,
+      "norm_label": "srrda",
+      "id": "road_authority_srrda"
     },
     {
       "label": "Gram Panchayat",
@@ -519,9 +564,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "road_authority_gram_panchayat",
-      "community": 39,
-      "norm_label": "gram panchayat"
+      "community": 43,
+      "norm_label": "gram panchayat",
+      "id": "road_authority_gram_panchayat"
     },
     {
       "label": "citizen-core-api",
@@ -532,9 +577,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "java_citizen_core_api_citizen_core_api",
-      "community": 2,
-      "norm_label": "citizen-core-api"
+      "community": 5,
+      "norm_label": "citizen-core-api",
+      "id": "java_citizen_core_api_citizen_core_api"
     },
     {
       "label": "crm-core-api",
@@ -545,9 +590,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "java_crm_core_api_crm_core_api",
-      "community": 3,
-      "norm_label": "crm-core-api"
+      "community": 7,
+      "norm_label": "crm-core-api",
+      "id": "java_crm_core_api_crm_core_api"
     },
     {
       "label": "citizen-ai-service",
@@ -558,9 +603,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "python_citizen_ai_service_citizen_ai_service",
-      "community": 2,
-      "norm_label": "citizen-ai-service"
+      "community": 5,
+      "norm_label": "citizen-ai-service",
+      "id": "python_citizen_ai_service_citizen_ai_service"
     },
     {
       "label": "crm-ai-service",
@@ -571,9 +616,339 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "python_crm_ai_service_crm_ai_service",
-      "community": 3,
-      "norm_label": "crm-ai-service"
+      "community": 7,
+      "norm_label": "crm-ai-service",
+      "id": "python_crm_ai_service_crm_ai_service"
+    },
+    {
+      "label": "Graphify Rules Document",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "graphify_rules",
+      "community": 4,
+      "norm_label": "graphify rules document"
+    },
+    {
+      "label": "Graphify Workflows Document",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "graphify_workflows",
+      "community": 4,
+      "norm_label": "graphify workflows document"
+    },
+    {
+      "label": "Competitor & Ecosystem Analysis Document",
+      "file_type": "document",
+      "source_file": "docs/competitor_analysis.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "competitor_analysis",
+      "community": 0,
+      "norm_label": "competitor & ecosystem analysis document"
+    },
+    {
+      "label": "RoadWatch CRM User Personas Document",
+      "file_type": "document",
+      "source_file": "docs/crm_user_personas.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "crm_user_personas",
+      "community": 0,
+      "norm_label": "roadwatch crm user personas document"
+    },
+    {
+      "label": "RoadWatch Project Plan Document",
+      "file_type": "document",
+      "source_file": "docs/plan.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "project_plan",
+      "community": 0,
+      "norm_label": "roadwatch project plan document"
+    },
+    {
+      "label": "Indian Road Authority Hierarchy Document",
+      "file_type": "document",
+      "source_file": "docs/road_authority_hierarchy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "road_authority_hierarchy",
+      "community": 0,
+      "norm_label": "indian road authority hierarchy document"
+    },
+    {
+      "label": "RoadWatch High-Level Design Document",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "hld_roadwatch",
+      "community": 0,
+      "norm_label": "roadwatch high-level design document"
+    },
+    {
+      "label": "Java Citizen Core API LLD Document",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/java_citizen_core_api_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "java_citizen_core_api_lld",
+      "community": 0,
+      "norm_label": "java citizen core api lld document"
+    },
+    {
+      "label": "Java CRM Core API LLD Document",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/java_crm_core_api_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "java_crm_core_api_lld",
+      "community": 0,
+      "norm_label": "java crm core api lld document"
+    },
+    {
+      "label": "Python Citizen AI Service LLD Document",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/python_citizen_ai_service_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "python_citizen_ai_service_lld",
+      "community": 0,
+      "norm_label": "python citizen ai service lld document"
+    },
+    {
+      "label": "Python CRM AI Service LLD Document",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "python_crm_ai_service_lld",
+      "community": 0,
+      "norm_label": "python crm ai service lld document"
+    },
+    {
+      "label": "citizen-core-api (Spring Boot Service)",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/java_citizen_core_api_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "citizen_core_api",
+      "community": 2,
+      "norm_label": "citizen-core-api (spring boot service)"
+    },
+    {
+      "label": "crm-core-api (Spring Boot Service)",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/java_crm_core_api_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "crm_core_api",
+      "community": 2,
+      "norm_label": "crm-core-api (spring boot service)"
+    },
+    {
+      "label": "citizen-ai-service (FastAPI Service)",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/python_citizen_ai_service_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "citizen_ai_service",
+      "community": 1,
+      "norm_label": "citizen-ai-service (fastapi service)"
+    },
+    {
+      "label": "crm-ai-service (FastAPI Service)",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "crm_ai_service",
+      "community": 1,
+      "norm_label": "crm-ai-service (fastapi service)"
+    },
+    {
+      "label": "Keycloak Identity and Access Management System",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "keycloak",
+      "community": 2,
+      "norm_label": "keycloak identity and access management system"
+    },
+    {
+      "label": "PostgreSQL & PostGIS Database",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "postgresql_postgis",
+      "community": 1,
+      "norm_label": "postgresql & postgis database"
+    },
+    {
+      "label": "Redis Sessions & Cache Store",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "redis",
+      "community": 1,
+      "norm_label": "redis sessions & cache store"
+    },
+    {
+      "label": "Kong API Gateway",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "kong_api_gateway",
+      "community": 2,
+      "norm_label": "kong api gateway"
+    },
+    {
+      "label": "Public Financial Management System Integration",
+      "file_type": "document",
+      "source_file": "docs/plan.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pfms",
+      "community": 2,
+      "norm_label": "public financial management system integration"
+    },
+    {
+      "label": "MasterTicket Spatial Clustering Mechanism",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/java_citizen_core_api_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Deduplicates multiple reports of the same physical road issue (within a 50m radius) into a single MasterTicket, avoiding overwhelming officials with duplicate complaints while tracking community interest via contribution counts and auto-upgrading priority.",
+      "id": "master_ticket_clustering",
+      "community": 1,
+      "norm_label": "masterticket spatial clustering mechanism"
+    },
+    {
+      "label": "Grievance Escalation Pipeline",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/java_crm_core_api_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Redesigned for rapid resolution compared to CPGRAMS's slow bureaucratic escalation. Uses real-time status updates via WebSockets, SLA timers, auto-escalation, and blackspot overrides to bypass junior levels for critical accident-prone areas.",
+      "id": "grievance_escalation_pipeline",
+      "community": 1,
+      "norm_label": "grievance escalation pipeline"
+    },
+    {
+      "label": "Proof-of-Work (PoW) Validation Pipeline",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Ensures accountability by requiring contractors to upload before/after photos and geotags. Automates verification through a Python AI service checking EXIF data and visual change via LLM vision to prevent false resolutions.",
+      "id": "pow_validation_pipeline",
+      "community": 1,
+      "norm_label": "proof-of-work (pow) validation pipeline"
+    },
+    {
+      "label": "Role-Based Access Control and Row-Level Security",
+      "file_type": "document",
+      "source_file": "docs/Design Docs/java_crm_core_api_lld.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Ensures data visibility is automatically scoped to each user's jurisdiction (e.g. Ward Engineer sees Ward 42 tickets; NHAI GM sees corridor). Essential for driving adoption among Indian government officials by mirroring their operational workflows and enabling sandboxed contractor portals.",
+      "id": "role_based_access_control_rls",
+      "community": 2,
+      "norm_label": "role-based access control and row-level security"
+    },
+    {
+      "label": "Agentic AI Multilingual Chatbot Interface",
+      "file_type": "document",
+      "source_file": "docs/plan.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Provides a highly accessible, conversational, and multilingual entry point for citizens to report issues, track tickets, or query budgets without navigating complex menus.",
+      "id": "agentic_ai_chat_interface",
+      "community": 1,
+      "norm_label": "agentic ai multilingual chatbot interface"
     }
   ],
   "links": [
@@ -616,8 +991,371 @@
       "weight": 1.0,
       "source": "java_crm_core_api_crm_core_api",
       "target": "python_crm_ai_service_crm_ai_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "graphify_workflows",
+      "target": "graphify_rules"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/competitor_analysis.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "competitor_analysis",
+      "target": "road_authority_hierarchy"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/plan.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "project_plan",
+      "target": "competitor_analysis"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/plan.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "project_plan",
+      "target": "crm_user_personas"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "hld_roadwatch",
+      "target": "crm_user_personas"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/crm_user_personas.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "road_authority_hierarchy",
+      "target": "crm_user_personas"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/plan.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "project_plan",
+      "target": "road_authority_hierarchy"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "hld_roadwatch",
+      "target": "project_plan"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/java_citizen_core_api_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "java_citizen_core_api_lld",
+      "target": "hld_roadwatch"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/java_crm_core_api_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "java_crm_core_api_lld",
+      "target": "hld_roadwatch"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_citizen_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "python_citizen_ai_service_lld",
+      "target": "hld_roadwatch"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "python_crm_ai_service_lld",
+      "target": "hld_roadwatch"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_citizen_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "citizen_ai_service",
+      "target": "citizen_core_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/java_citizen_core_api_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "citizen_core_api",
+      "target": "keycloak"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "citizen_core_api",
+      "target": "postgresql_postgis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "kong_api_gateway",
+      "target": "citizen_core_api"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "citizen_core_api",
+      "target": "crm_core_api"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "crm_ai_service",
+      "target": "crm_core_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/java_crm_core_api_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "crm_core_api",
+      "target": "keycloak"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "crm_core_api",
+      "target": "postgresql_postgis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "kong_api_gateway",
+      "target": "crm_core_api"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/java_crm_core_api_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "crm_core_api",
+      "target": "pfms"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_citizen_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "citizen_ai_service",
+      "target": "postgresql_postgis"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_citizen_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "citizen_ai_service",
+      "target": "redis"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_citizen_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agentic_ai_chat_interface",
+      "target": "citizen_ai_service"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/Design Docs/hld_roadwatch.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "citizen_ai_service",
+      "target": "crm_ai_service"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "crm_ai_service",
+      "target": "postgresql_postgis"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "crm_ai_service",
+      "target": "redis"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "grievance_escalation_pipeline",
+      "target": "crm_ai_service"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/python_crm_ai_service_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pow_validation_pipeline",
+      "target": "crm_ai_service"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/java_crm_core_api_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "role_based_access_control_rls",
+      "target": "keycloak"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/java_citizen_core_api_lld.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "master_ticket_clustering",
+      "target": "postgresql_postgis"
     }
   ],
-  "hyperedges": [],
-  "built_at_commit": "7463e672c17d78fce94f20d542077f782179c2f3"
+  "hyperedges": [
+    {
+      "id": "microservices_architecture",
+      "label": "Microservices Core Services",
+      "nodes": [
+        "citizen_core_api",
+        "crm_core_api",
+        "citizen_ai_service",
+        "crm_ai_service"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/hld_roadwatch.md"
+    },
+    {
+      "id": "authentication_and_authorization_flow",
+      "label": "Secure Authentication and RBAC Flow",
+      "nodes": [
+        "keycloak",
+        "kong_api_gateway",
+        "role_based_access_control_rls",
+        "crm_core_api"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/Design Docs/hld_roadwatch.md"
+    },
+    {
+      "id": "grievance_resolution_loop",
+      "label": "End-to-End Citizen Grievance Loop",
+      "nodes": [
+        "agentic_ai_chat_interface",
+        "master_ticket_clustering",
+        "grievance_escalation_pipeline",
+        "pow_validation_pipeline"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/plan.md"
+    }
+  ],
+  "built_at_commit": "0af1f8cff3e098965368d1f49d757168b13e8b13"
 }

@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/roadwatch
+    username: roadwatch
+    password: dev123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.spatial.dialect.postgis.PostgisPG10Dialect
+        show_sql: false
+        format_sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/realms/roadwatch
+          jwk-set-uri: http://keycloak:8080/realms/roadwatch/protocol/openid-connect/certs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+
+roadwatch:
+  ai-service-url: http://citizen-ai-service:8100
+  sla:
+    normal-hours: 72
+    high-hours: 48
+    blackspot-hours: 24
+  clustering:
+    radius-meters: 50
+    priority-upgrade-threshold: 5

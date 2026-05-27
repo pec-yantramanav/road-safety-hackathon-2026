@@ -1,0 +1,42 @@
+_format_version: "3.0"
+
+services:
+  - name: citizen-core-api
+    url: http://citizen-core-api:8080
+    routes:
+      - name: citizen-routes
+        paths: ["/api/v1/citizen"]
+        strip_path: false
+
+  - name: crm-core-api
+    url: http://crm-core-api:8081
+    routes:
+      - name: crm-routes
+        paths: ["/api/v1/crm"]
+        strip_path: false
+
+  - name: citizen-ai-service
+    url: http://citizen-ai-service:8100
+    routes:
+      - name: citizen-ai-routes
+        paths: ["/api/v1/ai/citizen"]
+
+  - name: crm-ai-service
+    url: http://crm-ai-service:8101
+    routes:
+      - name: crm-ai-routes
+        paths: ["/api/v1/ai/crm"]
+
+plugins:
+  - name: rate-limiting
+    config:
+      minute: 100
+      policy: redis
+      redis_host: redis
+      redis_port: 6379
+  - name: cors
+    config:
+      origins: ["*"]
+      methods: [GET, POST, PATCH, DELETE, OPTIONS]
+      headers: [Keep-Alive, User-Agent, X-Requested-With, Cache-Control, Content-Type, Authorization]
+      credentials: true
