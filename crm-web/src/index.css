@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Outfit', sans-serif;
+    --bg-dark: #070a13;
+    --panel-glass: rgba(20, 26, 48, 0.4);
+    --border-glass: rgba(255, 255, 255, 0.05);
+    
+    --accent-neon: #3b82f6;
+    --warning-neon: #eab308;
+    --success-neon: #10b981;
+    --danger-neon: #ef4444;
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    font-family: var(--font-sans);
+    color: #f3f4f6;
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphic Panel Cards with subtle micro-animations */
+.glass-panel {
+  background: var(--panel-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 
+              0 0 15px -3px rgba(59, 130, 246, 0.15);
+}
+
+/* Smooth custom slide animations for live event alerts */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* SLA Breach pulse glow indicators */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.4);
+    border-color: rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+    border-color: rgba(239, 68, 68, 0.8);
+  }
+}
+
+.sla-alert-active {
+  animation: pulseGlow 2s infinite ease-in-out;
+}

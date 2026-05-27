@@ -1,47 +1,74 @@
-# RoadWatch — Backend Grievance & Budget Transparency Platform
+# RoadWatch — Grievance, Spatial Routing, & Budget Transparency Platform
 
-RoadWatch is a high-integrity, real-time civic grievance routing and budget transparency backend. It integrates spatial query engines, role-scoped row-level security, OIDC identity management, API gateway proxies, and automated AI helpers.
+RoadWatch is a high-integrity civic grievance routing and budget transparency platform. It integrates spatial query engines, role-scoped row-level security, OIDC identity management, API gateway proxies, automated AI helpers, and **two full-stack frontend applications** equipped with comprehensive test suites.
 
 ---
 
 ## 1. System Architecture & Port Map
 
-All services run inside a containerized network bridge (`roadwatch-net`):
+All services run inside containerized bridge network layers (`roadwatch-net`), with clients running on the host system:
 
 ```mermaid
 graph TD
-    CLIENTS["👤 Clients<br/>(Citizen Mobile / CRM Web)"] --> KONG["🔵 Kong API Gateway<br/>Port :8000"]
+    subgraph Host Clients
+        CA["📱 Citizen Mobile App<br/>Expo / Zustand<br/>Port :19000"]
+        CRM["💻 Govt CRM Dashboard<br/>Vite / Redux<br/>Port :3000"]
+    end
+
+    subgraph API Routing & Gateway Layer
+        KONG["🔵 Kong API Gateway<br/>Port :8000"]
+    end
+
+    subgraph Backend Microservices
+        CIT_CORE["🔴 citizen-core-api<br/>Java / Spring Boot<br/>Port :8080"]
+        CRM_CORE["🔴 crm-core-api<br/>Java / Spring Boot<br/>Port :8081"]
+        CIT_AI["🟣 citizen-ai-service<br/>Python / FastAPI<br/>Port :8100"]
+        CRM_AI["🟣 crm-ai-service<br/>Python / FastAPI<br/>Port :8101"]
+        KC["🔑 Keycloak IAM<br/>Port :8180"]
+    end
+
+    subgraph Database & Caching
+        PG["🟠 PostgreSQL + PostGIS<br/>Port :5432"]
+        REDIS["🟠 Redis Cache<br/>Port :6379"]
+    end
+
+    CA --> KONG
+    CRM --> KONG
     
-    KONG --> CIT_CORE["🔴 citizen-core-api<br/>Java / Spring Boot<br/>Port :8080"]
-    KONG --> CRM_CORE["🔴 crm-core-api<br/>Java / Spring Boot<br/>Port :8081"]
-    KONG --> CIT_AI["🟣 citizen-ai-service<br/>Python / FastAPI<br/>Port :8100"]
-    KONG --> CRM_AI["🟣 crm-ai-service<br/>Python / FastAPI<br/>Port :8101"]
+    KONG --> CIT_CORE
+    KONG --> CRM_CORE
+    KONG --> CIT_AI
+    KONG --> CRM_AI
     
     CIT_CORE --> CIT_AI
     CRM_CORE --> CRM_AI
     
-    CIT_CORE --> KC["🔑 Keycloak IAM<br/>Port :8180"]
+    CIT_CORE --> KC
     CRM_CORE --> KC
     
-    CIT_CORE --> PG["🟠 PostgreSQL + PostGIS<br/>Port :5432"]
+    CIT_CORE --> PG
     CRM_CORE --> PG
     CIT_AI --> PG
     CRM_AI --> PG
     
-    CIT_AI --> REDIS["🟠 Redis Cache<br/>Port :6379"]
+    CIT_AI --> REDIS
     CRM_AI --> REDIS
 ```
 
-| Service | Port | Endpoint Prefix | Purpose |
-|---|---|---|---|
-| **Kong Gateway** | `8000` | `/api/v1/` | API routing proxy, Redis-backed rate limiting, CORS |
-| **Keycloak** | `8180` | `/realms/roadwatch` | IAM OAuth2 OIDC identity provider |
-| **PostgreSQL** | `5432` | — | Relational database + PostGIS spatial extension |
-| **Redis** | `6379` | — | rate-limit counters & chatbot session cache |
-| **citizen-core-api** | `8080` | `/api/v1/citizen` | Spring Boot: ticket creation, clustering, offline sync, WebSockets |
-| **crm-core-api** | `8081` | `/api/v1/crm` | Spring Boot: RLS-scoped ticket list, workorders, and budgets |
-| **citizen-ai-service**| `8100` | `/api/v1/ai/citizen` | FastAPI: AI chatbot agent, spatial containment geo-routing, spam check |
-| **crm-ai-service** | `8101` | `/api/v1/ai/crm` | FastAPI: Officer chat assistant, SLA predictor cron, PoW photo checker, PDF gen |
+### Complete Port Mapping Reference
+
+| Service / App | Platform / Lang | Port | Endpoint Prefix | Purpose |
+|---|---|---|---|---|
+| **Citizen App** | Expo / React Native | `19000` | — | Mobile client: offline-first complaint saves, chat assistant, leaflet WebView maps |
+| **Govt CRM** | React / Vite | `3000` | — | Dashboard client: RLS backlog grid, split-pane computer vision PoW validations, MSW mock worker |
+| **Kong Gateway** | Kong 3.7 | `8000` | `/api/v1/` | Routing proxy, Redis rate-limiting, CORS handling |
+| **Keycloak** | Keycloak 25 | `8180` | `/realms/roadwatch` | IAM OAuth2 OIDC identity provider (SSO) |
+| **PostgreSQL** | PostgreSQL 16 + PostGIS | `5432` | — | Relational database + spatial queries |
+| **Redis** | Redis 7 | `6379` | — | Chatbot session caching & rate-limit counters |
+| **citizen-core-api** | Java 21 / Spring Boot 3.3 | `8080` | `/api/v1/citizen` | Spring Boot: ticket creation, spatial clustering, offline sync, WebSockets STOMP broker |
+| **crm-core-api** | Java 21 / Spring Boot 3.3 | `8081` | `/api/v1/crm` | Spring Boot: RLS-scoped ticket list, workorders, and budget schemes |
+| **citizen-ai-service**| Python 3.12 / FastAPI | `8100` | `/api/v1/ai/citizen` | FastAPI: AI chatbot, spatial containment routing, spam checks |
+| **crm-ai-service** | Python 3.12 / FastAPI | `8101` | `/api/v1/ai/crm` | FastAPI: SLA predictor cron, PoW photo checks, ReportLab PDF UCs |
 
 ---
 
@@ -49,31 +76,23 @@ graph TD
 
 ### 2.1 Spatial Clustering (50m Radius Centroid Shifting)
 *   **Location**: `citizen-core-api` — `TicketService.java`
-*   **Logic**: When a citizen submits a report, the backend queries PostGIS via `ST_DWithin` geography for open tickets of the same category within a 50m radius.
-*   **Clustering**: If found, the report is saved as a `TicketContribution` linked to the original `MasterTicket`. The master's `contributorCount` increments. If count reaches 5+, priority auto-upgrades to `HIGH`. If not found, a new `MasterTicket` is created.
+*   **Logic**: Query PostGIS via `ST_DWithin` geography for open tickets of the same category within 50m. If found, save report as a `TicketContribution` linked to the original `MasterTicket`. If count reaches 5+, priority auto-upgrades to `HIGH`. Otherwise, create a new `MasterTicket`.
 
 ### 2.2 Relational Row-Level Security (RLS)
 *   **Location**: `crm-core-api` — `MasterTicketRepository.java`
-*   **Logic**: Verifies that division officers only query tickets matching their division tree coordinates.
-*   **JE/EE**: Restricted strictly to their `jurisdictionId` boundaries (Ward 42).
-*   **SE/CE**: Extended to query their division tree, retrieving child node tickets through recursive subqueries.
+*   **Logic**: Verifies that division officers only query tickets matching their division tree coordinates. Wards JEs are restricted to Ward 42 boundaries. SEs/CEs query child node tickets through recursive subqueries.
 
-### 2.3 Conversational AI Agent & Mock Fallbacks
-*   **Location**: `citizen-ai-service` & `crm-ai-service` — `app/clients/llm_client.py`
-*   **Integration**: Utilizes official OpenAI client libraries with `gpt-4o-mini` templates.
-*   **Resilience Fallback**: If `OPENAI_API_KEY` is blank or calls fail, the client gracefully switches to a **Local Heuristic Mode** using keyphrase scanners to trigger structured OIDC tool calls (e.g. `submit_complaint`), ensuring the backend can be tested offline.
+### 2.3 Offline-First Sync Queue
+*   **Location**: `citizen-app` — `syncQueueStore.ts` & `useOfflineSyncController.ts`
+*   **Logic**: When a mobile user is offline, submissions are saved to a Zustand queue store serialized to disk (`AsyncStorage`). A NetInfo listener detects cellular/WiFi recovery, trigger-replaying actions to `/sync/queue` endpoints.
 
-### 2.4 SLA Scan Background Cron
-*   **Location**: `crm-ai-service` — `app/jobs/sla_scanner.py`
-*   **Logic**: Runs every 30 minutes via an `APScheduler` worker. Directly queries the shared Postgres database for tickets in `OPEN` or `ASSIGNED` state whose `sla_deadline < now + 48h`. Re-routes tickets to parent role `EE` via `/tickets/{id}/escalate` path.
+### 2.4 double-pane Computer Vision PoW Scanning
+*   **Location**: `crm-web` — `ProofViewer.tsx` & `usePoWValidationController.ts`
+*   **Logic**: Compares coordinates distance. If GPS coordinates of the uploaded contractor repair photo differ by > 200m from the ticket location, it triggers a `location_match: false` and overall `REJECTED` verdict. The UI displays an active scanning visual during FastAPI computer vision analysis.
 
-### 2.5 Proof-of-Work Validator
-*   **Location**: `crm-ai-service` — `app/services/pow_service.py`
-*   **Logic**: Compares coordinates distance. If GPS coordinates of the uploaded contractor repair photo differ by > 200m from the ticket location, it triggers a `location_match: false` and overall `REJECTED` verdict.
-
-### 2.6 ReportLab Utilization Certificate (UC) PDF Generator
-*   **Location**: `crm-ai-service` — `app/services/uc_service.py`
-*   **Logic**: Generates a GFR 12-A form using reportlab paragraph layouts and styles, writing it to `static/uc/uc-{wo_id}.pdf`.
+### 2.5 RoleGuard structural access masking
+*   **Location**: `crm-web` — `RoleGuard.tsx`
+*   **Logic**: Wraps interactive visual components structurally based on decrypted Keycloak JWT roles (e.g. JE is restricted from manual escalations or fund release buttons).
 
 ---
 
@@ -86,35 +105,69 @@ OPENAI_API_KEY=your_openai_api_key_here
 ```
 *(Leave blank to run the entire backend fully offline using AI fallback loops).*
 
-### Build and Launch the Stack
+### 3.1 Spin up the Backend Stack
 ```bash
 docker-compose up --build -d
 ```
+Keycloak Realm config imports and Postgres Flyway migrations run automatically on launch.
+*   **JE Credentials**: Phone login via app OR `officer_je` (Password: `dev123`)
+*   **EE Credentials**: SSO login via CRM web portal OR `officer_ee` (Password: `dev123`)
 
-### Initial Seed Data
-Keycloak will automatically import the realm configurations. Postgres will run Flyway migrations creating tables and seeding default metrics.
+### 3.2 Spin up the Frontend Applications
 
-**Seeded Users (Credentials: Password `dev123` for all)**:
-*   `officer_je` (Junior Engineer, Ward 42) — ID: `447192dc-e3a5-4e78-bc4a-9eb4c5c76ab1`
-*   `officer_ee` (Executive Engineer, Chennai Division) — ID: `b9b9a674-ec0a-4fb4-bbab-fb605eb8716b`
-*   `contractor_1` (Apex Infrastructure)
+#### A. Govt CRM Web Dashboard
+```bash
+cd crm-web
+npm install
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000). (The Mock Service Worker MSW is active by default to support stand-alone testing. Use OIDC SSO credentials token `developer-jwt-token-claims` to sign in instantly).
+
+#### B. Citizen Mobile Client
+```bash
+cd ../citizen-app
+npm install
+npm run start
+```
+Launch Expo CLI on host to preview app tabs (explore map grid, offline sync indicators, file grievances, AI chatbot streaming).
 
 ---
 
 ## 4. Run Automated Test Suites
 
-Both Java services use **JUnit 5** and PyTest is integrated inside both FastAPI services:
-
+### 4.1 Backend Test Suites
 ```bash
-# 1. citizen-core-api
+# 1. citizen-core-api (JUnit 5)
 cd citizen-core-api && mvn test
 
-# 2. crm-core-api
+# 2. crm-core-api (JUnit 5)
 cd ../crm-core-api && mvn test
 
-# 3. citizen-ai-service
+# 3. citizen-ai-service (PyTest)
 cd ../citizen-ai-service && pytest
 
-# 4. crm-ai-service
+# 4. crm-ai-service (PyTest)
 cd ../crm-ai-service && pytest
+```
+
+### 4.2 Frontend Test Suites
+
+#### A. crm-web Dashboard (Vitest & Playwright)
+```bash
+cd ../crm-web
+# Run Unit & React Component Integration tests:
+npm run test
+
+# Run E2E Headless Chrome Browser tests:
+npx playwright test
+```
+
+#### B. citizen-app Mobile Client (Jest & Maestro)
+```bash
+cd ../citizen-app
+# Run Unit & Custom Hook Integration tests:
+npm test
+
+# Run mobile E2E device automation:
+maestro test .maestro/offline_complaint_flow.yaml
 ```

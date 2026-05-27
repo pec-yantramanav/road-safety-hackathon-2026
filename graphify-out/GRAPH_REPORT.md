@@ -1,12 +1,18 @@
-# Graph Report - .  (2026-05-28)
+# Graph Report - road-safety-hackathon-2026  (2026-05-28)
 
 ## Corpus Check
-- Corpus is ~31,424 words - fits in a single context window. You may not need a graph.
+- 179 files · ~47,839 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1296 nodes · 43 edges · 1269 communities (550 shown, 719 thin omitted)
-- Extraction: 70% EXTRACTED · 30% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.9)
+- 1679 nodes · 2249 edges · 157 communities (99 shown, 58 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 89 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `c4cd688c`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
@@ -15,278 +21,32 @@
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Graphify Rules and Workflows|Graphify Rules and Workflows]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
+- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_Community 7 (Key concepts basesettings)|Community 7 (Key concepts: basesettings)]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 17 (Key concepts basemodel)|Community 17 (Key concepts: basemodel)]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 38 (Key concepts db_orm_jurisdiction)|Community 38 (Key concepts: db_orm_jurisdiction)]]
-- [[_COMMUNITY_Community 39 (Key concepts base)|Community 39 (Key concepts: base)]]
-- [[_COMMUNITY_Community 40 (Key concepts db_orm_blackspot)|Community 40 (Key concepts: db_orm_blackspot)]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 63 (Key concepts citizen_citizencoreapplication_citizencoreapplication)|Community 63 (Key concepts: citizen_citizencoreapplication_citizencoreapplication)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 78 (Key concepts config_websocketconfig_websocketconfig)|Community 78 (Key concepts: config_websocketconfig_websocketconfig)]]
-- [[_COMMUNITY_Community 79 (Key concepts websocketmessagebrokerconfigurer)|Community 79 (Key concepts: websocketmessagebrokerconfigurer)]]
-- [[_COMMUNITY_Community 81 (Key concepts messagebrokerregistry)|Community 81 (Key concepts: messagebrokerregistry)]]
-- [[_COMMUNITY_Community 82 (Key concepts override)|Community 82 (Key concepts: override)]]
-- [[_COMMUNITY_Community 84 (Key concepts stompendpointregistry)|Community 84 (Key concepts: stompendpointregistry)]]
-- [[_COMMUNITY_Community 86 (Key concepts controller_synccontroller_synccontroller)|Community 86 (Key concepts: controller_synccontroller_synccontroller)]]
-- [[_COMMUNITY_Community 88 (Key concepts syncqueuerequest)|Community 88 (Key concepts: syncqueuerequest)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 115 (Key concepts dto_createticketrequest_createticketrequest)|Community 115 (Key concepts: dto_createticketrequest_createticketrequest)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 138 (Key concepts dto_syncqueuerequest_syncqueuerequest)|Community 138 (Key concepts: dto_syncqueuerequest_syncqueuerequest)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 143 (Key concepts dto_syncqueuerequest_syncaction)|Community 143 (Key concepts: dto_syncqueuerequest_syncaction)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 154 (Key concepts dto_ticketresponse_ticketresponse)|Community 154 (Key concepts: dto_ticketresponse_ticketresponse)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 250 (Key concepts entity_ticketcontribution_ticketcontribution)|Community 250 (Key concepts: entity_ticketcontribution_ticketcontribution)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 290 (Key concepts entity_user_user)|Community 290 (Key concepts: entity_user_user)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 331 (Key concepts repository_ticketcontributionrepository_ticketcontributionrepository)|Community 331 (Key concepts: repository_ticketcontributionrepository_ticketcontributionrepository)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 335 (Key concepts ticketcontribution)|Community 335 (Key concepts: ticketcontribution)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 343 (Key concepts repository_userrepository_userrepository)|Community 343 (Key concepts: repository_userrepository_userrepository)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 369 (Key concepts service_syncservice_syncservice)|Community 369 (Key concepts: service_syncservice_syncservice)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 377 (Key concepts service_ticketservice_ticketservice)|Community 377 (Key concepts: service_ticketservice_ticketservice)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 399 (Key concepts service_websocketservice_websocketservice)|Community 399 (Key concepts: service_websocketservice_websocketservice)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 404 (Key concepts service_syncservicetest_syncservicetest)|Community 404 (Key concepts: service_syncservicetest_syncservicetest)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 408 (Key concepts service_ticketservicetest_ticketservicetest)|Community 408 (Key concepts: service_ticketservicetest_ticketservicetest)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 424 (Key concepts fastapi)|Community 424 (Key concepts: fastapi)]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 472 (Key concepts crm_crmcoreapplication_crmcoreapplication)|Community 472 (Key concepts: crm_crmcoreapplication_crmcoreapplication)]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 487 (Key concepts controller_budgetcontroller_budgetcontroller)|Community 487 (Key concepts: controller_budgetcontroller_budgetcontroller)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 498 (Key concepts controller_dashboardcontroller_dashboardcontroller)|Community 498 (Key concepts: controller_dashboardcontroller_dashboardcontroller)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 517 (Key concepts patchmapping)|Community 517 (Key concepts: patchmapping)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 524 (Key concepts controller_workordercontroller_workordercontroller)|Community 524 (Key concepts: controller_workordercontroller_workordercontroller)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 540 (Key concepts entity_budgetscheme_budgetscheme)|Community 540 (Key concepts: entity_budgetscheme_budgetscheme)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 564 (Key concepts entity_contractor_contractor)|Community 564 (Key concepts: entity_contractor_contractor)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 578 (Key concepts entity_jurisdiction_jurisdiction)|Community 578 (Key concepts: entity_jurisdiction_jurisdiction)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 591 (Key concepts multipolygon)|Community 591 (Key concepts: multipolygon)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 643 (Key concepts entity_officer_officer)|Community 643 (Key concepts: entity_officer_officer)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 655 (Key concepts officerrole)|Community 655 (Key concepts: officerrole)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 683 (Key concepts entity_workorder_workorder)|Community 683 (Key concepts: entity_workorder_workorder)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 724 (Key concepts repository_budgetschemerepository_budgetschemerepository)|Community 724 (Key concepts: repository_budgetschemerepository_budgetschemerepository)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 744 (Key concepts repository_officerrepository_officerrepository)|Community 744 (Key concepts: repository_officerrepository_officerrepository)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 749 (Key concepts officer)|Community 749 (Key concepts: officer)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 755 (Key concepts repository_workorderrepository_workorderrepository)|Community 755 (Key concepts: repository_workorderrepository_workorderrepository)]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
@@ -301,18 +61,6 @@
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 800 (Key concepts service_dashboardservice_dashboardservice)|Community 800 (Key concepts: service_dashboardservice_dashboardservice)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 807 (Key concepts service_escalationservice_escalationservice)|Community 807 (Key concepts: service_escalationservice_escalationservice)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 814 (Key concepts service_workorderservice_workorderservice)|Community 814 (Key concepts: service_workorderservice_workorderservice)]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
@@ -322,15 +70,6 @@
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 830 (Key concepts security_rlssecuritytest_rlssecuritytest)|Community 830 (Key concepts: security_rlssecuritytest_rlssecuritytest)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 842 (Key concepts service_escalationservicetest_escalationservicetest)|Community 842 (Key concepts: service_escalationservicetest_escalationservicetest)]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 846 (Key concepts service_workorderservicetest_workorderservicetest)|Community 846 (Key concepts: service_workorderservicetest_workorderservicetest)]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
@@ -338,25 +77,7 @@
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Community 858 (Key concepts road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform)|Community 858 (Key concepts: road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform)]]
-- [[_COMMUNITY_Community 859 (Key concepts road_safety_hackathon_2026_readme_1_system_architecture_port_map)|Community 859 (Key concepts: road_safety_hackathon_2026_readme_1_system_architecture_port_map)]]
-- [[_COMMUNITY_Community 860 (Key concepts road_safety_hackathon_2026_readme_codeblock_1)|Community 860 (Key concepts: road_safety_hackathon_2026_readme_codeblock_1)]]
-- [[_COMMUNITY_Community 861 (Key concepts road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference)|Community 861 (Key concepts: road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference)]]
-- [[_COMMUNITY_Community 862 (Key concepts road_safety_hackathon_2026_readme_2_1_spatial_clustering_50m_radius_centroid_shifting)|Community 862 (Key concepts: road_safety_hackathon_2026_readme_2_1_spatial_clustering_50m_radius_centroid_shifting)]]
-- [[_COMMUNITY_Community 863 (Key concepts road_safety_hackathon_2026_readme_2_2_relational_row_level_security_rls)|Community 863 (Key concepts: road_safety_hackathon_2026_readme_2_2_relational_row_level_security_rls)]]
-- [[_COMMUNITY_Community 864 (Key concepts road_safety_hackathon_2026_readme_2_3_conversational_ai_agent_mock_fallbacks)|Community 864 (Key concepts: road_safety_hackathon_2026_readme_2_3_conversational_ai_agent_mock_fallbacks)]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 866 (Key concepts road_safety_hackathon_2026_readme_2_5_proof_of_work_validator)|Community 866 (Key concepts: road_safety_hackathon_2026_readme_2_5_proof_of_work_validator)]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Community 868 (Key concepts road_safety_hackathon_2026_readme_3_development_setup_launch)|Community 868 (Key concepts: road_safety_hackathon_2026_readme_3_development_setup_launch)]]
-- [[_COMMUNITY_Community 869 (Key concepts road_safety_hackathon_2026_readme_prerequisites)|Community 869 (Key concepts: road_safety_hackathon_2026_readme_prerequisites)]]
-- [[_COMMUNITY_Community 870 (Key concepts road_safety_hackathon_2026_readme_codeblock_2)|Community 870 (Key concepts: road_safety_hackathon_2026_readme_codeblock_2)]]
-- [[_COMMUNITY_Community 871 (Key concepts road_safety_hackathon_2026_readme_build_and_launch_the_stack)|Community 871 (Key concepts: road_safety_hackathon_2026_readme_build_and_launch_the_stack)]]
-- [[_COMMUNITY_Community 872 (Key concepts road_safety_hackathon_2026_readme_codeblock_3)|Community 872 (Key concepts: road_safety_hackathon_2026_readme_codeblock_3)]]
-- [[_COMMUNITY_Community 873 (Key concepts road_safety_hackathon_2026_readme_initial_seed_data)|Community 873 (Key concepts: road_safety_hackathon_2026_readme_initial_seed_data)]]
-- [[_COMMUNITY_Community 874 (Key concepts road_safety_hackathon_2026_readme_4_run_automated_test_suites)|Community 874 (Key concepts: road_safety_hackathon_2026_readme_4_run_automated_test_suites)]]
-- [[_COMMUNITY_Community 875 (Key concepts road_safety_hackathon_2026_readme_codeblock_4)|Community 875 (Key concepts: road_safety_hackathon_2026_readme_codeblock_4)]]
+- [[_COMMUNITY_Community 857 (Key concepts readme_md)|Community 857 (Key concepts: readme_md)]]
 - [[_COMMUNITY_Graphify Rules and Workflows|Graphify Rules and Workflows]]
 - [[_COMMUNITY_Graphify Rules and Workflows|Graphify Rules and Workflows]]
 - [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
@@ -364,323 +85,14 @@
 - [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
 - [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
 - [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Project Design and Architecture Docs|Project Design and Architecture Docs]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
-- [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
 - [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
 - [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
 - [[_COMMUNITY_STLC Test Plan and Quality Assurance|STLC Test Plan and Quality Assurance]]
@@ -734,71 +146,339 @@
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `RoadWatch High-Level Design Document` - 7 edges
-2. `crm-core-api (Spring Boot Service)` - 7 edges
-3. `crm-ai-service (FastAPI Service)` - 7 edges
-4. `citizen-core-api (Spring Boot Service)` - 6 edges
-5. `citizen-ai-service (FastAPI Service)` - 6 edges
-6. `STLC Phase 3: Test Case Development` - 6 edges
-7. `PostgreSQL & PostGIS Database` - 5 edges
-8. `RoadWatch Project Plan Document` - 4 edges
-9. `RoadWatch CRM User Personas Document` - 3 edges
-10. `Indian Road Authority Hierarchy Document` - 3 edges
+1. `TicketResponse` - 39 edges
+2. `MasterTicket` - 37 edges
+3. `MasterTicket` - 37 edges
+4. `WorkOrder` - 27 edges
+5. `User` - 19 edges
+6. `BudgetScheme` - 19 edges
+7. `compilerOptions` - 18 edges
+8. `CreateTicketRequest` - 17 edges
+9. `TicketContribution` - 17 edges
+10. `Officer` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Indian Road Authority Hierarchy Document` --semantically_similar_to--> `RoadWatch CRM User Personas Document`  [INFERRED] [semantically similar]
   docs/road_authority_hierarchy.md → docs/crm_user_personas.md
-- `STLC Phase 1: Requirement Analysis` --references--> `RoadWatch High-Level Design Document`  [EXTRACTED]
-  docs/STLC_Test_Plan/01_requirement_analysis.md → docs/Design_Docs/hld_roadwatch.md
 - `citizen-core-api (Spring Boot Service)` --semantically_similar_to--> `crm-core-api (Spring Boot Service)`  [INFERRED] [semantically similar]
   docs/Design_Docs/java_citizen_core_api_lld.md → docs/Design_Docs/java_crm_core_api_lld.md
-- `STLC Phase 3: Test Case Development` --conceptually_related_to--> `citizen-core-api (Spring Boot Service)`  [INFERRED]
-  docs/STLC_Test_Plan/03_test_case_development.md → docs/Design_Docs/java_citizen_core_api_lld.md
-- `STLC Phase 3: Test Case Development` --conceptually_related_to--> `crm-core-api (Spring Boot Service)`  [INFERRED]
-  docs/STLC_Test_Plan/03_test_case_development.md → docs/Design_Docs/java_crm_core_api_lld.md
+- `citizen-ai-service (FastAPI Service)` --semantically_similar_to--> `crm-ai-service (FastAPI Service)`  [INFERRED] [semantically similar]
+  docs/Design_Docs/python_citizen_ai_service_lld.md → docs/Design_Docs/python_crm_ai_service_lld.md
+- `float` --uses--> `Jurisdiction`  [INFERRED]
+  citizen-ai-service/app/services/geo_service.py → citizen-ai-service/app/db/orm.py
+- `AsyncSession` --uses--> `Jurisdiction`  [INFERRED]
+  citizen-ai-service/app/services/geo_service.py → citizen-ai-service/app/db/orm.py
 
 ## Hyperedges (group relationships)
 - **Microservices Core Services** — citizen_core_api, crm_core_api, citizen_ai_service, crm_ai_service [EXTRACTED 1.00]
 - **Secure Authentication and RBAC Flow** — keycloak, kong_api_gateway, role_based_access_control_rls, crm_core_api [EXTRACTED 1.00]
 - **End-to-End Citizen Grievance Loop** — agentic_ai_chat_interface, master_ticket_clustering, grievance_escalation_pipeline, pow_validation_pipeline [INFERRED 0.85]
 
-## Communities (1269 total, 719 thin omitted)
+## Communities (157 total, 58 thin omitted)
 
 ### Community 0 - "Core APIs, Gateway, and Authentication"
-Cohesion: 0.31
-Nodes (9): Competitor & Ecosystem Analysis Document, RoadWatch CRM User Personas Document, RoadWatch High-Level Design Document, Java Citizen Core API LLD Document, Java CRM Core API LLD Document, RoadWatch Project Plan Document, Python Citizen AI Service LLD Document, Python CRM AI Service LLD Document (+1 more)
+Cohesion: 0.10
+Nodes (30): Agentic AI Multilingual Chatbot Interface, citizen-ai-service (FastAPI Service), citizen-core-api (Spring Boot Service), Competitor & Ecosystem Analysis Document, crm-ai-service (FastAPI Service), crm-core-api (Spring Boot Service), RoadWatch CRM User Personas Document, Grievance Escalation Pipeline (+22 more)
 
 ### Community 1 - "AI Service Operations and DB Engines"
-Cohesion: 0.32
-Nodes (8): Agentic AI Multilingual Chatbot Interface, citizen-ai-service (FastAPI Service), crm-ai-service (FastAPI Service), Grievance Escalation Pipeline, MasterTicket Spatial Clustering Mechanism, PostgreSQL & PostGIS Database, Proof-of-Work (PoW) Validation Pipeline, Redis Sessions & Cache Store
+Cohesion: 0.21
+Nodes (13): ticketApi, TicketTable(), TicketTableProps, useEscalationController(), useTicketListController(), LocationPoint, Ticket, TicketCategory (+5 more)
 
 ### Community 2 - "STLC Test Plan and Quality Assurance"
-Cohesion: 0.29
-Nodes (7): STLC: Failure Modes and Robustness Testing, STLC Phase 1: Requirement Analysis, STLC Phase 3: Test Case Development, STLC Phase 6: Test Cycle Closure, STLC Phase 4: Test Environment Setup, STLC Phase 5: Test Execution, STLC Phase 2: Test Planning
+Cohesion: 0.05
+Nodes (40): AuthorityType, ChatMessage, LocationPoint, SyncAction, Ticket, TicketCategory, TicketEvent, TicketPriority (+32 more)
 
 ### Community 3 - "Core APIs, Gateway, and Authentication"
-Cohesion: 0.47
-Nodes (6): citizen-core-api (Spring Boot Service), crm-core-api (Spring Boot Service), Keycloak Identity and Access Management System, Kong API Gateway, Public Financial Management System Integration, Role-Based Access Control and Row-Level Security
+Cohesion: 0.06
+Nodes (32): dependencies, axios, expo, expo-secure-store, expo-status-bar, i18n-js, lucide-react-native, nativewind (+24 more)
+
+### Community 5 - "AI Service Operations and DB Engines"
+Cohesion: 0.29
+Nodes (5): BaseSettings, Config, Settings, Config, Settings
+
+### Community 6 - "AI Service Operations and DB Engines"
+Cohesion: 0.06
+Nodes (32): dependencies, chart.js, jwt-decode, leaflet, lucide-react, react, react-chartjs-2, react-dom (+24 more)
+
+### Community 7 - "Community 7 (Key concepts: basesettings)"
+Cohesion: 0.08
+Nodes (25): 1. Architecture Position, 2. Directory Structure, 3.1 Domain TypeScript Interfaces (Model), 3.2 Global State Definition (Zustand & React Query), 3. Data & API Layer Definitions, 4.1 Ticket Controller (`useComplaintController.ts`), 4.2 Offline Sync Controller (`useOfflineSyncController.ts`), 4. Controller Layer Implementation (The Business Logic) (+17 more)
+
+### Community 8 - "AI Service Operations and DB Engines"
+Cohesion: 0.08
+Nodes (24): 1. Architecture Position, 2. Directory Structure, 3.1 Custom Keycloak Claims & Redux Auth State, 3.2 RTK Query API Service (`ticketApi.ts`), 3. Data & API Layer Definitions, 4.1 Ticket List Controller (`useTicketListController.ts`), 4.2 Work Order AI Validation Controller (`usePoWValidationController.ts`), 4. Controller Layer Implementation (The Business Logic) (+16 more)
+
+### Community 10 - "AI Service Operations and DB Engines"
+Cohesion: 0.10
+Nodes (20): compilerOptions, allowImportingTsExtensions, baseUrl, isolatedModules, jsx, lib, module, moduleResolution (+12 more)
+
+### Community 11 - "AI Service Operations and DB Engines"
+Cohesion: 0.11
+Nodes (18): backgroundColor, adaptiveIcon, expo, android, icon, ios, name, orientation (+10 more)
+
+### Community 12 - "AI Service Operations and DB Engines"
+Cohesion: 0.07
+Nodes (27): create_session(), get_session(), MessageRequest, send_message(), SessionRequest, filter_spam_and_duplicates(), FilterRequest, GeoRequest (+19 more)
+
+### Community 13 - "AI Service Operations and DB Engines"
+Cohesion: 0.29
+Nodes (6): compilerOptions, baseUrl, paths, strict, extends, @/*
+
+### Community 21 - "Community 21"
+Cohesion: 0.13
+Nodes (14): RoleGuard(), RoleGuardProps, Sidebar(), SidebarProps, authSlice, AuthState, initialState, KeycloakTokenPayload (+6 more)
+
+### Community 22 - "Community 22"
+Cohesion: 0.26
+Nodes (8): baseQueryWithReauth(), rawBaseQuery, budgetApi, workorderApi, BudgetSchemeDetails, WorkOrder, AppDispatch, store
+
+### Community 23 - "Community 23"
+Cohesion: 0.24
+Nodes (7): ProofViewer(), ProofViewerProps, useBudgetDashboardController(), usePoWValidationController(), GlassCardProps, App(), RootState
+
+### Community 24 - "Community 24"
+Cohesion: 0.22
+Nodes (7): worker, handlers, mockBudgets, mockTickets, mockWorkOrders, prepareApp(), server
+
+### Community 25 - "Community 25"
+Cohesion: 0.18
+Nodes (9): initialState, ToastAlert, uiSlice, UIState, action, activeState, backState, initialState (+1 more)
+
+### Community 26 - "Community 26"
+Cohesion: 0.50
+Nodes (3): React, store, { View }
+
+### Community 37 - "AI Service Operations and DB Engines"
+Cohesion: 0.39
+Nodes (6): Base, AsyncSession, float, Blackspot, Jurisdiction, resolve_jurisdiction()
+
+### Community 41 - "AI Service Operations and DB Engines"
+Cohesion: 0.70
+Nodes (4): str, create_chat_session(), get_chat_session(), send_chat_message()
+
+### Community 46 - "AI Service Operations and DB Engines"
+Cohesion: 0.40
+Nodes (4): AsyncSession, float, str, filter_complaint()
+
+### Community 66 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.53
+Nodes (4): Bean, SecurityConfig, HttpSecurity, SecurityFilterChain
+
+### Community 72 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.60
+Nodes (3): Bean, WebClientConfig, WebClient
+
+### Community 77 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.39
+Nodes (5): WebSocketConfig, MessageBrokerRegistry, Override, StompEndpointRegistry, WebSocketMessageBrokerConfigurer
+
+### Community 85 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.07
+Nodes (27): List, Map, Object, PostMapping, ResponseEntity, String, List, Map (+19 more)
+
+### Community 95 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.23
+Nodes (12): TicketController, CreateTicketRequest, GetMapping, List, Map, Object, PostMapping, ResponseEntity (+4 more)
+
+### Community 114 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.14
+Nodes (6): Double, List, String, TicketCategory, UUID, CreateTicketRequest
+
+### Community 153 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.06
+Nodes (10): AuthorityType, Double, List, LocalDateTime, String, TicketCategory, TicketPriority, TicketStatus (+2 more)
+
+### Community 202 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.07
+Nodes (10): AuthorityType, MasterTicket, List, LocalDateTime, Point, String, TicketCategory, TicketPriority (+2 more)
+
+### Community 249 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.15
+Nodes (5): List, LocalDateTime, String, UUID, TicketContribution
+
+### Community 271 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.18
+Nodes (5): TicketEvent, EventType, LocalDateTime, String, UUID
+
+### Community 289 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.15
+Nodes (4): LocalDateTime, String, UUID, User
+
+### Community 336 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.53
+Nodes (4): List, TicketEventRepository, TicketEvent, UUID
+
+### Community 376 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.05
+Nodes (36): List, MasterTicket, Object, Optional, Query, MasterTicketRepository, TicketCategory, UUID (+28 more)
+
+### Community 450 - "AI Service Operations and DB Engines"
+Cohesion: 0.67
+Nodes (3): str, create_officer_session(), send_officer_message()
+
+### Community 454 - "AI Service Operations and DB Engines"
+Cohesion: 0.50
+Nodes (3): float, str, validate_proof_of_work()
+
+### Community 475 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.53
+Nodes (4): Bean, SecurityConfig, HttpSecurity, SecurityFilterChain
+
+### Community 481 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.60
+Nodes (3): Bean, WebClientConfig, WebClient
+
+### Community 497 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.06
+Nodes (36): BudgetController, DashboardController, BudgetScheme, GetMapping, List, ResponseEntity, String, UUID (+28 more)
+
+### Community 506 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.23
+Nodes (11): TicketController, GetMapping, List, MasterTicket, PostMapping, ResponseEntity, String, TicketEvent (+3 more)
+
+### Community 523 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.18
+Nodes (15): WorkOrderController, BigDecimal, GetMapping, List, PostMapping, ResponseEntity, String, UUID (+7 more)
+
+### Community 563 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.22
+Nodes (3): String, UUID, Contractor
+
+### Community 577 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.18
+Nodes (5): AuthorityType, String, UUID, Jurisdiction, MultiPolygon
+
+### Community 595 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.07
+Nodes (10): AuthorityType, MasterTicket, List, LocalDateTime, Point, String, TicketCategory, TicketPriority (+2 more)
+
+### Community 642 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.14
+Nodes (5): AuthorityType, String, UUID, Officer, OfficerRole
+
+### Community 664 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.18
+Nodes (5): TicketEvent, EventType, LocalDateTime, String, UUID
+
+### Community 682 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.05
+Nodes (24): AuthorityType, BigDecimal, String, UUID, BigDecimal, List, LocalDateTime, String (+16 more)
+
+### Community 743 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.16
+Nodes (13): Optional, Query, String, UUID, String, TicketEvent, Transactional, UUID (+5 more)
+
+### Community 764 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.09
+Nodes (10): Mono, AiIntegrationService, String, UUID, PoWValidationResponse, PoWValidationResponse, SlaPredictionResponse, UcResponse (+2 more)
+
+### Community 849 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.25
+Nodes (7): clients, enabled, id, realm, roles, realm, users
+
+### Community 857 - "Community 857 (Key concepts: readme_md)"
+Cohesion: 0.07
+Nodes (35): 1. System Architecture & Port Map, 2.1 Spatial Clustering (50m Radius Centroid Shifting), 2.2 Relational Row-Level Security (RLS), 2.3 Conversational AI Agent & Mock Fallbacks, 2.3 Offline-First Sync Queue, 2.4 double-pane Computer Vision PoW Scanning, 2.4 SLA Scan Background Cron, 2.5 Proof-of-Work Validator (+27 more)
+
+### Community 880 - "Project Design and Architecture Docs"
+Cohesion: 0.22
+Nodes (8): 1. Meri Sadak (PMGSY), 2. NHAI Portals & Rajmargyatra App, 3. Municipal Corporation Apps (e.g., MyBMC 24x7, Delhi PWD), 4. CPGRAMS (Centralized Public Grievance Redress and Monitoring System), 5. Civic Platforms (e.g., Swachhata-MoHUA, I Change My City), Competitor & Ecosystem Analysis, Summary of Ecosystem Drawbacks, The RoadWatch Advantage
+
+### Community 889 - "Project Design and Architecture Docs"
+Cohesion: 0.11
+Nodes (17): code:block1 (Citizen reports pothole on NH-48 via app), code:block2 (Citizen reports bad road quality on SH-17), code:block3 (Citizen reports pothole on MG Road (city road)), code:block4 (Citizen (or Sarpanch) submits "Need Road" petition via app), code:block5 (Central Level), Level 1: Central Government (NHAI / MoRTH / BRO), Level 2: State Government (State PWD), Level 3: District & Urban (Municipal Corporation / Zilla Parishad) (+9 more)
+
+### Community 907 - "Project Design and Architecture Docs"
+Cohesion: 0.17
+Nodes (11): 1. RoadWatch Authority Portal (Gov-Infra CRM), 2. RoadWatch Citizen App (Grievance & Transparency), Connecting authorities to communities, Considerations, Core Interface Capabilities, Core MVP Features, KPIs, Non-Technical (Impact & Engagement Metrics) (+3 more)
+
+### Community 919 - "Project Design and Architecture Docs"
+Cohesion: 0.25
+Nodes (7): Indian Road Authority Hierarchy (by Governance Level), Key Takeaway for RoadWatch AI Routing, Level 1: Central Government, Level 2: State Government, Level 3: District & Urban, Level 4: Local / Rural (Panchayati Raj), Level 5: Special / Project-Based
+
+### Community 927 - "Project Design and Architecture Docs"
+Cohesion: 0.05
+Nodes (43): 10. Production Architecture (AWS), 11. Network & Security (AWS), 12. CI/CD Pipeline, 13. Technology Stack Summary, 14. Non-Functional Requirements, 1. System Context, 2. Service Architecture Overview, 3. Service Responsibility Matrix (+35 more)
+
+### Community 971 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.05
+Nodes (39): 1. Architecture Position, 2. Project Structure (Maven multi-module), 3.1 User, 3.2 MasterTicket, 3.3 TicketContribution, 3.4 TicketEvent, 3. Entity Models (JPA + PostGIS), 4.0 Operational Endpoints (+31 more)
+
+### Community 1011 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.12
+Nodes (15): 10. Key Dependencies, 11. Standardized Error Response, 1. Architecture Position, 2. Project Structure, 7. Kong API Gateway Config, 8. Docker Compose (Local Dev), 9. Config (application.yml), code:mermaid (graph TD) (+7 more)
+
+### Community 1017 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.18
+Nodes (11): 3.1 Officer (synced from Keycloak), 3.2 WorkOrder, 3.3 BudgetScheme, 3.4 Jurisdiction, 3.5 Contractor, 3. Entity Models, code:java (@Entity @Table(name = "officers")), code:java (@Entity @Table(name = "work_orders")) (+3 more)
+
+### Community 1028 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.29
+Nodes (7): 4.0 Operational Endpoints, 4.1 Tickets (Officer View), 4.2 Work Orders, 4.3 Budget, 4.4 Dashboard, 4.5 Contractors, 4. API Contracts
+
+### Community 1035 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.17
+Nodes (12): 5.1 RBAC + Row-Level Security, 5.2 Escalation Chain, 5.3 WorkOrder Lifecycle, 5.4 Dashboard Aggregation (Role-Specific), 5. Core Logic, code:java (// RlsFilter.java — extracts from JWT), code:mermaid (graph TD), code:java (// EscalationService.java) (+4 more)
+
+### Community 1047 - "Core APIs, Gateway, and Authentication"
+Cohesion: 0.40
+Nodes (5): 6.1 Realm: `roadwatch`, 6.2 Realm Roles, 6.3 Custom JWT Claims (via Keycloak Protocol Mapper), 6. Keycloak Setup, code:block15 (CITIZEN, CONTRACTOR,)
+
+### Community 1062 - "AI Service Operations and DB Engines"
+Cohesion: 0.06
+Nodes (30): 1. Architecture Position, 2. Project Structure, 3. Database Models (PostGIS), 4.0 Operational Endpoints, 4.1 Chat, 4.2 Geo-Router, 4.3 Spam Filter, 4.4 Budget (+22 more)
+
+### Community 1093 - "AI Service Operations and DB Engines"
+Cohesion: 0.06
+Nodes (31): 1. Architecture Position, 2. Project Structure, 3.0 Operational Endpoints, 3.1 Officer AI Assistant, 3.2 SLA Breach Predictor, 3.3 Proof-of-Work Validator, 3.4 UC Draft Generator, 3. API Contracts (+23 more)
+
+### Community 1125 - "STLC Test Plan and Quality Assurance"
+Cohesion: 0.22
+Nodes (8): 1. Objective, 2.1 citizen-core-api (Spring Boot), 2.2 crm-core-api (Spring Boot), 2.3 citizen-ai-service (FastAPI), 2.4 crm-ai-service (FastAPI), 2. Testability Analysis by Service, 3. Requirement Traceability Matrix (RTM), STLC Stage 1: Requirement Analysis & Testability Review
+
+### Community 1134 - "STLC Test Plan and Quality Assurance"
+Cohesion: 0.11
+Nodes (17): 1. Introduction, 2.1 Backend Testing Strategy, 2.1 Unit Testing (UT), 2.2 Frontend Testing Strategy, 2.2 Integration Testing (IT), 2.3 Functional Testing (FT), 2.4 Security & Resilience (RBAC + RLS + Failure Modes), 2. Test Strategy (+9 more)
+
+### Community 1150 - "STLC Test Plan and Quality Assurance"
+Cohesion: 0.09
+Nodes (21): 1. citizen-core-api — Test Cases, 2. crm-core-api — Test Cases, 3. AI Services — Test Cases, 4. citizen-app (Expo/React Native) — Test Cases, 5. crm-web (React Dashboard) — Test Cases, STLC Stage 3: Test Case Development, TC-AI-01: Chatbot Tool Triggering Fallback, TC-AI-02: Proof-of-Work Location GPS Check (+13 more)
+
+### Community 1164 - "STLC Test Plan and Quality Assurance"
+Cohesion: 0.09
+Nodes (25): 1. Environment Architecture, 2. Backend Setup Procedure, 2. Setup Procedure, 3.1 Keycloak Client Scopes Verification, 3.2 Mocking Service Endpoints, 3. Mock and Keycloak Configuration Verification, 4.1 Setup citizen-app (Expo/React Native), 4.2 Setup crm-web Dashboard (Vite/React) (+17 more)
+
+### Community 1180 - "STLC Test Plan and Quality Assurance"
+Cohesion: 0.06
+Nodes (30): 1. citizen-core-api — Execution Logs, 2. crm-core-api — Execution Logs, 3. AI Services — Execution Logs, 4.1 executing citizen-app Test Suites, 4.2 executing crm-web Dashboard Test Suites, 4. Frontend Execution Logs & CLI Runbook, code:bash (curl -X POST http://localhost:8000/api/v1/citizen/tickets \), code:bash (curl -X POST http://localhost:8000/api/v1/ai/citizen/chat/se) (+22 more)
+
+### Community 1203 - "STLC Test Plan and Quality Assurance"
+Cohesion: 0.29
+Nodes (6): 1. Test Summary Report (TSR) Dashboard, 2.1 Minor Deferred Issues (Targeted for v1.1), 2. Defect Analysis & Status, 3. Exit Criteria Evaluation, 4. Final Recommendations & Operational Handover, STLC Stage 6: Test Cycle Closure
+
+### Community 1210 - "STLC Test Plan and Quality Assurance"
+Cohesion: 0.13
+Nodes (14): 1. Failure Mode and Effects Analysis (FMEA) Matrix, 2. Robustness & Negative Test Cases, code:bash (curl -X POST http://localhost:8000/api/v1/citizen/tickets \), code:bash (curl -X POST "http://localhost:8000/api/v1/crm/workorders/{i), code:bash (curl "http://localhost:8000/api/v1/crm/tickets/{ward_99_tick), code:bash (curl -X POST http://localhost:8000/api/v1/citizen/tickets \), code:json ({), code:bash (# Concurrent submits to lat 13.055, lng 80.275) (+6 more)
 
 ## Knowledge Gaps
-- **728 isolated node(s):** `Settings`, `Config`, `SessionRequest`, `MessageRequest`, `str` (+723 more)
+- **513 isolated node(s):** `Config`, `AsyncSession`, `AsyncSession`, `float`, `str` (+508 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **719 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **58 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `RoadWatch High-Level Design Document` connect `Core APIs, Gateway, and Authentication` to `STLC Test Plan and Quality Assurance`?**
-  _High betweenness centrality (0.000) - this node is a cross-community bridge._
-- **Why does `STLC Phase 3: Test Case Development` connect `STLC Test Plan and Quality Assurance` to `AI Service Operations and DB Engines`, `Core APIs, Gateway, and Authentication`?**
-  _High betweenness centrality (0.000) - this node is a cross-community bridge._
-- **Are the 2 inferred relationships involving `RoadWatch High-Level Design Document` (e.g. with `RoadWatch Project Plan Document` and `RoadWatch CRM User Personas Document`) actually correct?**
-  _`RoadWatch High-Level Design Document` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 2 inferred relationships involving `crm-core-api (Spring Boot Service)` (e.g. with `citizen-core-api (Spring Boot Service)` and `STLC Phase 3: Test Case Development`) actually correct?**
-  _`crm-core-api (Spring Boot Service)` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 2 inferred relationships involving `crm-ai-service (FastAPI Service)` (e.g. with `citizen-ai-service (FastAPI Service)` and `STLC Phase 3: Test Case Development`) actually correct?**
-  _`crm-ai-service (FastAPI Service)` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 2 inferred relationships involving `citizen-core-api (Spring Boot Service)` (e.g. with `crm-core-api (Spring Boot Service)` and `STLC Phase 3: Test Case Development`) actually correct?**
-  _`citizen-core-api (Spring Boot Service)` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 2 inferred relationships involving `citizen-ai-service (FastAPI Service)` (e.g. with `crm-ai-service (FastAPI Service)` and `STLC Phase 3: Test Case Development`) actually correct?**
-  _`citizen-ai-service (FastAPI Service)` has 2 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `OfficerRole` connect `Core APIs, Gateway, and Authentication` to `Core APIs, Gateway, and Authentication`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **What connects `Config`, `AsyncSession`, `AsyncSession` to the rest of the system?**
+  _513 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Core APIs, Gateway, and Authentication` be split into smaller, more focused modules?**
+  _Cohesion score 0.09655172413793103 - nodes in this community are weakly interconnected._
+- **Should `STLC Test Plan and Quality Assurance` be split into smaller, more focused modules?**
+  _Cohesion score 0.053923541247484906 - nodes in this community are weakly interconnected._
+- **Should `Core APIs, Gateway, and Authentication` be split into smaller, more focused modules?**
+  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
+- **Should `AI Service Operations and DB Engines` be split into smaller, more focused modules?**
+  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
+- **Should `Community 7 (Key concepts: basesettings)` be split into smaller, more focused modules?**
+  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._

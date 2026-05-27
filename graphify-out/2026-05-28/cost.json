@@ -1,0 +1,29 @@
+{
+  "runs": [
+    {
+      "timestamp": "2026-05-27T07:42:27.839714+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "date": "2026-05-27T20:19:37.965554+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 11
+    },
+    {
+      "timestamp": "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 32
+    },
+    {
+      "timestamp": "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 1296
+    }
+  ],
+  "total_input_tokens": 0,
+  "total_output_tokens": 0
+}

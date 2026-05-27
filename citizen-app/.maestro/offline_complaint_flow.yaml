@@ -1,0 +1,33 @@
+appId: "com.roadwatch.citizen"
+---
+# Scenario: Offline Grievance Filing and Replay
+- clearState
+
+# 1. Login Authentication Simulation
+- tapOn: "PHONE NUMBER"
+- inputText: "9999999999"
+- tapOn: "ENTER OTP"
+- inputText: "123456"
+- tapOn: "Verify & Register"
+- assertVisible: "Welcome, Citizen Jane Doe"
+
+# 2. Simulate Offline state
+- setAirplaneMode: "on"
+
+# 3. File complaint while offline
+- tapOn: "File ticket"
+- tapOn: "POTHOLE"
+- tapOn: "DESCRIPTION"
+- inputText: "Deep pothole blocking Ward 42 main bridge"
+- tapOn: "File Grievance"
+
+# 4. Assert offline fallback popup and queue status
+- assertVisible: "Connection offline! Saved to sync queue."
+- tapOn: "OK"
+- tapOn: "Explore"
+- assertVisible: "1 offline action(s) queued."
+
+# 5. Restore connection and trigger sync
+- setAirplaneMode: "off"
+- tapOn: "Sync Now"
+- assertNotVisible: "1 offline action(s) queued."

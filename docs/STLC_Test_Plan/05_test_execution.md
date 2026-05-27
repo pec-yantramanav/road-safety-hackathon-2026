@@ -1,6 +1,6 @@
 # STLC Stage 5: Test Execution Log & Integration Scenarios
 
-This document serves as the primary manual and automated execution runbook, outlining specific curl requests and parameters to validate the entire backend flow.
+This document serves as the primary manual and automated execution runbook, outlining specific curl requests and CLI execution commands to validate the entire backend and frontend flow.
 
 ---
 
@@ -113,3 +113,42 @@ Query the citizen chatbot session to search division budgets:
       }'
     ```
 *   **Expected Response**: The assistant maps the message, executes the local division budget summary check tool, and returns the current utilized amount (`1,200,000.00`) inside a clean conversational response.
+
+---
+
+## 4. Frontend Execution Logs & CLI Runbook
+
+To run unit, integration, and E2E automation test suites for both mobile and web clients:
+
+### 4.1 executing citizen-app Test Suites
+Navigate to `citizen-app/` directory.
+
+1.  **Run TypeScript Checks**:
+    ```bash
+    npm run ts:check
+    ```
+    *   **Expected Result**: Compilation terminates with exit status 0 (no TS compiler errors).
+2.  **Run Unit & Hook Integration Tests** (using Jest):
+    ```bash
+    npm test
+    ```
+    *   **Expected Result**: Prints pass logs for `authStore.test.ts`, `syncQueueStore.test.ts`, and `useComplaintController.test.ts`.
+3.  **Run E2E User Journey Scenarios** (using Maestro):
+    ```bash
+    maestro test .maestro/offline_complaint_flow.yaml
+    ```
+    *   **Expected Result**: Simulates device startup, turns off network connectivity, submits complaint, opens sync queue panel, pings online, and checks successful background sync transmission.
+
+### 4.2 executing crm-web Dashboard Test Suites
+Navigate to `crm-web/` directory.
+
+1.  **Run Unit & Slice state Tests** (using Vitest):
+    ```bash
+    npm run test
+    ```
+    *   **Expected Result**: Prints pass logs for `authSlice.test.ts`, `uiSlice.test.ts`, and `RoleGuard.test.tsx` component access masks checks.
+2.  **Run E2E Dashboard integration Scenarios** (using Playwright):
+    ```bash
+    npx playwright test
+    ```
+    *   **Expected Result**: Opens headless Chromium browser instance, signs in as `officer_ee`, logs active tickets backlog grid counts, navigates to Contractor Portal panel, triggers repair proof file uploads to verify side-by-side computer vision split scanner animation transitions, and asserts successful approved billing states.

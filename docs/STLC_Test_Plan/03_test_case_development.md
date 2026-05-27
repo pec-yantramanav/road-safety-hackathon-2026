@@ -1,6 +1,6 @@
 # STLC Stage 3: Test Case Development
 
-This document outlines the detailed functional test cases designed to validate the core logic, spatial boundaries, RBAC/RLS security configurations, and AI services of the RoadWatch platform.
+This document outlines the detailed functional test cases designed to validate the core logic, spatial boundaries, RBAC/RLS security configurations, and AI services of the RoadWatch platform (both backend microservices and frontend clients).
 
 ---
 
@@ -109,3 +109,75 @@ This document outlines the detailed functional test cases designed to validate t
     *   The service compiles the GFR 12-A form using ReportLab.
     *   The PDF is successfully written to `/static/uc/uc-{workorder_id}.pdf`.
     *   The API returns a JSON response containing `document_url: "/static/uc/uc-...pdf"` and a successful summary message.
+
+---
+
+## 4. citizen-app (Expo/React Native) — Test Cases
+
+### TC-FE-CIT-01: Zustand Offline Sync Queue Serialization
+*   **Feature**: Local Offline Storage
+*   **Prerequisites**: Zustand `syncQueueStore` is fully loaded, AsyncStorage is mocked.
+*   **Test Steps**:
+    1.  Execute `queueAction({ id: 'act-1', type: 'CREATE_TICKET', payload: { category: 'POTHOLE' }, timestamp: '...', attempts: 0 })`.
+    2.  Query `AsyncStorage.getItem('@roadwatch_offline_queue')`.
+    3.  Assert the length of `syncQueueStore.getState().queue`.
+*   **Expected Results**:
+    *   `queue` length equals `1`.
+    *   AsyncStorage contains a serialized JSON string containing the exact queued payload data.
+
+### TC-FE-CIT-02: WebView Leaflet Coordinate Message Handling
+*   **Feature**: Geographical Selectors
+*   **Prerequisites**: `LeafletMap` component rendered in test runner container.
+*   **Test Steps**:
+    1.  Trigger WebView `onMessage` event handler callback, passing a mock native JSON payload string: `{"latitude": 13.061, "longitude": 80.281}`.
+    2.  Assert if the coordinate callback `onLocationSelect` resolves.
+*   **Expected Results**:
+    *   The callback trigger completes successfully.
+    *   The parent screen state coordinate variables update precisely to `latitude: 13.061, longitude: 80.281`.
+
+### TC-FE-CIT-03: Custom Hook Offline Fallback (`useComplaintController`)
+*   **Feature**: ViewModel Resilience
+*   **Prerequisites**: Jest mock for NetInfo returns `isConnected: false`.
+*   **Test Steps**:
+    1.  Call `submitComplaint({ category: 'POTHOLE', description: 'Crater pothole', location: { latitude: 12, longitude: 77 }, photoUrls: [], isAnonymous: false })`.
+*   **Expected Results**:
+    *   The mutation triggers the catch interceptor.
+    *   `useSyncQueueStore` receives a `CREATE_TICKET` action addition.
+    *   `isSavedOffline` returns `true` (enabling visual UI popups to inform user of offline status).
+
+---
+
+## 5. crm-web (React Dashboard) — Test Cases
+
+### TC-FE-CRM-01: RoleGuard Component Access Masking
+*   **Feature**: UI Element Masking
+*   **Prerequisites**: Redux store loaded with mock credentials.
+*   **Test Steps**:
+    1.  Mount `<RoleGuard allowed={['EE', 'SE']} fallback={<span data-testid="fallback">Access Denied</span>}><button data-testid="action">Approve</button></RoleGuard>` under `officer_je` roles slice state (`roles: ["JE"]`).
+    2.  Assert DOM node visibility.
+    3.  Re-mount under `officer_ee` roles slice state (`roles: ["EE"]`).
+*   **Expected Results**:
+    *   Under JE, the fallback test-id `"fallback"` is present in the DOM and the button is hidden.
+    *   Under EE, the action button `"action"` is displayed successfully and fallback is unmounted.
+
+### TC-FE-CRM-02: RTK Query Cache Invalidation & In-line Ticket Assignment
+*   **Feature**: State Caching & Mutations
+*   **Prerequisites**: RTK Query store config loaded, MSW intercepts active.
+*   **Test Steps**:
+    1.  Render `TicketTable` displaying active list.
+    2.  Select an unassigned ticket, trigger `assignOfficer('RW-4217', 'officer-je-sharma')` mutation.
+*   **Expected Results**:
+    *   Axios-free patch mutation triggers `PATCH /tickets/RW-4217/assign`.
+    *   On completion, the RTK Query cache invalidates the `Tickets` tag automatically.
+    *   The row state automatically updates on screen to display assigned officer name: `"Junior Engineer Sharma"`.
+
+### TC-FE-CRM-03: ProofViewer Image Comparison Pane & MSW Interception
+*   **Feature**: split-screen Computer Vision Verification
+*   **Prerequisites**: MSW handlers fully booted in browser environment.
+*   **Test Steps**:
+    1.  Initialize `ProofViewer` with `status: "AI_ANALYZING"` and `proofPhotoUrl: "mock-url"`.
+    2.  Mock MSW to return successful AI analysis response after 1.5 seconds.
+    3.  Wait for transition, inspect DOM text.
+*   **Expected Results**:
+    *   The split-screen overlays an active scanning spinning visual during verification.
+    *   After completion, the status changes to `SUCCESS`, the verdict displays `VERDICT: PASS`, and the custom CV match accuracy text is shown.

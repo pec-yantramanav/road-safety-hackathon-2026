@@ -1,6 +1,6 @@
 # STLC Stage 4: Test Environment Setup
 
-This document outlines the step-by-step procedure to establish, configure, and verify the test environment for the RoadWatch platform.
+This document outlines the step-by-step procedure to establish, configure, and verify the test environment for the RoadWatch platform (both backend services and frontend applications).
 
 ---
 
@@ -8,13 +8,33 @@ This document outlines the step-by-step procedure to establish, configure, and v
 
 ```mermaid
 graph TD
-    KONG["🔵 Kong API Gateway<br/>Port :8000"]
+    subgraph Client Clients
+        CA["🟢 Citizen App<br/>Port :19000 (Expo)<br/>+ Persisted Store"]
+        CRM["🟢 Govt CRM Dashboard<br/>Port :3000 (Vite)<br/>+ MSW Mock Worker"]
+      end
+
+    subgraph Gateway Routing
+        KONG["🔵 Kong API Gateway<br/>Port :8000"]
+    end
     
-    KONG --> CIT_CORE["🔴 citizen-core-api<br/>Port :8080"]
-    KONG --> CRM_CORE["🔴 crm-core-api<br/>Port :8081"]
+    subgraph Core APIs
+        CIT_CORE["🔴 citizen-core-api<br/>Port :8080"]
+        CRM_CORE["🔴 crm-core-api<br/>Port :8081"]
+    end
+
+    subgraph Python AI
+        CIT_AI["🟣 citizen-ai-service<br/>Port :8100"]
+        CRM_AI["🟣 crm-ai-service<br/>Port :8101"]
+    end
     
-    CIT_CORE --> CIT_AI["🟣 citizen-ai-service<br/>Port :8100"]
-    CRM_CORE --> CRM_AI["🟣 crm-ai-service<br/>Port :8101"]
+    CA --> KONG
+    CRM --> KONG
+    
+    KONG --> CIT_CORE
+    KONG --> CRM_CORE
+    
+    CIT_CORE --> CIT_AI
+    CRM_CORE --> CRM_AI
     
     CIT_AI --> PG["🟠 PostgreSQL + PostGIS<br/>Port :5432"]
     CRM_AI --> PG
@@ -23,15 +43,11 @@ graph TD
     CRM_AI --> REDIS
 ```
 
-All back-end applications run in isolated Docker containers, connected via the `roadwatch-net` bridge network.
-*   **Postgres + PostGIS**: Exposes port `5432`. Holds the shared `roadwatch` database.
-*   **Redis**: Exposes port `6379`. Handles session caching and gateway rate limits.
-*   **Keycloak**: Exposes port `8180` (maps to internal port `8080`).
-*   **Kong Gateway**: Exposes port `8000` (proxy) and `8001` (admin).
+All backend microservices run inside isolated Docker containers, connected via the `roadwatch-net` bridge network. The frontends run on the host environment connecting directly to the Kong API Gateway proxy or running standalone in mock mode.
 
 ---
 
-## 2. Setup Procedure
+## 2. Backend Setup Procedure
 
 ### Step 2.1: Clone and Configuration
 Ensure the root environment variables are configured. Create a `.env` file in the root directory:
@@ -75,9 +91,40 @@ To simplify local verification of JWT roles during active testing, Spring Boot's
 
 ---
 
-## 4. Test Environment Verification Checklist
+## 4. Frontend Setup Procedure
 
-| Service / Port | Verification Endpoint | Expected Response | Status |
+Ensure **Node.js LTS** (version 18 or 20) and **npm** are installed on the host environment.
+
+### 4.1 Setup citizen-app (Expo/React Native)
+1. Navigate to the `citizen-app` directory:
+   ```bash
+   cd citizen-app
+   ```
+2. Install package dependencies:
+   ```bash
+   npm install
+   ```
+3. Establish Tailwind NativeWind styles parsing. Tailwind maps NativeWind properties during Expo initialization.
+
+### 4.2 Setup crm-web Dashboard (Vite/React)
+1. Navigate to the `crm-web` directory:
+   ```bash
+   cd crm-web
+   ```
+2. Install dependencies (including Vitest and Mock Service Worker):
+   ```bash
+   npm install
+   ```
+3. Initialize the MSW Service Worker file into Vite's public workspace folder to permit browser interception:
+   ```bash
+   npx msw init public/ --save
+   ```
+
+---
+
+## 5. Test Environment Verification Checklist
+
+| Service / Port | Verification Endpoint / Action | Expected Response | Status |
 |---|---|---|---|
 | **PostgreSQL (:5432)** | Internal ping / connect test | Success | Verified |
 | **Redis (:6379)** | Internal ping test | `PONG` | Verified |
@@ -87,3 +134,5 @@ To simplify local verification of JWT roles during active testing, Spring Boot's
 | **crm-core-api (:8081)** | `http://localhost:8081/actuator/health` | `{"status": "UP"}` | Verified |
 | **citizen-ai-service (:8100)** | `http://localhost:8100/health` | `{"status": "ok"}` | Verified |
 | **crm-ai-service (:8101)** | `http://localhost:8101/health` | `{"status": "ok"}` | Verified |
+| **citizen-app (:19000)** | Run `npm run ts:check` | TypeScript compilation successful | Verified |
+| **crm-web Mock Worker** | Boot Vite server (`npm run dev`) | Browser log: `[MSW] Mock Interceptors Activated` | Verified |
