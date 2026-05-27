@@ -8,23 +8,25 @@
 
 ## 1. Architecture Position
 
-```
-Citizen App (React Native)
-        │ HTTPS / WebSocket
-        ▼
-┌──────────────────────────────────┐
-│  citizen-core-api (Spring Boot)  │
-│                                  │
-│  Auth (JWT)    Ticket Controller │
-│  WebSocket     Offline Sync     │
-│  Cluster Svc   Contribution Svc │
-│       │               │         │
-│  Python AI Svc    PostgreSQL    │
-│  (WebClient)      (PostGIS)     │
-└───┬───────────────────┬─────────┘
-    │                   │
-  Python AI         PostgreSQL
-  (geo, filter)     (all entities)
+```mermaid
+graph TD
+    APP["Citizen App (React Native)"]
+    subgraph Core["citizen-core-api (Spring Boot)"]
+        AUTH["Auth (JWT)"]
+        TC["Ticket Controller"]
+        WS["WebSocket"]
+        SYNC["Offline Sync"]
+        CS["Cluster Svc"]
+        CONT["Contribution Svc"]
+        PAI_CLIENT["Python AI Svc (WebClient)"]
+        DB_CLIENT["PostgreSQL (PostGIS)"]
+    end
+    AI["Python AI (geo, filter)"]
+    DB["PostgreSQL (all entities)"]
+
+    APP -- "HTTPS / WebSocket" --> Core
+    PAI_CLIENT --> AI
+    DB_CLIENT --> DB
 ```
 
 This is the **primary REST API** for the Citizen App. All requests route through **Kong API Gateway**. It calls the Python AI service for geo-routing and spam filtering during ticket creation. Auth tokens issued by **Keycloak**.
@@ -106,9 +108,11 @@ citizen-core-api/
 public class User {
     @Id @GeneratedValue UUID id;
     String name;
-    String email;
+    String email;                            // optional
     String phone;
-    @Enumerated(STRING) Role role;          // CITIZEN, ANONYMOUS
+    String aadharNumber;                     // optional
+    boolean isAadharVerified;
+    @Enumerated(STRING) Role role;           // CITIZEN
     String language;                         // en, ta, hi
     LocalDateTime createdAt;
 }
@@ -224,41 +228,20 @@ Handled entirely by **Keycloak**. Citizens register/login via Keycloak's `citize
 
 ### 5.1 Ticket Creation Flow
 
-```
-POST /tickets {category, description, lat, lng, photos, is_anonymous}
-        │
-        ▼
-┌─ Step 1: Call Python AI — Geo-Resolve ─────────┐
-│  POST python-ai/geo/resolve {lat, lng}          │
-│  → authority_type, jurisdiction_id, is_blackspot │
-└────────────────────┬────────────────────────────┘
-                     ▼
-┌─ Step 2: Call Python AI — Spam Filter ─────────┐
-│  POST python-ai/ai/filter/complaint             │
-│  → verdict: PASS / HOLD / REJECT                │
-│  If HOLD + duplicate_ticket_id:                 │
-│    → auto-redirect to contribute endpoint       │
-│  If REJECT: → return 422 with reason            │
-└────────────────────┬────────────────────────────┘
-                     ▼
-┌─ Step 3: Cluster Check (local DB) ─────────────┐
-│  SELECT FROM master_tickets                      │
-│  WHERE ST_DWithin(location, point, 50m)          │
-│    AND category = X AND status IN (OPEN,...)     │
-│  If found: create TicketContribution instead     │
-│  If not: create new MasterTicket                 │
-└────────────────────┬────────────────────────────┘
-                     ▼
-┌─ Step 4: Set SLA + Priority ───────────────────┐
-│  If blackspot → priority = BLACKSPOT, SLA = 24h │
-│  If HIGH → SLA = 48h                            │
-│  Default → SLA = 72h (JE level)                 │
-└────────────────────┬────────────────────────────┘
-                     ▼
-┌─ Step 5: Create TicketEvent(CREATED) ──────────┐
-│  Broadcast via WebSocket to /ws/tickets/{id}    │
-│  Return TicketResponse to client                │
-└────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    START["POST /tickets {category, description, lat, lng, photos, is_anonymous}"]
+    STEP1["Step 1: Call Python AI — Geo-Resolve<br/>POST python-ai/geo/resolve {lat, lng}<br/>→ authority_type, jurisdiction_id, is_blackspot"]
+    STEP2["Step 2: Call Python AI — Spam Filter<br/>POST python-ai/ai/filter/complaint<br/>→ verdict: PASS / HOLD / REJECT"]
+    STEP3["Step 3: Cluster Check (local DB)<br/>ST_DWithin 50m<br/>If found: TicketContribution<br/>If not: MasterTicket"]
+    STEP4["Step 4: Set SLA + Priority<br/>BLACKSPOT → 24h, HIGH → 48h, Default → 72h"]
+    STEP5["Step 5: Create TicketEvent(CREATED)<br/>WS Broadcast, Return TicketResponse"]
+
+    START --> STEP1
+    STEP1 --> STEP2
+    STEP2 --> STEP3
+    STEP3 --> STEP4
+    STEP4 --> STEP5
 ```
 
 ### 5.2 MasterTicket Clustering
@@ -364,32 +347,24 @@ public List<SyncResult> processQueue(@RequestBody List<SyncAction> actions) {
 
 ## 6. Sequence Diagram — Ticket Creation
 
-```
-Citizen App      Java Core API      Python AI Svc      PostgreSQL
-    │                 │                   │                  │
-    │ POST /tickets   │                   │                  │
-    │────────────────►│                   │                  │
-    │                 │ POST /geo/resolve │                  │
-    │                 │──────────────────►│                  │
-    │                 │ {jurisdiction}    │                  │
-    │                 │◄──────────────────│                  │
-    │                 │ POST /ai/filter   │                  │
-    │                 │──────────────────►│                  │
-    │                 │ {verdict:PASS}    │                  │
-    │                 │◄──────────────────│                  │
-    │                 │                   │                  │
-    │                 │ ST_DWithin(50m)   │                  │
-    │                 │─────────────────────────────────────►│
-    │                 │ no duplicate      │                  │
-    │                 │◄─────────────────────────────────────│
-    │                 │ INSERT ticket     │                  │
-    │                 │─────────────────────────────────────►│
-    │                 │ INSERT event      │                  │
-    │                 │─────────────────────────────────────►│
-    │                 │                   │                  │
-    │                 │ WS broadcast      │                  │
-    │ 201 {ticket}    │                   │                  │
-    │◄────────────────│                   │                  │
+```mermaid
+sequenceDiagram
+    participant App as Citizen App
+    participant Core as Java Core API
+    participant AI as Python AI Svc
+    participant DB as PostgreSQL
+
+    App->>Core: POST /tickets
+    Core->>AI: POST /geo/resolve
+    AI-->>Core: {jurisdiction}
+    Core->>AI: POST /ai/filter
+    AI-->>Core: {verdict:PASS}
+    Core->>DB: ST_DWithin(50m)
+    DB-->>Core: no duplicate
+    Core->>DB: INSERT ticket
+    Core->>DB: INSERT event
+    Core->>App: WS broadcast
+    Core-->>App: 201 {ticket}
 ```
 
 ---

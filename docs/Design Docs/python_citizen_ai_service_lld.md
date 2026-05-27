@@ -7,22 +7,27 @@
 
 ## 1. Architecture Position
 
-```
-Citizen App (React Native)
-        │ HTTPS / SSE
-        ▼
-┌─────────────────────────────────┐
-│   citizen-ai-service (FastAPI)  │
-│                                 │
-│  Chat Engine ←→ Tool Registry   │
-│  Geo-Router    Spam Filter      │
-│       │              │          │
-│  LLM Client    Core API Client  │
-│  (Gemini/Claude)  (httpx)       │
-└───┬──────────────────┬──────────┘
-    │                  │
-  Redis           PostgreSQL
- (Sessions)       (PostGIS)
+```mermaid
+graph TD
+    APP["Citizen App (React Native)"]
+    subgraph FastAPI["citizen-ai-service (FastAPI)"]
+        CHAT["Chat Engine & Tool Registry"]
+        GEO["Geo-Router"]
+        SPAM["Spam Filter"]
+        LLM_CLIENT["LLM Client"]
+        CORE_CLIENT["Core API Client (httpx)"]
+        
+        CHAT <--> GEO
+        CHAT <--> SPAM
+        CHAT --> LLM_CLIENT
+        CHAT --> CORE_CLIENT
+    end
+    REDIS["Redis (Sessions)"]
+    PG["PostgreSQL (PostGIS)"]
+
+    APP -- "HTTPS / SSE" --> FastAPI
+    FastAPI --> REDIS
+    FastAPI --> PG
 ```
 
 Both the **Citizen App** and the **Java Core API** call this service via **Kong API Gateway**. The Java Core calls `/geo/resolve` and `/ai/filter/complaint` during ticket creation; the Citizen App calls `/chat/*` directly. Auth tokens are issued by **Keycloak**.
@@ -64,7 +69,7 @@ citizen-ai-service/
 │   │       ├── geo_queries.py   # ST_Contains, ST_DWithin
 │   │       └── ticket_queries.py
 │   ├── clients/
-│   │   ├── llm_client.py        # Gemini / Claude wrapper
+│   │   ├── llm_client.py        # LLM Provider wrapper
 │   │   └── core_api_client.py   # Java Core API (httpx)
 │   └── utils/
 │       ├── exif.py              # EXIF GPS extraction
@@ -186,20 +191,19 @@ class Blackspot(Base):
 
 ### 5.1 Agent Loop (Chat Engine)
 
-```
-User msg → Intent Classifier (cheap) → OFF_TOPIC? → Guardrail response
-                                      ↓ ON_TOPIC
-                              Build system prompt + history
-                                      ↓
-                              LLM call with tool schemas
-                                      ↓
-                           ┌── tool_call? ──────────────┐
-                           │   Execute tool              │
-                           │   Feed result → LLM again   │
-                           │   (max 5 iterations)        │
-                           └─────────────────────────────┘
-                                      ↓ text response
-                              Stream tokens via SSE → done
+```mermaid
+graph TD
+    USER_MSG["User msg"] --> INTENT["Intent Classifier (cheap)"]
+    INTENT -->|OFF_TOPIC| GUARDRAIL["Guardrail response"]
+    INTENT -->|ON_TOPIC| PROMPT["Build system prompt + history"]
+    PROMPT --> LLM_CALL["LLM call with tool schemas"]
+    
+    LLM_CALL --> CHECK_TOOL{"tool_call?"}
+    CHECK_TOOL -->|Yes| EXEC_TOOL["Execute tool<br/>Feed result → LLM again<br/>(max 5 iterations)"]
+    EXEC_TOOL --> LLM_CALL
+    CHECK_TOOL -->|No| TEXT_RESP["text response"]
+    
+    TEXT_RESP --> STREAM["Stream tokens via SSE → done"]
 ```
 
 **Tool Registry** (6 tools available to citizen chatbot):
@@ -247,32 +251,25 @@ async def resolve_jurisdiction(lat, lng, db):
 
 ## 6. Sequence Diagram — Chat → Complaint
 
-```
-Citizen App        FastAPI            LLM (Gemini)       Java Core API
-    │                 │                    │                   │
-    │ POST /chat/msg  │                    │                   │
-    │ "pothole here"  │                    │                   │
-    │────────────────►│                    │                   │
-    │                 │ classify_intent()  │                   │
-    │                 │───────────────────►│                   │
-    │                 │ COMPLAINT          │                   │
-    │                 │◄───────────────────│                   │
-    │                 │ chat(msgs, tools)  │                   │
-    │                 │───────────────────►│                   │
-    │                 │ tool: submit_complaint()               │
-    │                 │◄───────────────────│                   │
-    │  SSE:tool_call  │                    │                   │
-    │◄────────────────│ POST /tickets      │                   │
-    │                 │───────────────────────────────────────►│
-    │                 │ {ticket_id}        │                   │
-    │                 │◄───────────────────────────────────────│
-    │  SSE:tool_result│                    │                   │
-    │◄────────────────│ chat(msgs+result)  │                   │
-    │                 │───────────────────►│                   │
-    │  SSE:token...   │ "Filed! Ticket..." │                   │
-    │◄────────────────│◄───────────────────│                   │
-    │  SSE:done       │                    │                   │
-    │◄────────────────│                    │                   │
+```mermaid
+sequenceDiagram
+    participant App as Citizen App
+    participant API as FastAPI
+    participant LLM as LLM Provider
+    participant Core as Java Core API
+
+    App->>API: POST /chat/msg "pothole here"
+    API->>API: classify_intent() -> COMPLAINT
+    API->>LLM: chat(msgs, tools)
+    LLM-->>API: tool: submit_complaint()
+    API-->>App: SSE:tool_call
+    API->>Core: POST /tickets
+    Core-->>API: {ticket_id}
+    API-->>App: SSE:tool_result
+    API->>LLM: chat(msgs+result)
+    LLM-->>API: "Filed! Ticket..."
+    API-->>App: SSE:token...
+    API-->>App: SSE:done
 ```
 
 ---
@@ -282,8 +279,8 @@ Citizen App        FastAPI            LLM (Gemini)       Java Core API
 ```
 DATABASE_URL=postgresql+asyncpg://user:pass@localhost:5432/roadwatch
 REDIS_URL=redis://localhost:6379/0
-LLM_PROVIDER=gemini
-GEMINI_API_KEY=...
+LLM_PROVIDER=agnostic
+LLM_API_KEY=...
 CORE_API_BASE_URL=http://localhost:8080/api/v1
 CORE_API_KEY=...
 CHAT_SESSION_TTL_HOURS=24
@@ -297,6 +294,5 @@ LOG_FORMAT=json
 
 ```
 fastapi, uvicorn[standard], sqlalchemy[asyncio], asyncpg,
-geoalchemy2, redis[hiredis], httpx, pydantic-settings,
-google-genai, anthropic, sse-starlette, pillow, alembic, structlog
+httpx, pydantic-settings, sse-starlette, pillow, alembic, structlog
 ```

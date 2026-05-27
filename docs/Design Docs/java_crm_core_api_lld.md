@@ -8,23 +8,22 @@
 
 ## 1. Architecture Position
 
-```
-                    ┌──────────┐
-                    │   Kong   │  (API Gateway — rate limit, auth routing)
-                    │ Gateway  │
-                    └────┬─────┘
-            ┌────────────┼────────────────┐
-            ▼            ▼                ▼
-    ┌──────────┐  ┌────────────┐  ┌──────────────┐
-    │ Citizen   │  │ CRM Core   │  │ Python AI    │
-    │ Core API  │  │ API (this) │  │ Services     │
-    │ (Java)    │  │ (Java)     │  │ (FastAPI)    │
-    └──────────┘  └─────┬──────┘  └──────────────┘
-                        │
-          ┌─────────────┼─────────────┐
-          ▼             ▼             ▼
-     PostgreSQL     Keycloak       Redis
-     (PostGIS)    (IAM/SSO)     (cache)
+```mermaid
+graph TD
+    KONG["Kong Gateway<br/>(API Gateway — rate limit, auth routing)"]
+    CITIZEN_CORE["Citizen Core API (Java)"]
+    CRM_CORE["CRM Core API (this) (Java)"]
+    PYTHON_AI["Python AI Services (FastAPI)"]
+    PG["PostgreSQL (PostGIS)"]
+    KC["Keycloak (IAM/SSO)"]
+    REDIS["Redis (cache)"]
+
+    KONG --> CITIZEN_CORE
+    KONG --> CRM_CORE
+    KONG --> PYTHON_AI
+    CRM_CORE --> PG
+    CRM_CORE --> KC
+    CRM_CORE --> REDIS
 ```
 
 The **CRM Core API** serves the Govt CRM web dashboard (React + Redux). All requests route through **Kong**, which validates Keycloak JWT tokens and applies rate limiting. The service enforces **Row-Level Security** via jurisdiction-scoped queries.
@@ -114,7 +113,7 @@ crm-core-api/
 public class Officer {
     @Id UUID id;                          // Matches Keycloak user ID
     String name;
-    String email;
+    String email;                         // optional
     String phone;
     @Enumerated(STRING) OfficerRole role; // JE,AE,EE,SE,CE,COMMISSIONER,GM
     UUID jurisdictionId;                  // Scopes all data access
@@ -322,14 +321,18 @@ List<MasterTicket> findAllInJurisdictionTree(@Param("jurisdictionId") UUID jid);
 
 ### 5.2 Escalation Chain
 
-```
-Escalation hierarchy (time-based):
-JE (72h) → AE (5 days) → EE (7 days) → SE (14 days) → CE/Commissioner
+```mermaid
+graph TD
+    JE["JE (72h)"] --> AE["AE (5 days)"]
+    AE --> EE["EE (7 days)"]
+    EE --> SE["SE (14 days)"]
+    SE --> CE["CE/Commissioner"]
 
-Trigger sources:
-1. Auto: Python SLA predictor says ESCALATE_NOW
-2. Manual: Officer clicks "Escalate" in CRM
-3. Citizen: Re-complaint on resolved ticket (reopen + escalate)
+    subgraph Triggers
+        T1["Auto: Python SLA predictor says ESCALATE_NOW"]
+        T2["Manual: Officer clicks 'Escalate' in CRM"]
+        T3["Citizen: Re-complaint on resolved ticket"]
+    end
 ```
 
 ```java
@@ -372,41 +375,28 @@ public TicketEvent escalateTicket(UUID ticketId) {
 
 ### 5.3 WorkOrder Lifecycle
 
-```
-EE assigns ticket to contractor
-        │
-        ▼
-  WorkOrder(ASSIGNED) → Contractor sees in portal
-        │
-        ▼
-  Contractor does work → uploads before/after photos
-        │
-        ▼
-  POST /workorders/{id}/submit {proof_photo_urls}
-        │
-        ▼
-┌─ CRM Core calls Python AI PoW Validator ───────┐
-│  POST python-ai/ai/validate/workorder            │
-│  → APPROVED / FLAGGED / REJECTED                 │
-└────────────────────┬─────────────────────────────┘
-                     │
-         ┌───────────┼───────────┐
-         ▼           ▼           ▼
-     APPROVED     FLAGGED     REJECTED
-     auto-queue   needs EE    return to
-     for EE       manual      contractor
-     approval     review      with reason
-         │           │
-         ▼           ▼
-  EE approves → WorkOrder(APPROVED)
-        │
-        ▼
-  Ticket → RESOLVED
-  TicketEvent(RESOLVED) created
-  WebSocket broadcast to citizen
-        │
-        ▼
-  Python AI generates UC draft (if EE+ approves)
+```mermaid
+graph TD
+    ASSIGN["EE assigns ticket to contractor"]
+    ASSIGNED["WorkOrder(ASSIGNED) → Contractor sees in portal"]
+    DO_WORK["Contractor does work → uploads before/after photos"]
+    SUBMIT["POST /workorders/{id}/submit {proof_photo_urls}"]
+    AI_VALIDATE["CRM Core calls Python AI PoW Validator<br/>POST python-ai/ai/validate/workorder<br/>→ APPROVED / FLAGGED / REJECTED"]
+    
+    ASSIGN --> ASSIGNED
+    ASSIGNED --> DO_WORK
+    DO_WORK --> SUBMIT
+    SUBMIT --> AI_VALIDATE
+    
+    AI_VALIDATE -->|APPROVED| AUTO_QUEUE["auto-queue for EE approval"]
+    AI_VALIDATE -->|FLAGGED| MANUAL_REVIEW["needs EE manual review"]
+    AI_VALIDATE -->|REJECTED| RETURN_CONTR["return to contractor with reason"]
+    
+    AUTO_QUEUE --> EE_APPROVE["EE approves → WorkOrder(APPROVED)"]
+    MANUAL_REVIEW --> EE_APPROVE
+    
+    EE_APPROVE --> RESOLVED["Ticket → RESOLVED<br/>TicketEvent(RESOLVED) created<br/>WebSocket broadcast to citizen"]
+    RESOLVED --> UC_DRAFT["Python AI generates UC draft (if EE+ approves)"]
 ```
 
 ### 5.4 Dashboard Aggregation (Role-Specific)
@@ -582,7 +572,7 @@ services:
       DATABASE_URL: postgresql+asyncpg://roadwatch:dev123@postgres:5432/roadwatch
       REDIS_URL: redis://redis:6379/0
       CORE_API_BASE_URL: http://citizen-core-api:8080
-      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      LLM_API_KEY: ${LLM_API_KEY}
     depends_on: [postgres, redis]
 
   crm-ai-service:
@@ -592,7 +582,7 @@ services:
       DATABASE_URL: postgresql+asyncpg://roadwatch:dev123@postgres:5432/roadwatch
       REDIS_URL: redis://redis:6379/1
       CORE_API_BASE_URL: http://crm-core-api:8081
-      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      LLM_API_KEY: ${LLM_API_KEY}
     depends_on: [postgres, redis]
 
 volumes:

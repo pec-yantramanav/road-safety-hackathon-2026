@@ -1,0 +1,57 @@
+{
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\competitor_analysis.md": {
+    "mtime": 1777211702.799427,
+    "ast_hash": "bc622405303ef45178e11a66a81ee0da",
+    "semantic_hash": "bc622405303ef45178e11a66a81ee0da"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\crm_user_personas.md": {
+    "mtime": 1777213974.2041512,
+    "ast_hash": "919b638969eab2b0cda8409d40027b82",
+    "semantic_hash": "919b638969eab2b0cda8409d40027b82"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\plan.md": {
+    "mtime": 1777219486.2211027,
+    "ast_hash": "d38020f6f4a80fc09401cc43b5919ab6",
+    "semantic_hash": "d38020f6f4a80fc09401cc43b5919ab6"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\road_authority_hierarchy.md": {
+    "mtime": 1777215517.5690365,
+    "ast_hash": "6b605ba0f40bf3776cac28fe061face3",
+    "semantic_hash": "6b605ba0f40bf3776cac28fe061face3"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\.agents\\rules\\graphify.md": {
+    "mtime": 1779867344.450776,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": "a0e4d192b9e2e17256124dbfc8e24e6a"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\.agents\\workflows\\graphify.md": {
+    "mtime": 1779867344.4560194,
+    "ast_hash": "84de69efd46ab0b8430393bd4188f8f2",
+    "semantic_hash": "84de69efd46ab0b8430393bd4188f8f2"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\Design Docs\\hld_roadwatch.md": {
+    "mtime": 1779520609.482483,
+    "ast_hash": "ebbe4d26f2f52fdfb8c71e060bd44059",
+    "semantic_hash": "ebbe4d26f2f52fdfb8c71e060bd44059"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\Design Docs\\java_citizen_core_api_lld.md": {
+    "mtime": 1778656776.5399756,
+    "ast_hash": "6af42ad4741dc8b73bf29e05b4626e1c",
+    "semantic_hash": "6af42ad4741dc8b73bf29e05b4626e1c"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\Design Docs\\java_crm_core_api_lld.md": {
+    "mtime": 1778656753.0487595,
+    "ast_hash": "43ef8987eff19f532244ba6644989940",
+    "semantic_hash": "43ef8987eff19f532244ba6644989940"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\Design Docs\\python_citizen_ai_service_lld.md": {
+    "mtime": 1778656705.6279545,
+    "ast_hash": "2ed4b78f6d7e6a26215b41e9dd5ea6d3",
+    "semantic_hash": "2ed4b78f6d7e6a26215b41e9dd5ea6d3"
+  },
+  "C:\\Users\\grand\\codespace\\Road Safety Hackathon\\Design Docs\\python_crm_ai_service_lld.md": {
+    "mtime": 1778656691.3145478,
+    "ast_hash": "2e283d84b8f21b70ab49a6442ac18194",
+    "semantic_hash": "2e283d84b8f21b70ab49a6442ac18194"
+  }
+}

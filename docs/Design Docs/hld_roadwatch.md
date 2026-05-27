@@ -18,8 +18,8 @@ C4Context
 
     System(roadwatch, "RoadWatch Platform", "Unified road infrastructure grievance & transparency platform")
 
-    System_Ext(keycloak, "Keycloak", "Identity & Access Management")
-    System_Ext(llm, "Gemini / Claude API", "LLM for chatbot & AI features")
+    System(keycloak, "Keycloak", "Identity & Access Management (Internal)")
+    System_Ext(llm, "LLM Provider", "Agnostic LLM API for chatbot & AI features")
     System_Ext(pfms, "PFMS (Mock)", "Public Financial Management System")
     System_Ext(maps, "Google Maps API", "Map tiles & geocoding")
 
@@ -48,6 +48,7 @@ graph TB
     end
 
     subgraph Backend Services
+        KC["🔑 Keycloak<br/>OAuth2 / OIDC"]
         CITIZEN_CORE["🔴 citizen-core-api<br/>Java · Spring Boot<br/>Tickets · WebSocket · Sync"]
         CRM_CORE["🔴 crm-core-api<br/>Java · Spring Boot<br/>RBAC · WorkOrders · Budget"]
         CITIZEN_AI["🟣 citizen-ai-service<br/>Python · FastAPI<br/>Chatbot · Geo-Router · Filter"]
@@ -60,8 +61,7 @@ graph TB
     end
 
     subgraph External
-        KC["🔑 Keycloak<br/>OAuth2 / OIDC"]
-        LLM["🤖 Gemini / Claude<br/>LLM API"]
+        LLM["🤖 LLM Provider<br/>Agnostic LLM API"]
     end
 
     CA --> KONG
@@ -95,8 +95,8 @@ graph TB
 |---------|----------|------|-------|
 | `citizen-core-api` | Java 21 / Spring Boot | Ticket CRUD, MasterTicket clustering, WebSocket, offline sync | `citizen-ai-service`, PostgreSQL, Keycloak |
 | `crm-core-api` | Java 21 / Spring Boot | RBAC+RLS, WorkOrders, Budget, Escalation, Contractor portal | `crm-ai-service`, PostgreSQL, Keycloak |
-| `citizen-ai-service` | Python 3.12 / FastAPI | Citizen chatbot, geo-router, spam filter, budget queries | Gemini/Claude API, PostgreSQL, Redis |
-| `crm-ai-service` | Python 3.12 / FastAPI | Officer AI assistant, SLA predictor, PoW validator, UC generator | Gemini/Claude API, PostgreSQL, Redis |
+| `citizen-ai-service` | Python 3.12 / FastAPI | Citizen chatbot, geo-router, spam filter, budget queries | LLM API, PostgreSQL, Redis |
+| `crm-ai-service` | Python 3.12 / FastAPI | Officer AI assistant, SLA predictor, PoW validator, UC generator | LLM API, PostgreSQL, Redis |
 
 ### API Routes Summary (All Services)
 
@@ -169,7 +169,7 @@ sequenceDiagram
     participant Kong as Kong Gateway
     participant Core as citizen-core-api<br/>(Java)
     participant AI as citizen-ai-service<br/>(Python)
-    participant LLM as Gemini API
+    participant LLM as LLM Provider
     participant DB as PostgreSQL
     participant WS as WebSocket
 
@@ -264,7 +264,6 @@ erDiagram
         int cluster_radius_m "default 50"
         text_array photo_urls
         int contributor_count
-        boolean is_anonymous
         uuid citizen_id FK
         uuid assigned_to FK
         uuid jurisdiction_id FK
@@ -333,9 +332,11 @@ erDiagram
     USER {
         uuid id PK
         string name
-        string email
+        string email "optional"
         string phone
-        enum role "CITIZEN|ANONYMOUS"
+        string aadhar_number "optional"
+        boolean is_aadhar_verified
+        enum role "CITIZEN"
         string language
         timestamp created_at
     }
@@ -343,7 +344,7 @@ erDiagram
     OFFICER {
         uuid id PK
         string name
-        string email
+        string email "optional"
         string phone
         enum role "JE|AE|EE|SE|CE|COMMISSIONER|GM"
         uuid jurisdiction_id FK
@@ -598,7 +599,7 @@ services:
       DATABASE_URL: postgresql+asyncpg://roadwatch:dev123@postgres:5432/roadwatch
       REDIS_URL: redis://redis:6379/0
       CORE_API_BASE_URL: http://citizen-core-api:8080
-      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      LLM_API_KEY: ${LLM_API_KEY}
     depends_on: [postgres, redis]
 
   crm-ai-service:
@@ -608,7 +609,7 @@ services:
       DATABASE_URL: postgresql+asyncpg://roadwatch:dev123@postgres:5432/roadwatch
       REDIS_URL: redis://redis:6379/1
       CORE_API_BASE_URL: http://crm-core-api:8081
-      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      LLM_API_KEY: ${LLM_API_KEY}
     depends_on: [postgres, redis]
 
 volumes:
@@ -717,7 +718,7 @@ graph TB
         end
 
         subgraph "External APIs"
-            LLM_EXT["Gemini / Claude API"]
+            LLM_EXT["LLM Provider API"]
         end
     end
 

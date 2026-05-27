@@ -8,22 +8,33 @@
 
 ## 1. Architecture Position
 
-```
-Govt CRM (React + Redux)
-        │ HTTPS / SSE
-        ▼
-┌──────────────────────────────┐
-│   crm-ai-service (FastAPI)   │
-│                              │
-│  Officer Chat    SLA Pred.   │
-│  PoW Validator   UC Gen.     │
-│       │              │       │
-│  LLM Client    Core API     │
-│  (Gemini/Claude)  (httpx)    │
-└───┬──────────────────┬───────┘
-    │                  │
-  Redis           PostgreSQL
- (Officer sessions)  (tickets, workorders)
+```mermaid
+graph TD
+    CRM["Govt CRM (React + Redux)"]
+    subgraph FastAPI["crm-ai-service (FastAPI)"]
+        CHAT["Officer Chat"]
+        SLA["SLA Predictor"]
+        POW["PoW Validator"]
+        UC["UC Generator"]
+        LLM_CLIENT["LLM Client"]
+        CORE_CLIENT["Core API Client (httpx)"]
+
+        CHAT --> LLM_CLIENT
+        SLA --> LLM_CLIENT
+        POW --> LLM_CLIENT
+        UC --> LLM_CLIENT
+        
+        CHAT --> CORE_CLIENT
+        SLA --> CORE_CLIENT
+        POW --> CORE_CLIENT
+        UC --> CORE_CLIENT
+    end
+    REDIS["Redis (Officer sessions)"]
+    PG["PostgreSQL (tickets, workorders)"]
+
+    CRM -- "HTTPS / SSE" --> FastAPI
+    FastAPI --> REDIS
+    FastAPI --> PG
 ```
 
 Called by: **CRM frontend** via **Kong gateway** (officer chat), **Java Core API** (PoW validation, SLA), and **APScheduler cron** (SLA predictor background job). Auth tokens issued by **Keycloak**.
@@ -185,33 +196,16 @@ System prompt injects: `role`, `jurisdiction_id`, `jurisdiction_name`, enforcing
 
 ### 4.1 SLA Breach Prediction (Rule-Based + Heuristic)
 
-```
-Input: ticket with sla_deadline, current_status, created_at
-                    │
-    ┌───────────────▼───────────────┐
-    │ Calculate time_remaining      │
-    │ Calculate time_elapsed_pct    │
-    └───────────────┬───────────────┘
-                    │
-    ┌───────────────▼───────────────┐
-    │ Heuristic scoring:            │
-    │  - elapsed > 80% + ASSIGNED   │
-    │    → breach_likely = true     │
-    │  - elapsed > 60% + ASSIGNED   │
-    │    → SEND_REMINDER            │
-    │  - status = IN_PROGRESS       │
-    │    → reduce risk by 0.3       │
-    │  - priority = BLACKSPOT       │
-    │    → tighter thresholds (50%) │
-    └───────────────┬───────────────┘
-                    │
-    ┌───────────────▼───────────────┐
-    │ Return prediction + action    │
-    │ Java Core API acts on it:     │
-    │   ESCALATE_NOW → create       │
-    │     TicketEvent(ESCALATED)    │
-    │   SEND_REMINDER → notify      │
-    └───────────────────────────────┘
+```mermaid
+graph TD
+    INPUT["Input: ticket with sla_deadline, current_status, created_at"]
+    CALC["Calculate time_remaining<br/>Calculate time_elapsed_pct"]
+    SCORE["Heuristic scoring:<br/>- elapsed > 80% + ASSIGNED → breach_likely = true<br/>- elapsed > 60% + ASSIGNED → SEND_REMINDER<br/>- status = IN_PROGRESS → reduce risk by 0.3<br/>- priority = BLACKSPOT → tighter thresholds (50%)"]
+    RETURN["Return prediction + action<br/>Java Core API acts on it:<br/>ESCALATE_NOW → create TicketEvent(ESCALATED)<br/>SEND_REMINDER → notify"]
+
+    INPUT --> CALC
+    CALC --> SCORE
+    SCORE --> RETURN
 ```
 
 **Background Job** (APScheduler):
@@ -232,33 +226,24 @@ async def scan_at_risk_tickets():
 
 ### 4.2 Proof-of-Work Validation Pipeline
 
-```
-Contractor submits workorder
-        │
-        ▼
-┌─ Step 1: EXIF Location Check ─────────────────┐
-│  Compare after_photo EXIF GPS vs ticket lat/lng │
-│  Tolerance: 200m                                │
-│  Fail → flag LOCATION_MISMATCH                  │
-└────────────────────┬────────────────────────────┘
-                     ▼
-┌─ Step 2: Visual Change Detection ──────────────┐
-│  Download before + after images                 │
-│  Send to LLM vision: "Do these show repair?"   │
-│  Or: compute structural similarity (SSIM)       │
-│  No change → flag NO_VISIBLE_CHANGE             │
-└────────────────────┬────────────────────────────┘
-                     ▼
-┌─ Step 3: Timestamp Validation ─────────────────┐
-│  EXIF timestamp must be after workorder created │
-│  And within reasonable window (< 30 days)       │
-│  Fail → flag TIMESTAMP_SUSPICIOUS               │
-└────────────────────┬────────────────────────────┘
-                     ▼
-        Compute verdict:
-          0 flags → APPROVED
-          1 flag  → FLAGGED (needs manual EE review)
-          2+ flags → REJECTED
+```mermaid
+graph TD
+    SUBMIT["Contractor submits workorder"]
+    STEP1["Step 1: EXIF Location Check<br/>Compare after_photo EXIF GPS vs ticket lat/lng<br/>Tolerance: 200m<br/>Fail → flag LOCATION_MISMATCH"]
+    STEP2["Step 2: Visual Change Detection<br/>Download before + after images<br/>Send to LLM vision: 'Do these show repair?'<br/>Or: compute structural similarity (SSIM)<br/>No change → flag NO_VISIBLE_CHANGE"]
+    STEP3["Step 3: Timestamp Validation<br/>EXIF timestamp must be after workorder created<br/>And within reasonable window (< 30 days)<br/>Fail → flag TIMESTAMP_SUSPICIOUS"]
+    VERDICT{"Compute verdict"}
+    APPROVED["0 flags → APPROVED"]
+    FLAGGED["1 flag → FLAGGED (needs manual EE review)"]
+    REJECTED["2+ flags → REJECTED"]
+
+    SUBMIT --> STEP1
+    STEP1 --> STEP2
+    STEP2 --> STEP3
+    STEP3 --> VERDICT
+    VERDICT --> APPROVED
+    VERDICT --> FLAGGED
+    VERDICT --> REJECTED
 ```
 
 ### 4.3 Officer AI Assistant — Role-Scoped Prompts
@@ -281,51 +266,38 @@ OFFICER_SYSTEM_PROMPTS = {
 
 ### 4.4 UC Document Generation
 
-```
-Trigger: EE approves workorder
-        │
-        ▼
-  Fetch: WorkOrder + BudgetScheme + Ticket + TicketEvents
-        │
-        ▼
-  LLM prompt: "Generate a Utilization Certificate with these fields:
-    scheme_name, sanctioned_amount, released_amount, utilized_amount,
-    work_description, contractor_name, completion_date, approving_officer"
-        │
-        ▼
-  Format as PDF (reportlab / weasyprint)
-        │
-        ▼
-  Upload to S3 → return document_url
+```mermaid
+graph TD
+    TRIGGER["Trigger: EE approves workorder"]
+    FETCH["Fetch: WorkOrder + BudgetScheme + Ticket + TicketEvents"]
+    PROMPT["LLM prompt: 'Generate a Utilization Certificate with these fields...<br/>scheme_name, sanctioned_amount..."]
+    PDF["Format as PDF (reportlab / weasyprint)"]
+    UPLOAD["Upload to S3 → return document_url"]
+
+    TRIGGER --> FETCH
+    FETCH --> PROMPT
+    PROMPT --> PDF
+    PDF --> UPLOAD
 ```
 
 ---
 
 ## 5. Sequence Diagram — SLA Auto-Escalation
 
-```
-APScheduler          FastAPI (SLA)       Java Core API
-    │                     │                   │
-    │ cron: every 30min   │                   │
-    │────────────────────►│                   │
-    │                     │ GET /tickets      │
-    │                     │ ?status=OPEN      │
-    │                     │ &sla < now+48h    │
-    │                     │──────────────────►│
-    │                     │ [ticket1,ticket2] │
-    │                     │◄──────────────────│
-    │                     │                   │
-    │                     │ predict(ticket1)  │
-    │                     │ → ESCALATE_NOW    │
-    │                     │                   │
-    │                     │ POST /tickets/    │
-    │                     │   {id}/escalate   │
-    │                     │──────────────────►│
-    │                     │ 200 OK            │  → creates TicketEvent
-    │                     │◄──────────────────│  → WebSocket notify
-    │                     │                   │
-    │ done                │                   │
-    │◄────────────────────│                   │
+```mermaid
+sequenceDiagram
+    participant Cron as APScheduler
+    participant API as FastAPI (SLA)
+    participant Core as Java Core API
+
+    Cron->>API: cron: every 30min
+    API->>Core: GET /tickets?status=OPEN&sla < now+48h
+    Core-->>API: [ticket1,ticket2]
+    API->>API: predict(ticket1) → ESCALATE_NOW
+    API->>Core: POST /tickets/{id}/escalate
+    Core-->>API: 200 OK
+    Note right of Core: creates TicketEvent<br/>WebSocket notify
+    API-->>Cron: done
 ```
 
 ---
@@ -335,8 +307,8 @@ APScheduler          FastAPI (SLA)       Java Core API
 ```env
 DATABASE_URL=postgresql+asyncpg://user:pass@localhost:5432/roadwatch
 REDIS_URL=redis://localhost:6379/1
-LLM_PROVIDER=gemini
-GEMINI_API_KEY=...
+LLM_PROVIDER=agnostic
+LLM_API_KEY=...
 CORE_API_BASE_URL=http://localhost:8081/api/v1
 SLA_SCAN_INTERVAL_MINUTES=30
 SLA_LOOKAHEAD_HOURS=48
