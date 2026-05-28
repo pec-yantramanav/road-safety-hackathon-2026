@@ -8,7 +8,7 @@ interface GlassCardProps extends ViewProps {
 export const GlassCard: React.FC<GlassCardProps> = ({ children, className, ...props }) => {
   return (
     <View
-      className={`bg-cardBg border border-borderBg rounded-2xl p-4 shadow-lg ${className}`}
+      className={`bg-cardBg dark:bg-darkCardBg border border-borderBg dark:border-darkBorderBg rounded-2xl p-4 shadow-lg ${className}`}
       {...props}
     >
       {children}

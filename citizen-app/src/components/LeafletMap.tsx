@@ -1,20 +1,30 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Ticket, LocationPoint } from '../api/types';
+import { useThemeStore } from '../state/themeStore';
 
 interface LeafletMapProps {
   nearbyTickets: Ticket[];
   center: LocationPoint;
   onLocationSelect?: (point: LocationPoint) => void;
+  onTicketSelect?: (ticket: Ticket) => void;
 }
 
 export const LeafletMap: React.FC<LeafletMapProps> = ({
   nearbyTickets,
   center,
-  onLocationSelect
+  onLocationSelect,
+  onTicketSelect
 }) => {
   const webViewRef = useRef<WebView>(null);
+  const theme = useThemeStore((state) => state.theme);
+
+  const isDark = theme === 'dark';
+  const mapBg = isDark ? '#0B0F19' : '#F8FAFC';
+  const popupBg = isDark ? 'rgba(25, 32, 56, 0.9)' : 'rgba(255, 255, 255, 0.95)';
+  const popupText = isDark ? '#F3F4F6' : '#0F172A';
+  const popupBorder = isDark ? 'rgba(255, 255, 255, 0.15)' : 'rgba(15, 23, 42, 0.1)';
 
   // Generate Leaflet HTML container using OpenStreetMap tiles
   const leafletHTML = `
@@ -29,18 +39,18 @@ export const LeafletMap: React.FC<LeafletMapProps> = ({
             height: 100%;
             margin: 0;
             padding: 0;
-            background: #0B0F19;
+            background: ${mapBg};
           }
           .custom-popup .leaflet-popup-content-wrapper {
-            background: rgba(25, 32, 56, 0.9);
-            color: #F3F4F6;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: ${popupBg};
+            color: ${popupText};
+            border: 1px solid ${popupBorder};
             font-family: system-ui, sans-serif;
             border-radius: 8px;
             backdrop-filter: blur(4px);
           }
           .custom-popup .leaflet-popup-tip {
-            background: rgba(25, 32, 56, 0.9);
+            background: ${popupBg};
           }
         </style>
       </head>
@@ -54,24 +64,37 @@ export const LeafletMap: React.FC<LeafletMapProps> = ({
             attribution: '© OpenStreetMap contributors'
           }).addTo(map);
 
-          // Add active markers
+          // Add active markers with explicit click hooks
           const tickets = ${JSON.stringify(nearbyTickets)};
           tickets.forEach(ticket => {
             const marker = L.marker([ticket.location.latitude, ticket.location.longitude]).addTo(map);
+            
+            // Map pin popup
             marker.bindPopup(\`
               <div class="custom-popup">
                 <h4 style="margin: 0 0 4px 0; color: #4F46E5;">\${ticket.id}</h4>
-                <p style="margin: 0; font-size: 12px;">\${ticket.description}</p>
+                <p style="margin: 0; font-size: 12px; font-weight: 500;">\${ticket.description}</p>
                 <div style="margin-top: 6px; font-weight: bold; font-size: 11px;">Status: \${ticket.status}</div>
               </div>
             \`);
+
+            // Send native postMessage on pin tap
+            marker.on('click', function() {
+              window.ReactNativeWebView.postMessage(JSON.stringify({
+                type: 'TICKET_CLICK',
+                ticket: ticket
+              }));
+            });
           });
 
-          // Selection handler callback
+          // Selection handler callback for general map clicks
           map.on('click', function(e) {
             const { lat, lng } = e.latlng;
-            L.marker([lat, lng]).addTo(map).bindPopup('<b>Selected Spot</b>').openPopup();
-            window.ReactNativeWebView.postMessage(JSON.stringify({ latitude: lat, longitude: lng }));
+            window.ReactNativeWebView.postMessage(JSON.stringify({
+              type: 'MAP_CLICK',
+              latitude: lat,
+              longitude: lng
+            }));
           });
         </script>
       </body>
@@ -80,9 +103,11 @@ export const LeafletMap: React.FC<LeafletMapProps> = ({
 
   const handleMessage = (event: any) => {
     try {
-      const selectedPoint: LocationPoint = JSON.parse(event.nativeEvent.data);
-      if (onLocationSelect) {
-        onLocationSelect(selectedPoint);
+      const data = JSON.parse(event.nativeEvent.data);
+      if (data.type === 'TICKET_CLICK' && onTicketSelect) {
+        onTicketSelect(data.ticket);
+      } else if (data.type === 'MAP_CLICK' && onLocationSelect) {
+        onLocationSelect({ latitude: data.latitude, longitude: data.longitude });
       }
     } catch (e) {
       console.warn('Failed parsing selection point message from Leaflet WebView', e);
@@ -90,7 +115,7 @@ export const LeafletMap: React.FC<LeafletMapProps> = ({
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { borderColor: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(15, 23, 42, 0.08)' }]}>
       <WebView
         ref={webViewRef}
         originWhitelist={['*']}
@@ -111,7 +136,6 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     overflow: 'hidden',
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.08)',
   },
   map: {
     flex: 1,

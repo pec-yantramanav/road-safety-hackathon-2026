@@ -17,6 +17,24 @@ export const useComplaintController = () => {
     });
   };
 
+  // Fetch specific ticket details
+  const useTicketDetails = (id: string) => {
+    return useQuery({
+      queryKey: ['tickets', id],
+      queryFn: () => ticketApi.fetchDetails(id),
+      enabled: !!id,
+    });
+  };
+
+  // Fetch specific ticket event history logs
+  const useTicketEvents = (id: string) => {
+    return useQuery({
+      queryKey: ['tickets', id, 'events'],
+      queryFn: () => ticketApi.fetchEvents(id),
+      enabled: !!id,
+    });
+  };
+
   // Submit Complaint with transparent offline queueing
   const submitComplaintMutation = useMutation({
     mutationFn: async (payload: {
@@ -47,11 +65,30 @@ export const useComplaintController = () => {
     }
   });
 
+  // Contribute (Upvote / Support) to an existing complaint
+  const contributeMutation = useMutation({
+    mutationFn: async (payload: { id: string; description: string; photoUrls: string[] }) => {
+      return ticketApi.contributeMeToo(payload.id, {
+        description: payload.description,
+        photoUrls: payload.photoUrls
+      });
+    },
+    onSuccess: (data, variables) => {
+      queryClient.invalidateQueries({ queryKey: ['tickets'] });
+      queryClient.invalidateQueries({ queryKey: ['tickets', variables.id] });
+    }
+  });
+
   return {
     useNearbyTickets,
+    useTicketDetails,
+    useTicketEvents,
     submitComplaint: submitComplaintMutation.mutateAsync,
     isSubmitting: submitComplaintMutation.isPending,
     submitError: submitComplaintMutation.error,
-    isSavedOffline: submitComplaintMutation.error?.message === 'OFFLINE_SAVED'
+    isSavedOffline: submitComplaintMutation.error?.message === 'OFFLINE_SAVED',
+    contributeComplaint: contributeMutation.mutateAsync,
+    isContributing: contributeMutation.isPending,
   };
 };
+export default useComplaintController;

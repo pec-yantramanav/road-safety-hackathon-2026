@@ -18,14 +18,14 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
       <View
         className={`max-w-[80%] rounded-2xl p-4 ${
           isUser
-            ? 'bg-accent rounded-tr-none'
-            : 'bg-cardBg rounded-tl-none border border-borderBg'
+            ? 'bg-accent dark:bg-darkAccent rounded-tr-none'
+            : 'bg-cardBg dark:bg-darkCardBg rounded-tl-none border border-borderBg dark:border-darkBorderBg'
         }`}
       >
-        <Text className="text-textPrimary text-sm leading-5">
+        <Text className={`text-textPrimary dark:text-darkTextPrimary text-sm leading-5 ${isUser ? 'text-white' : ''}`}>
           {message.content}
         </Text>
-        <Text className="text-[10px] text-textSecondary mt-2 text-right">
+        <Text className="text-[10px] text-textSecondary dark:text-darkTextSecondary mt-2 text-right">
           {new Date(message.timestamp).toLocaleTimeString([], {
             hour: '2-digit',
             minute: '2-digit',

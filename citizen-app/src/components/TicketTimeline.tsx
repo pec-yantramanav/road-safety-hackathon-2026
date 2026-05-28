@@ -20,24 +20,24 @@ export const TicketTimeline: React.FC<TicketTimelineProps> = ({ events }) => {
           <View className="flex-row">
             {/* Dynamic visual line divider indicators */}
             <View className="items-center mr-4">
-              <View className="w-3 h-3 rounded-full bg-accent border-2 border-background" />
+              <View className="w-3 h-3 rounded-full bg-accent dark:bg-darkAccent border-2 border-background dark:border-darkBackground" />
               {index !== sortedEvents.length - 1 && (
-                <View className="w-[2px] flex-1 bg-borderBg my-1" />
+                <View className="w-[2px] flex-1 bg-borderBg dark:bg-darkBorderBg my-1" />
               )}
             </View>
             <View className="flex-1 pb-6">
               <View className="flex-row justify-between items-center mb-1">
-                <Text className="text-textPrimary font-bold text-sm">
+                <Text className="text-textPrimary dark:text-darkTextPrimary font-bold text-sm">
                   {item.eventType}
                 </Text>
-                <Text className="text-[10px] text-textSecondary">
+                <Text className="text-[10px] text-textSecondary dark:text-darkTextSecondary">
                   {new Date(item.timestamp).toLocaleDateString([], {
                     month: 'short',
                     day: 'numeric',
                   })}
                 </Text>
               </View>
-              <Text className="text-textSecondary text-xs">
+              <Text className="text-textSecondary dark:text-darkTextSecondary text-xs">
                 {item.eventType === 'ASSIGNED'
                   ? `Assigned to: ${item.payload.assignedTo || 'Grievance Officer'}`
                   : item.eventType === 'CREATED'
