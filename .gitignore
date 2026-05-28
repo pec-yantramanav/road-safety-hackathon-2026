@@ -1,0 +1,98 @@
+# ==============================================================================
+# OS & System Files
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==============================================================================
+# IDEs & Editor Configurations
+# ==============================================================================
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# ==============================================================================
+# Node.js / React / Vite / Frontend (crm-web, citizen-app)
+# ==============================================================================
+node_modules/
+dist/
+build/
+out/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+lerna-debug.log*
+.vitest/
+playwright-report/
+test-results/
+
+# ==============================================================================
+# React Native / Expo (citizen-app)
+# ==============================================================================
+.expo/
+web-build/
+android/
+ios/
+*.jks
+*.keystore
+*.apk
+*.aab
+
+# ==============================================================================
+# Python (citizen-ai-service, crm-ai-service)
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+env/
+python-local-env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==============================================================================
+# Java / Maven (citizen-core-api, crm-core-api)
+# ==============================================================================
+target/
+*.class
+*.log
+*.jar
+*.war
+*.ear
+.factorypath
+.project
+.classpath
+.settings/
+
+# ==============================================================================
+# Environment & Secrets (Never commit secrets!)
+# ==============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.*
+!*.env.example
