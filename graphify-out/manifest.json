@@ -590,8 +590,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\App.tsx": {
-    "mtime": 1779917724.0032372,
-    "ast_hash": "e58e55735b1d6152ca353c3d1b0d9024",
+    "mtime": 1779986140.344283,
+    "ast_hash": "4700373a2cd042690f1950fb951297ae",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\package.json": {
@@ -600,8 +600,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\tailwind.config.js": {
-    "mtime": 1779917637.6720328,
-    "ast_hash": "7a23bba7b7ea884ecbddf8e8161f820e",
+    "mtime": 1779986137.4522643,
+    "ast_hash": "d0cb1129d7090d6db36dffd6377b5330",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\tsconfig.json": {
@@ -640,23 +640,23 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\components\\ChatBubble.tsx": {
-    "mtime": 1779917705.531402,
-    "ast_hash": "146cfe69191f6f6fb70cc34fd955cb35",
+    "mtime": 1779986149.099437,
+    "ast_hash": "97d3e2ddc98e463eef1bbefb21745b7a",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\components\\GlassCard.tsx": {
-    "mtime": 1779917711.2542017,
-    "ast_hash": "3ad21948360b36e5187c029eb9bb9487",
+    "mtime": 1779986145.4599037,
+    "ast_hash": "2002d879ce9d286905c349fc4b46b291",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\components\\LeafletMap.tsx": {
-    "mtime": 1779917702.9924498,
-    "ast_hash": "358dc50545833fc5d9aa3b29d445cb08",
+    "mtime": 1779986639.3597465,
+    "ast_hash": "dc63ddf6e828b6ca3a3e62520fe95243",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\components\\TicketTimeline.tsx": {
-    "mtime": 1779917708.9396422,
-    "ast_hash": "4a58765c893ac11167a51f27bf817f32",
+    "mtime": 1779986152.5343068,
+    "ast_hash": "6cde217c228043f0b7e2cc1414d65a6b",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\controllers\\useAuthController.ts": {
@@ -670,8 +670,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\controllers\\useComplaintController.ts": {
-    "mtime": 1779917689.7332833,
-    "ast_hash": "c12e4080efd9ad1fca3df23e229af13a",
+    "mtime": 1779986649.6994276,
+    "ast_hash": "4c84e02658d444413677f94efca38940",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\controllers\\useOfflineSyncController.ts": {
@@ -685,8 +685,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\navigation\\AppNavigator.tsx": {
-    "mtime": 1779917718.804062,
-    "ast_hash": "25cf5d2a4f032283a7f04601864a7b56",
+    "mtime": 1779986674.2945063,
+    "ast_hash": "454e58a5ae4f87ebd93e6ec2661c14b5",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\state\\authStore.ts": {
@@ -715,8 +715,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\tailwind.config.js": {
-    "mtime": 1779917650.9960353,
-    "ast_hash": "f2ad32d3e27a3fb1a2bd918784683f85",
+    "mtime": 1779986172.569317,
+    "ast_hash": "025a2045102f547914b58c3b4c6396da",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\tsconfig.json": {
@@ -730,8 +730,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\App.tsx": {
-    "mtime": 1779917806.7960804,
-    "ast_hash": "b76a0f8fc5087b7b2ca5ea0a8d7e5ebc",
+    "mtime": 1779986825.3987641,
+    "ast_hash": "9d4afb17ce74ef9952197eaec1e10476",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\main.tsx": {
@@ -775,8 +775,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\components\\ProofViewer.tsx": {
-    "mtime": 1779917787.043512,
-    "ast_hash": "fb5e3d78c8289fcce9d54fef304992cc",
+    "mtime": 1779986700.0369778,
+    "ast_hash": "87b1cc687ff7f71cc53b72524e469239",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\components\\RoleGuard.tsx": {
@@ -785,13 +785,13 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\components\\Sidebar.tsx": {
-    "mtime": 1779917783.14104,
-    "ast_hash": "24296934cee75fdcdbfd76504fecd7fa",
+    "mtime": 1779986182.730574,
+    "ast_hash": "4be6425f584d68c883925a27252c9f43",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\components\\TicketTable.tsx": {
-    "mtime": 1779917791.1982443,
-    "ast_hash": "f67dc6353cb46d8d4139c8fcba6787a2",
+    "mtime": 1779986193.6958413,
+    "ast_hash": "c1726fe63f438de0d6797ae051338011",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\controllers\\useBudgetDashboardController.ts": {
@@ -830,13 +830,13 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\state\\slices\\authSlice.ts": {
-    "mtime": 1779917751.8133795,
-    "ast_hash": "81867afbd648b05e4526782bc7b6b7f1",
+    "mtime": 1779986682.3952053,
+    "ast_hash": "c06ffd837a45c477cc9a22874cda476a",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\state\\slices\\uiSlice.ts": {
-    "mtime": 1779917754.55183,
-    "ast_hash": "b76b4f526b1c4ce3c0ad2129a45e1ba7",
+    "mtime": 1779986169.4449162,
+    "ast_hash": "5dd734daf4cdfe1e188223bc6c78b015",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\index.html": {
@@ -910,8 +910,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\__tests\\uiSlice.test.ts": {
-    "mtime": 1779918365.6205504,
-    "ast_hash": "80fa443fccfa730824d84781d8fa2b56",
+    "mtime": 1779986204.0659456,
+    "ast_hash": "a32e70afafb09ef91c825dabaeafd652",
     "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\__tests\\e2e\\dashboard.spec.ts": {
@@ -922,6 +922,61 @@
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\.maestro\\offline_complaint_flow.yaml": {
     "mtime": 1779918349.0119746,
     "ast_hash": "ea185adf658a394d7fd62b815170f0ad",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\docs\\UI_UX_Design\\citizen_app_spec.md": {
+    "mtime": 1779985769.1452744,
+    "ast_hash": "3d76d4f8a3055a4f1be6c479eb114179",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\docs\\UI_UX_Design\\crm_web_spec.md": {
+    "mtime": 1779985775.8373234,
+    "ast_hash": "93ce4b2b147c4822542ac1a2b4dbc915",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\docs\\UI_UX_Design\\design_system.md": {
+    "mtime": 1779985761.453588,
+    "ast_hash": "b2bfbbbc0cb65a285e414d86d493bbb2",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\docs\\UI_UX_Design\\README.md": {
+    "mtime": 1779985780.1327043,
+    "ast_hash": "cc57b5df4b6bddf6f163e68c78a5b335",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\controllers\\useBudgetController.ts": {
+    "mtime": 1779986634.7463257,
+    "ast_hash": "afd4598e2f991ff3e3a64e0431184567",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\state\\themeStore.ts": {
+    "mtime": 1779986133.568553,
+    "ast_hash": "a38dc15bcf552a9a5016fe9d45139764",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\src\\__tests\\themeStore.test.ts": {
+    "mtime": 1779986165.763615,
+    "ast_hash": "ac20e1fa8b2f0d5ef30566457631835b",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\components\\dashboards\\ContractorDashboard.tsx": {
+    "mtime": 1779986819.7097802,
+    "ast_hash": "af4ef5e8d5944f9fc311d5d5d633ad70",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\components\\dashboards\\ExecutiveDashboard.tsx": {
+    "mtime": 1779986806.2721684,
+    "ast_hash": "cb0750890aeb8ff1f0f51234affaedf1",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\components\\dashboards\\FieldDashboard.tsx": {
+    "mtime": 1779986816.141806,
+    "ast_hash": "8e9a61233c3a9fc720e7c66da069f53d",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\crm-web\\src\\components\\dashboards\\OperationalDashboard.tsx": {
+    "mtime": 1779986811.6859317,
+    "ast_hash": "80648ad337ee8a3ce51b86a3d39006e6",
     "semantic_hash": ""
   }
 }

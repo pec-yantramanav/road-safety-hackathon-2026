@@ -505,9 +505,9 @@
     "semantic_hash": "d4dc91c3917858d75bebea009d2a874d"
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\README.md": {
-    "mtime": 1779915160.4403348,
-    "ast_hash": "f470168affad36fa711106efb8e0609e",
-    "semantic_hash": "f470168affad36fa711106efb8e0609e"
+    "mtime": 1779918499.7707152,
+    "ast_hash": "c5c6fa7f054f08b6bc82f4537dcc3969",
+    "semantic_hash": ""
   },
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-core-api\\src\\main\\resources\\application.yml": {
     "mtime": 1779913816.8630526,
@@ -922,6 +922,26 @@
   "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\citizen-app\\.maestro\\offline_complaint_flow.yaml": {
     "mtime": 1779918349.0119746,
     "ast_hash": "ea185adf658a394d7fd62b815170f0ad",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\docs\\UI_UX_Design\\citizen_app_spec.md": {
+    "mtime": 1779985769.1452744,
+    "ast_hash": "3d76d4f8a3055a4f1be6c479eb114179",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\docs\\UI_UX_Design\\crm_web_spec.md": {
+    "mtime": 1779985775.8373234,
+    "ast_hash": "93ce4b2b147c4822542ac1a2b4dbc915",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\docs\\UI_UX_Design\\design_system.md": {
+    "mtime": 1779985761.453588,
+    "ast_hash": "b2bfbbbc0cb65a285e414d86d493bbb2",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\grand\\codespace\\road-safety-hackathon-2026\\docs\\UI_UX_Design\\README.md": {
+    "mtime": 1779985780.1327043,
+    "ast_hash": "cc57b5df4b6bddf6f163e68c78a5b335",
     "semantic_hash": ""
   }
 }

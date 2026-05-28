@@ -5607,7 +5607,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L1",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_budgetcontroller_java",
-      "community": 486,
+      "community": 35,
       "norm_label": "budgetcontroller.java"
     },
     {
@@ -5616,7 +5616,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L10",
       "id": "controller_budgetcontroller_budgetcontroller",
-      "community": 486,
+      "community": 35,
       "norm_label": "budgetcontroller"
     },
     {
@@ -5625,7 +5625,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L17",
       "id": "controller_budgetcontroller_budgetcontroller_getbudgets",
-      "community": 486,
+      "community": 35,
       "norm_label": ".getbudgets()"
     },
     {
@@ -5634,7 +5634,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L17",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_budgetcontroller_java_uuid",
-      "community": 486,
+      "community": 35,
       "norm_label": "uuid"
     },
     {
@@ -5643,7 +5643,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L17",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_budgetcontroller_java_responseentity",
-      "community": 486,
+      "community": 35,
       "norm_label": "responseentity"
     },
     {
@@ -5652,7 +5652,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L17",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_budgetcontroller_java_list",
-      "community": 486,
+      "community": 35,
       "norm_label": "list"
     },
     {
@@ -5661,7 +5661,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L17",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_budgetcontroller_java_budgetscheme",
-      "community": 486,
+      "community": 35,
       "norm_label": "budgetscheme"
     },
     {
@@ -5670,7 +5670,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L17",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_budgetcontroller_java_getmapping",
-      "community": 486,
+      "community": 35,
       "norm_label": "getmapping"
     },
     {
@@ -5679,7 +5679,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L22",
       "id": "controller_budgetcontroller_budgetcontroller_getschemenames",
-      "community": 486,
+      "community": 35,
       "norm_label": ".getschemenames()"
     },
     {
@@ -5688,7 +5688,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L22",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_budgetcontroller_java_string",
-      "community": 486,
+      "community": 35,
       "norm_label": "string"
     },
     {
@@ -5697,7 +5697,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/BudgetController.java",
       "source_location": "L27",
       "id": "controller_budgetcontroller_budgetcontroller_getbudgetbyid",
-      "community": 486,
+      "community": 35,
       "norm_label": ".getbudgetbyid()"
     },
     {
@@ -5706,7 +5706,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L1",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_dashboardcontroller_java",
-      "community": 497,
+      "community": 36,
       "norm_label": "dashboardcontroller.java"
     },
     {
@@ -5715,7 +5715,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L9",
       "id": "controller_dashboardcontroller_dashboardcontroller",
-      "community": 497,
+      "community": 36,
       "norm_label": "dashboardcontroller"
     },
     {
@@ -5724,7 +5724,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L16",
       "id": "controller_dashboardcontroller_dashboardcontroller_getdashboardstats",
-      "community": 497,
+      "community": 36,
       "norm_label": ".getdashboardstats()"
     },
     {
@@ -5733,7 +5733,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L16",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_dashboardcontroller_java_uuid",
-      "community": 497,
+      "community": 36,
       "norm_label": "uuid"
     },
     {
@@ -5742,7 +5742,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L16",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_dashboardcontroller_java_responseentity",
-      "community": 497,
+      "community": 36,
       "norm_label": "responseentity"
     },
     {
@@ -5751,7 +5751,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L16",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_dashboardcontroller_java_map",
-      "community": 497,
+      "community": 36,
       "norm_label": "map"
     },
     {
@@ -5760,7 +5760,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L16",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_dashboardcontroller_java_string",
-      "community": 497,
+      "community": 36,
       "norm_label": "string"
     },
     {
@@ -5769,7 +5769,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L16",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_dashboardcontroller_java_object",
-      "community": 497,
+      "community": 36,
       "norm_label": "object"
     },
     {
@@ -5778,7 +5778,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/controller/DashboardController.java",
       "source_location": "L16",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_controller_dashboardcontroller_java_getmapping",
-      "community": 497,
+      "community": 36,
       "norm_label": "getmapping"
     },
     {
@@ -6084,7 +6084,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L1",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_model_entity_budgetscheme_java",
-      "community": 682,
+      "community": 497,
       "norm_label": "budgetscheme.java"
     },
     {
@@ -6093,7 +6093,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L8",
       "id": "entity_budgetscheme_budgetscheme",
-      "community": 682,
+      "community": 497,
       "norm_label": "budgetscheme"
     },
     {
@@ -6102,7 +6102,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L40",
       "id": "entity_budgetscheme_budgetscheme_getid",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getid()"
     },
     {
@@ -6111,7 +6111,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L40",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_model_entity_budgetscheme_java_uuid",
-      "community": 682,
+      "community": 497,
       "norm_label": "uuid"
     },
     {
@@ -6120,7 +6120,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L41",
       "id": "entity_budgetscheme_budgetscheme_setid",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setid()"
     },
     {
@@ -6129,7 +6129,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L43",
       "id": "entity_budgetscheme_budgetscheme_getschemename",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getschemename()"
     },
     {
@@ -6138,7 +6138,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L43",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_model_entity_budgetscheme_java_string",
-      "community": 682,
+      "community": 497,
       "norm_label": "string"
     },
     {
@@ -6147,7 +6147,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L44",
       "id": "entity_budgetscheme_budgetscheme_setschemename",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setschemename()"
     },
     {
@@ -6156,7 +6156,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L46",
       "id": "entity_budgetscheme_budgetscheme_getjurisdictionid",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getjurisdictionid()"
     },
     {
@@ -6165,7 +6165,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L47",
       "id": "entity_budgetscheme_budgetscheme_setjurisdictionid",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setjurisdictionid()"
     },
     {
@@ -6174,7 +6174,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L49",
       "id": "entity_budgetscheme_budgetscheme_getauthoritytype",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getauthoritytype()"
     },
     {
@@ -6183,7 +6183,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L49",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_model_entity_budgetscheme_java_authoritytype",
-      "community": 682,
+      "community": 497,
       "norm_label": "authoritytype"
     },
     {
@@ -6192,7 +6192,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L50",
       "id": "entity_budgetscheme_budgetscheme_setauthoritytype",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setauthoritytype()"
     },
     {
@@ -6201,7 +6201,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L52",
       "id": "entity_budgetscheme_budgetscheme_getsanctionedamount",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getsanctionedamount()"
     },
     {
@@ -6210,7 +6210,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L52",
       "id": "crm_core_api_src_main_java_com_roadwatch_crm_model_entity_budgetscheme_java_bigdecimal",
-      "community": 682,
+      "community": 497,
       "norm_label": "bigdecimal"
     },
     {
@@ -6219,7 +6219,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L53",
       "id": "entity_budgetscheme_budgetscheme_setsanctionedamount",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setsanctionedamount()"
     },
     {
@@ -6228,7 +6228,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L55",
       "id": "entity_budgetscheme_budgetscheme_getreleasedamount",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getreleasedamount()"
     },
     {
@@ -6237,7 +6237,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L56",
       "id": "entity_budgetscheme_budgetscheme_setreleasedamount",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setreleasedamount()"
     },
     {
@@ -6246,7 +6246,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L58",
       "id": "entity_budgetscheme_budgetscheme_getutilizedamount",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getutilizedamount()"
     },
     {
@@ -6255,7 +6255,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L59",
       "id": "entity_budgetscheme_budgetscheme_setutilizedamount",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setutilizedamount()"
     },
     {
@@ -6264,7 +6264,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L61",
       "id": "entity_budgetscheme_budgetscheme_getfinancialyear",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getfinancialyear()"
     },
     {
@@ -6273,7 +6273,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L62",
       "id": "entity_budgetscheme_budgetscheme_setfinancialyear",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setfinancialyear()"
     },
     {
@@ -6282,7 +6282,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L64",
       "id": "entity_budgetscheme_budgetscheme_getsourceref",
-      "community": 682,
+      "community": 497,
       "norm_label": ".getsourceref()"
     },
     {
@@ -6291,7 +6291,7 @@
       "source_file": "crm-core-api/src/main/java/com/roadwatch/crm/model/entity/BudgetScheme.java",
       "source_location": "L65",
       "id": "entity_budgetscheme_budgetscheme_setsourceref",
-      "community": 682,
+      "community": 497,
       "norm_label": ".setsourceref()"
     },
     {
@@ -8838,7 +8838,7 @@
       "source_file": "crm-core-api/src/test/java/com/roadwatch/crm/service/WorkOrderServiceTest.java",
       "source_location": "L1",
       "id": "crm_core_api_src_test_java_com_roadwatch_crm_service_workorderservicetest_java",
-      "community": 682,
+      "community": 497,
       "norm_label": "workorderservicetest.java"
     },
     {
@@ -8847,7 +8847,7 @@
       "source_file": "crm-core-api/src/test/java/com/roadwatch/crm/service/WorkOrderServiceTest.java",
       "source_location": "L22",
       "id": "service_workorderservicetest_workorderservicetest",
-      "community": 682,
+      "community": 497,
       "norm_label": "workorderservicetest"
     },
     {
@@ -8856,7 +8856,7 @@
       "source_file": "crm-core-api/src/test/java/com/roadwatch/crm/service/WorkOrderServiceTest.java",
       "source_location": "L43",
       "id": "service_workorderservicetest_workorderservicetest_testtc_crm_03_workorderapprovalandbudgetdeduction",
-      "community": 682,
+      "community": 497,
       "norm_label": ".testtc_crm_03_workorderapprovalandbudgetdeduction()"
     },
     {
@@ -8865,7 +8865,7 @@
       "source_file": "crm-core-api/src/test/java/com/roadwatch/crm/service/WorkOrderServiceTest.java",
       "source_location": "L43",
       "id": "crm_core_api_src_test_java_com_roadwatch_crm_service_workorderservicetest_java_test",
-      "community": 682,
+      "community": 497,
       "norm_label": "test"
     },
     {
@@ -10282,13 +10282,13 @@
       "norm_label": "readme.md"
     },
     {
-      "label": "RoadWatch \u2014 Backend Grievance & Budget Transparency Platform",
+      "label": "RoadWatch \u2014 Grievance, Spatial Routing, & Budget Transparency Platform",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "id": "road_safety_hackathon_2026_readme_roadwatch_grievance_spatial_routing_budget_transparency_platform",
       "community": 857,
-      "norm_label": "roadwatch \u2014 backend grievance & budget transparency platform"
+      "norm_label": "roadwatch \u2014 grievance, spatial routing, & budget transparency platform"
     },
     {
       "label": "1. System Architecture & Port Map",
@@ -10309,10 +10309,19 @@
       "norm_label": "code:mermaid (graph td)"
     },
     {
+      "label": "Complete Port Mapping Reference",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L58",
+      "id": "road_safety_hackathon_2026_readme_complete_port_mapping_reference",
+      "community": 857,
+      "norm_label": "complete port mapping reference"
+    },
+    {
       "label": "2. Core Mechanics (In-Depth Reference)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L48",
+      "source_location": "L75",
       "id": "road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference",
       "community": 857,
       "norm_label": "2. core mechanics (in-depth reference)"
@@ -10321,7 +10330,7 @@
       "label": "2.1 Spatial Clustering (50m Radius Centroid Shifting)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L50",
+      "source_location": "L77",
       "id": "road_safety_hackathon_2026_readme_2_1_spatial_clustering_50m_radius_centroid_shifting",
       "community": 857,
       "norm_label": "2.1 spatial clustering (50m radius centroid shifting)"
@@ -10330,52 +10339,43 @@
       "label": "2.2 Relational Row-Level Security (RLS)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L55",
+      "source_location": "L81",
       "id": "road_safety_hackathon_2026_readme_2_2_relational_row_level_security_rls",
       "community": 857,
       "norm_label": "2.2 relational row-level security (rls)"
     },
     {
-      "label": "2.3 Conversational AI Agent & Mock Fallbacks",
+      "label": "2.3 Offline-First Sync Queue",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L61",
-      "id": "road_safety_hackathon_2026_readme_2_3_conversational_ai_agent_mock_fallbacks",
+      "source_location": "L85",
+      "id": "road_safety_hackathon_2026_readme_2_3_offline_first_sync_queue",
       "community": 857,
-      "norm_label": "2.3 conversational ai agent & mock fallbacks"
+      "norm_label": "2.3 offline-first sync queue"
     },
     {
-      "label": "2.4 SLA Scan Background Cron",
+      "label": "2.4 double-pane Computer Vision PoW Scanning",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L66",
-      "id": "road_safety_hackathon_2026_readme_2_4_sla_scan_background_cron",
+      "source_location": "L89",
+      "id": "road_safety_hackathon_2026_readme_2_4_double_pane_computer_vision_pow_scanning",
       "community": 857,
-      "norm_label": "2.4 sla scan background cron"
+      "norm_label": "2.4 double-pane computer vision pow scanning"
     },
     {
-      "label": "2.5 Proof-of-Work Validator",
+      "label": "2.5 RoleGuard structural access masking",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L70",
-      "id": "road_safety_hackathon_2026_readme_2_5_proof_of_work_validator",
+      "source_location": "L93",
+      "id": "road_safety_hackathon_2026_readme_2_5_roleguard_structural_access_masking",
       "community": 857,
-      "norm_label": "2.5 proof-of-work validator"
-    },
-    {
-      "label": "2.6 ReportLab Utilization Certificate (UC) PDF Generator",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L74",
-      "id": "road_safety_hackathon_2026_readme_2_6_reportlab_utilization_certificate_uc_pdf_generator",
-      "community": 857,
-      "norm_label": "2.6 reportlab utilization certificate (uc) pdf generator"
+      "norm_label": "2.5 roleguard structural access masking"
     },
     {
       "label": "3. Development Setup & Launch",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L80",
+      "source_location": "L99",
       "id": "road_safety_hackathon_2026_readme_3_development_setup_launch",
       "community": 857,
       "norm_label": "3. development setup & launch"
@@ -10384,7 +10384,7 @@
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L82",
+      "source_location": "L101",
       "id": "road_safety_hackathon_2026_readme_prerequisites",
       "community": 857,
       "norm_label": "prerequisites"
@@ -10393,55 +10393,145 @@
       "label": "code:env (OPENAI_API_KEY=your_openai_api_key_here)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L84",
+      "source_location": "L103",
       "id": "road_safety_hackathon_2026_readme_codeblock_2",
       "community": 857,
       "norm_label": "code:env (openai_api_key=your_openai_api_key_here)"
     },
     {
-      "label": "Build and Launch the Stack",
+      "label": "3.1 Spin up the Backend Stack",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L89",
-      "id": "road_safety_hackathon_2026_readme_build_and_launch_the_stack",
+      "source_location": "L108",
+      "id": "road_safety_hackathon_2026_readme_3_1_spin_up_the_backend_stack",
       "community": 857,
-      "norm_label": "build and launch the stack"
+      "norm_label": "3.1 spin up the backend stack"
     },
     {
       "label": "code:bash (docker-compose up --build -d)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L90",
+      "source_location": "L109",
       "id": "road_safety_hackathon_2026_readme_codeblock_3",
       "community": 857,
       "norm_label": "code:bash (docker-compose up --build -d)"
     },
     {
-      "label": "Initial Seed Data",
+      "label": "3.2 Spin up the Frontend Applications",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L94",
-      "id": "road_safety_hackathon_2026_readme_initial_seed_data",
+      "source_location": "L116",
+      "id": "road_safety_hackathon_2026_readme_3_2_spin_up_the_frontend_applications",
       "community": 857,
-      "norm_label": "initial seed data"
+      "norm_label": "3.2 spin up the frontend applications"
+    },
+    {
+      "label": "A. Govt CRM Web Dashboard",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L118",
+      "id": "road_safety_hackathon_2026_readme_a_govt_crm_web_dashboard",
+      "community": 857,
+      "norm_label": "a. govt crm web dashboard"
+    },
+    {
+      "label": "code:bash (cd crm-web)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "id": "road_safety_hackathon_2026_readme_codeblock_4",
+      "community": 857,
+      "norm_label": "code:bash (cd crm-web)"
+    },
+    {
+      "label": "B. Citizen Mobile Client",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L126",
+      "id": "road_safety_hackathon_2026_readme_b_citizen_mobile_client",
+      "community": 857,
+      "norm_label": "b. citizen mobile client"
+    },
+    {
+      "label": "code:bash (cd ../citizen-app)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L127",
+      "id": "road_safety_hackathon_2026_readme_codeblock_5",
+      "community": 857,
+      "norm_label": "code:bash (cd ../citizen-app)"
     },
     {
       "label": "4. Run Automated Test Suites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L104",
+      "source_location": "L136",
       "id": "road_safety_hackathon_2026_readme_4_run_automated_test_suites",
       "community": 857,
       "norm_label": "4. run automated test suites"
     },
     {
-      "label": "code:bash (# 1. citizen-core-api)",
+      "label": "4.1 Backend Test Suites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L108",
-      "id": "road_safety_hackathon_2026_readme_codeblock_4",
+      "source_location": "L138",
+      "id": "road_safety_hackathon_2026_readme_4_1_backend_test_suites",
       "community": 857,
-      "norm_label": "code:bash (# 1. citizen-core-api)"
+      "norm_label": "4.1 backend test suites"
+    },
+    {
+      "label": "code:bash (# 1. citizen-core-api (JUnit 5))",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L139",
+      "id": "road_safety_hackathon_2026_readme_codeblock_6",
+      "community": 857,
+      "norm_label": "code:bash (# 1. citizen-core-api (junit 5))"
+    },
+    {
+      "label": "4.2 Frontend Test Suites",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L153",
+      "id": "road_safety_hackathon_2026_readme_4_2_frontend_test_suites",
+      "community": 857,
+      "norm_label": "4.2 frontend test suites"
+    },
+    {
+      "label": "A. crm-web Dashboard (Vitest & Playwright)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L155",
+      "id": "road_safety_hackathon_2026_readme_a_crm_web_dashboard_vitest_playwright",
+      "community": 857,
+      "norm_label": "a. crm-web dashboard (vitest & playwright)"
+    },
+    {
+      "label": "code:bash (cd ../crm-web)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "id": "road_safety_hackathon_2026_readme_codeblock_7",
+      "community": 857,
+      "norm_label": "code:bash (cd ../crm-web)"
+    },
+    {
+      "label": "B. citizen-app Mobile Client (Jest & Maestro)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L165",
+      "id": "road_safety_hackathon_2026_readme_b_citizen_app_mobile_client_jest_maestro",
+      "community": 857,
+      "norm_label": "b. citizen-app mobile client (jest & maestro)"
+    },
+    {
+      "label": "code:bash (cd ../citizen-app)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L166",
+      "id": "road_safety_hackathon_2026_readme_codeblock_8",
+      "community": 857,
+      "norm_label": "code:bash (cd ../citizen-app)"
     },
     {
       "label": "graphify.md",
@@ -14242,6 +14332,636 @@
       "norm_label": "code:bash (# concurrent submits to lat 13.055, lng 80.275)"
     },
     {
+      "label": "citizen_app_spec.md",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L1",
+      "id": "docs_ui_ux_design_citizen_app_spec_md",
+      "community": 34,
+      "norm_label": "citizen_app_spec.md"
+    },
+    {
+      "label": "RoadWatch Citizen App (Expo) UI/UX Design Specification (Light Theme)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L1",
+      "id": "ui_ux_design_citizen_app_spec_roadwatch_citizen_app_expo_ui_ux_design_specification_light_theme",
+      "community": 34,
+      "norm_label": "roadwatch citizen app (expo) ui/ux design specification (light theme)"
+    },
+    {
+      "label": "1. Visual Integration Layer (`Theme` Mapping)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L7",
+      "id": "ui_ux_design_citizen_app_spec_1_visual_integration_layer_theme_mapping",
+      "community": 34,
+      "norm_label": "1. visual integration layer (`theme` mapping)"
+    },
+    {
+      "label": "code:typescript (// src/components/theme.ts)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L11",
+      "id": "ui_ux_design_citizen_app_spec_codeblock_1",
+      "community": 34,
+      "norm_label": "code:typescript (// src/components/theme.ts)"
+    },
+    {
+      "label": "2. Screen-by-Screen UI Layouts",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L57",
+      "id": "ui_ux_design_citizen_app_spec_2_screen_by_screen_ui_layouts",
+      "community": 34,
+      "norm_label": "2. screen-by-screen ui layouts"
+    },
+    {
+      "label": "code:block2 ([ Landing Map Screen ]        [ File Complaint Screen ]     )",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L59",
+      "id": "ui_ux_design_citizen_app_spec_codeblock_2",
+      "community": 34,
+      "norm_label": "code:block2 ([ landing map screen ]        [ file complaint screen ]     )"
+    },
+    {
+      "label": "Screen 2.1: Interactive Map Dashboard (`InteractiveMapScreen`)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L80",
+      "id": "ui_ux_design_citizen_app_spec_screen_2_1_interactive_map_dashboard_interactivemapscreen",
+      "community": 34,
+      "norm_label": "screen 2.1: interactive map dashboard (`interactivemapscreen`)"
+    },
+    {
+      "label": "1. Visual Hierarchy & Elements Tree",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L84",
+      "id": "ui_ux_design_citizen_app_spec_1_visual_hierarchy_elements_tree",
+      "community": 34,
+      "norm_label": "1. visual hierarchy & elements tree"
+    },
+    {
+      "label": "2. Key Micro-Animations & Interactions",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L102",
+      "id": "ui_ux_design_citizen_app_spec_2_key_micro_animations_interactions",
+      "community": 34,
+      "norm_label": "2. key micro-animations & interactions"
+    },
+    {
+      "label": "Screen 2.2: File Complaint Screen (`FileComplaintScreen`)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L108",
+      "id": "ui_ux_design_citizen_app_spec_screen_2_2_file_complaint_screen_filecomplaintscreen",
+      "community": 34,
+      "norm_label": "screen 2.2: file complaint screen (`filecomplaintscreen`)"
+    },
+    {
+      "label": "1. Visual Hierarchy & Elements Tree",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L112",
+      "id": "ui_ux_design_citizen_app_spec_1_visual_hierarchy_elements_tree_112",
+      "community": 34,
+      "norm_label": "1. visual hierarchy & elements tree"
+    },
+    {
+      "label": "2. Key Micro-Animations & Interactions",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L140",
+      "id": "ui_ux_design_citizen_app_spec_2_key_micro_animations_interactions_140",
+      "community": 34,
+      "norm_label": "2. key micro-animations & interactions"
+    },
+    {
+      "label": "Screen 2.3: Live Ticket & Chatbot Window (`TicketDetailScreen` + `AIHelpChatbot`)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L146",
+      "id": "ui_ux_design_citizen_app_spec_screen_2_3_live_ticket_chatbot_window_ticketdetailscreen_aihelpchatbot",
+      "community": 34,
+      "norm_label": "screen 2.3: live ticket & chatbot window (`ticketdetailscreen` + `aihelpchatbot`)"
+    },
+    {
+      "label": "1. Visual Hierarchy & Elements Tree",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L150",
+      "id": "ui_ux_design_citizen_app_spec_1_visual_hierarchy_elements_tree_150",
+      "community": 34,
+      "norm_label": "1. visual hierarchy & elements tree"
+    },
+    {
+      "label": "2. Key Micro-Animations & Interactions",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L174",
+      "id": "ui_ux_design_citizen_app_spec_2_key_micro_animations_interactions_174",
+      "community": 34,
+      "norm_label": "2. key micro-animations & interactions"
+    },
+    {
+      "label": "Screen 2.4: Open Budgets Explorer (`BudgetExplorerScreen`)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L180",
+      "id": "ui_ux_design_citizen_app_spec_screen_2_4_open_budgets_explorer_budgetexplorerscreen",
+      "community": 34,
+      "norm_label": "screen 2.4: open budgets explorer (`budgetexplorerscreen`)"
+    },
+    {
+      "label": "1. Visual Hierarchy & Elements Tree",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L184",
+      "id": "ui_ux_design_citizen_app_spec_1_visual_hierarchy_elements_tree_184",
+      "community": 34,
+      "norm_label": "1. visual hierarchy & elements tree"
+    },
+    {
+      "label": "3. Zustand & TanStack State-UI Mappings",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L199",
+      "id": "ui_ux_design_citizen_app_spec_3_zustand_tanstack_state_ui_mappings",
+      "community": 34,
+      "norm_label": "3. zustand & tanstack state-ui mappings"
+    },
+    {
+      "label": "crm_web_spec.md",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L1",
+      "id": "docs_ui_ux_design_crm_web_spec_md",
+      "community": 32,
+      "norm_label": "crm_web_spec.md"
+    },
+    {
+      "label": "RoadWatch Govt CRM Portal UI/UX Design Specification (Light Theme)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L1",
+      "id": "ui_ux_design_crm_web_spec_roadwatch_govt_crm_portal_ui_ux_design_specification_light_theme",
+      "community": 32,
+      "norm_label": "roadwatch govt crm portal ui/ux design specification (light theme)"
+    },
+    {
+      "label": "1. Core Shell Layout (`DashboardLayout`)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L7",
+      "id": "ui_ux_design_crm_web_spec_1_core_shell_layout_dashboardlayout",
+      "community": 32,
+      "norm_label": "1. core shell layout (`dashboardlayout`)"
+    },
+    {
+      "label": "code:block1 (+-----------------------------------------------------------)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L11",
+      "id": "ui_ux_design_crm_web_spec_codeblock_1",
+      "community": 32,
+      "norm_label": "code:block1 (+-----------------------------------------------------------)"
+    },
+    {
+      "label": "1.1 Vertical Sidebar (Left Navigation)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L25",
+      "id": "ui_ux_design_crm_web_spec_1_1_vertical_sidebar_left_navigation",
+      "community": 32,
+      "norm_label": "1.1 vertical sidebar (left navigation)"
+    },
+    {
+      "label": "1.2 Horizontal Top Bar (Header)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L34",
+      "id": "ui_ux_design_crm_web_spec_1_2_horizontal_top_bar_header",
+      "community": 32,
+      "norm_label": "1.2 horizontal top bar (header)"
+    },
+    {
+      "label": "2. The Four Distinct Dashboard Layouts",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L45",
+      "id": "ui_ux_design_crm_web_spec_2_the_four_distinct_dashboard_layouts",
+      "community": 32,
+      "norm_label": "2. the four distinct dashboard layouts"
+    },
+    {
+      "label": "Layout 2.1: Executive / Oversight Dashboard (MoRTH, CE, SE)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L51",
+      "id": "ui_ux_design_crm_web_spec_layout_2_1_executive_oversight_dashboard_morth_ce_se",
+      "community": 32,
+      "norm_label": "layout 2.1: executive / oversight dashboard (morth, ce, se)"
+    },
+    {
+      "label": "code:block2 (+-----------------------------------------------------------)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L55",
+      "id": "ui_ux_design_crm_web_spec_codeblock_2",
+      "community": 32,
+      "norm_label": "code:block2 (+-----------------------------------------------------------)"
+    },
+    {
+      "label": "1. Page Grid & Widgets",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L63",
+      "id": "ui_ux_design_crm_web_spec_1_page_grid_widgets",
+      "community": 32,
+      "norm_label": "1. page grid & widgets"
+    },
+    {
+      "label": "Layout 2.2: Operational Division Dashboard (Executive Engineer (EE), Ward Engineer)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L75",
+      "id": "ui_ux_design_crm_web_spec_layout_2_2_operational_division_dashboard_executive_engineer_ee_ward_engineer",
+      "community": 32,
+      "norm_label": "layout 2.2: operational division dashboard (executive engineer (ee), ward engineer)"
+    },
+    {
+      "label": "code:block3 (+-----------------------------------------------------------)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L79",
+      "id": "ui_ux_design_crm_web_spec_codeblock_3",
+      "community": 32,
+      "norm_label": "code:block3 (+-----------------------------------------------------------)"
+    },
+    {
+      "label": "1. Page Grid & Widgets",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L90",
+      "id": "ui_ux_design_crm_web_spec_1_page_grid_widgets_90",
+      "community": 32,
+      "norm_label": "1. page grid & widgets"
+    },
+    {
+      "label": "Layout 2.3: Mobile-Responsive Field Portal (Junior Engineer (JE))",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L103",
+      "id": "ui_ux_design_crm_web_spec_layout_2_3_mobile_responsive_field_portal_junior_engineer_je",
+      "community": 32,
+      "norm_label": "layout 2.3: mobile-responsive field portal (junior engineer (je))"
+    },
+    {
+      "label": "1. UI Elements & Touch Targets",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L107",
+      "id": "ui_ux_design_crm_web_spec_1_ui_elements_touch_targets",
+      "community": 32,
+      "norm_label": "1. ui elements & touch targets"
+    },
+    {
+      "label": "Layout 2.4: Contractor Workspace Portal",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L116",
+      "id": "ui_ux_design_crm_web_spec_layout_2_4_contractor_workspace_portal",
+      "community": 32,
+      "norm_label": "layout 2.4: contractor workspace portal"
+    },
+    {
+      "label": "1. UI Elements & Widgets",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L120",
+      "id": "ui_ux_design_crm_web_spec_1_ui_elements_widgets",
+      "community": 32,
+      "norm_label": "1. ui elements & widgets"
+    },
+    {
+      "label": "3. High-Fidelity Double-Pane AI Verification Panel (`ProofViewer`)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L129",
+      "id": "ui_ux_design_crm_web_spec_3_high_fidelity_double_pane_ai_verification_panel_proofviewer",
+      "community": 32,
+      "norm_label": "3. high-fidelity double-pane ai verification panel (`proofviewer`)"
+    },
+    {
+      "label": "code:block4 (+-----------------------------------------------------------)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L133",
+      "id": "ui_ux_design_crm_web_spec_codeblock_4",
+      "community": 32,
+      "norm_label": "code:block4 (+-----------------------------------------------------------)"
+    },
+    {
+      "label": "3.1 Left Pane: Contractor Submission",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L154",
+      "id": "ui_ux_design_crm_web_spec_3_1_left_pane_contractor_submission",
+      "community": 32,
+      "norm_label": "3.1 left pane: contractor submission"
+    },
+    {
+      "label": "3.2 Right Pane: AI Analysis Verdict",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L159",
+      "id": "ui_ux_design_crm_web_spec_3_2_right_pane_ai_analysis_verdict",
+      "community": 32,
+      "norm_label": "3.2 right pane: ai analysis verdict"
+    },
+    {
+      "label": "3.3 Action Footer",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L164",
+      "id": "ui_ux_design_crm_web_spec_3_3_action_footer",
+      "community": 32,
+      "norm_label": "3.3 action footer"
+    },
+    {
+      "label": "4. State-UI RTK Query Mappings",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L170",
+      "id": "ui_ux_design_crm_web_spec_4_state_ui_rtk_query_mappings",
+      "community": 32,
+      "norm_label": "4. state-ui rtk query mappings"
+    },
+    {
+      "label": "design_system.md",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L1",
+      "id": "docs_ui_ux_design_design_system_md",
+      "community": 33,
+      "norm_label": "design_system.md"
+    },
+    {
+      "label": "RoadWatch Global UI/UX Design System Specification (Premium Light Theme)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L1",
+      "id": "ui_ux_design_design_system_roadwatch_global_ui_ux_design_system_specification_premium_light_theme",
+      "community": 33,
+      "norm_label": "roadwatch global ui/ux design system specification (premium light theme)"
+    },
+    {
+      "label": "1. Visual Philosophy & Design Direction",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L9",
+      "id": "ui_ux_design_design_system_1_visual_philosophy_design_direction",
+      "community": 33,
+      "norm_label": "1. visual philosophy & design direction"
+    },
+    {
+      "label": "Key Principles",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L13",
+      "id": "ui_ux_design_design_system_key_principles",
+      "community": 33,
+      "norm_label": "key principles"
+    },
+    {
+      "label": "2. Core Color Tokens (Hex & HSL Scales)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L21",
+      "id": "ui_ux_design_design_system_2_core_color_tokens_hex_hsl_scales",
+      "community": 33,
+      "norm_label": "2. core color tokens (hex & hsl scales)"
+    },
+    {
+      "label": "code:mermaid (graph LR)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L23",
+      "id": "ui_ux_design_design_system_codeblock_1",
+      "community": 33,
+      "norm_label": "code:mermaid (graph lr)"
+    },
+    {
+      "label": "2.1 Backgrounds & Neutral Scale",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L40",
+      "id": "ui_ux_design_design_system_2_1_backgrounds_neutral_scale",
+      "community": 33,
+      "norm_label": "2.1 backgrounds & neutral scale"
+    },
+    {
+      "label": "2.2 Functional Accents",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L50",
+      "id": "ui_ux_design_design_system_2_2_functional_accents",
+      "community": 33,
+      "norm_label": "2.2 functional accents"
+    },
+    {
+      "label": "3. Frosted Glassmorphism Styling Specifications (CSS Rules)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L61",
+      "id": "ui_ux_design_design_system_3_frosted_glassmorphism_styling_specifications_css_rules",
+      "community": 33,
+      "norm_label": "3. frosted glassmorphism styling specifications (css rules)"
+    },
+    {
+      "label": "code:css (/* Frosted Glass Card Base Styles */)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L65",
+      "id": "ui_ux_design_design_system_codeblock_2",
+      "community": 33,
+      "norm_label": "code:css (/* frosted glass card base styles */)"
+    },
+    {
+      "label": "4. Typography Scale & Layout Foundations",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L103",
+      "id": "ui_ux_design_design_system_4_typography_scale_layout_foundations",
+      "community": 33,
+      "norm_label": "4. typography scale & layout foundations"
+    },
+    {
+      "label": "4.1 Fonts",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L105",
+      "id": "ui_ux_design_design_system_4_1_fonts",
+      "community": 33,
+      "norm_label": "4.1 fonts"
+    },
+    {
+      "label": "4.2 Hierarchy Chart (Standardized)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L109",
+      "id": "ui_ux_design_design_system_4_2_hierarchy_chart_standardized",
+      "community": 33,
+      "norm_label": "4.2 hierarchy chart (standardized)"
+    },
+    {
+      "label": "5. Mobile Layout Design Bounds (Citizen App)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L121",
+      "id": "ui_ux_design_design_system_5_mobile_layout_design_bounds_citizen_app",
+      "community": 33,
+      "norm_label": "5. mobile layout design bounds (citizen app)"
+    },
+    {
+      "label": "code:block3 (+------------------------------------------+  <- 0px (Top))",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L125",
+      "id": "ui_ux_design_design_system_codeblock_3",
+      "community": 33,
+      "norm_label": "code:block3 (+------------------------------------------+  <- 0px (top))"
+    },
+    {
+      "label": "Safe Area Settings",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L143",
+      "id": "ui_ux_design_design_system_safe_area_settings",
+      "community": 33,
+      "norm_label": "safe area settings"
+    },
+    {
+      "label": "6. Micro-Animations & Dynamic States Spec",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L149",
+      "id": "ui_ux_design_design_system_6_micro_animations_dynamic_states_spec",
+      "community": 33,
+      "norm_label": "6. micro-animations & dynamic states spec"
+    },
+    {
+      "label": "6.1 State Transitions",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L151",
+      "id": "ui_ux_design_design_system_6_1_state_transitions",
+      "community": 33,
+      "norm_label": "6.1 state transitions"
+    },
+    {
+      "label": "code:css (transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L152",
+      "id": "ui_ux_design_design_system_codeblock_4",
+      "community": 33,
+      "norm_label": "code:css (transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);)"
+    },
+    {
+      "label": "6.2 State Spec Table",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L157",
+      "id": "ui_ux_design_design_system_6_2_state_spec_table",
+      "community": 33,
+      "norm_label": "6.2 state spec table"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L1",
+      "id": "docs_ui_ux_design_readme_md",
+      "community": 38,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "RoadWatch UI/UX Design System & Specifications (Premium Light Theme)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L1",
+      "id": "ui_ux_design_readme_roadwatch_ui_ux_design_system_specifications_premium_light_theme",
+      "community": 38,
+      "norm_label": "roadwatch ui/ux design system & specifications (premium light theme)"
+    },
+    {
+      "label": "\ud83d\udcc2 Directory Contents & Navigation",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L9",
+      "id": "ui_ux_design_readme_directory_contents_navigation",
+      "community": 38,
+      "norm_label": "\ud83d\udcc2 directory contents & navigation"
+    },
+    {
+      "label": "1. \ud83c\udfa8 [Global Design System Spec](file:///c:/Users/grand/codespace/road-safety-hackathon-2026/docs/UI_UX_Design/design_system.md)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L13",
+      "id": "ui_ux_design_readme_1_global_design_system_spec_file_c_users_grand_codespace_road_safety_hackathon_2026_docs_ui_ux_design_design_system_md",
+      "community": 38,
+      "norm_label": "1. \ud83c\udfa8 [global design system spec](file:///c:/users/grand/codespace/road-safety-hackathon-2026/docs/ui_ux_design/design_system.md)"
+    },
+    {
+      "label": "2. \ud83d\udcf1 [Citizen Mobile App UI/UX Spec](file:///c:/Users/grand/codespace/road-safety-hackathon-2026/docs/UI_UX_Design/citizen_app_spec.md)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L22",
+      "id": "ui_ux_design_readme_2_citizen_mobile_app_ui_ux_spec_file_c_users_grand_codespace_road_safety_hackathon_2026_docs_ui_ux_design_citizen_app_spec_md",
+      "community": 38,
+      "norm_label": "2. \ud83d\udcf1 [citizen mobile app ui/ux spec](file:///c:/users/grand/codespace/road-safety-hackathon-2026/docs/ui_ux_design/citizen_app_spec.md)"
+    },
+    {
+      "label": "3. \ud83d\udda5\ufe0f [Govt CRM Portal UI/UX Spec](file:///c:/Users/grand/codespace/road-safety-hackathon-2026/docs/UI_UX_Design/crm_web_spec.md)",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L34",
+      "id": "ui_ux_design_readme_3_govt_crm_portal_ui_ux_spec_file_c_users_grand_codespace_road_safety_hackathon_2026_docs_ui_ux_design_crm_web_spec_md",
+      "community": 38,
+      "norm_label": "3. \ud83d\udda5\ufe0f [govt crm portal ui/ux spec](file:///c:/users/grand/codespace/road-safety-hackathon-2026/docs/ui_ux_design/crm_web_spec.md)"
+    },
+    {
+      "label": "\ud83e\udd16 Contextual Prompts for AI Design Generators",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L48",
+      "id": "ui_ux_design_readme_contextual_prompts_for_ai_design_generators",
+      "community": 38,
+      "norm_label": "\ud83e\udd16 contextual prompts for ai design generators"
+    },
+    {
+      "label": "Prompt for Generating the React Native Citizen App Views",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L52",
+      "id": "ui_ux_design_readme_prompt_for_generating_the_react_native_citizen_app_views",
+      "community": 38,
+      "norm_label": "prompt for generating the react native citizen app views"
+    },
+    {
+      "label": "Prompt for Generating the Govt CRM Dashboard Views",
+      "file_type": "document",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L55",
+      "id": "ui_ux_design_readme_prompt_for_generating_the_govt_crm_dashboard_views",
+      "community": 38,
+      "norm_label": "prompt for generating the govt crm dashboard views"
+    },
+    {
       "label": "{ useGetBudgetsQuery, useGetJurisdictionBudgetQuery }",
       "file_type": "code",
       "source_file": "crm-web/src/api/budgetApi.ts",
@@ -14267,6 +14987,69 @@
       "id": "api_workorderapi_usegetworkordersquery_usegetworkorderquery_usecreateworkordermutation_usesubmitproofmutation_useapproveworkordermutation",
       "community": 16,
       "norm_label": "{\n  usegetworkordersquery,\n  usegetworkorderquery,\n  usecreateworkordermutation,\n  usesubmitproofmutation,\n  useapproveworkordermutation\n}"
+    },
+    {
+      "label": "RoadWatch \u2014 Backend Grievance & Budget Transparency Platform",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "community": 857,
+      "norm_label": "roadwatch \u2014 backend grievance & budget transparency platform",
+      "id": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform"
+    },
+    {
+      "label": "2.3 Conversational AI Agent & Mock Fallbacks",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L61",
+      "community": 857,
+      "norm_label": "2.3 conversational ai agent & mock fallbacks",
+      "id": "road_safety_hackathon_2026_readme_2_3_conversational_ai_agent_mock_fallbacks"
+    },
+    {
+      "label": "2.4 SLA Scan Background Cron",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L66",
+      "community": 857,
+      "norm_label": "2.4 sla scan background cron",
+      "id": "road_safety_hackathon_2026_readme_2_4_sla_scan_background_cron"
+    },
+    {
+      "label": "2.5 Proof-of-Work Validator",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L70",
+      "community": 857,
+      "norm_label": "2.5 proof-of-work validator",
+      "id": "road_safety_hackathon_2026_readme_2_5_proof_of_work_validator"
+    },
+    {
+      "label": "2.6 ReportLab Utilization Certificate (UC) PDF Generator",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L74",
+      "community": 857,
+      "norm_label": "2.6 reportlab utilization certificate (uc) pdf generator",
+      "id": "road_safety_hackathon_2026_readme_2_6_reportlab_utilization_certificate_uc_pdf_generator"
+    },
+    {
+      "label": "Build and Launch the Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L89",
+      "community": 857,
+      "norm_label": "build and launch the stack",
+      "id": "road_safety_hackathon_2026_readme_build_and_launch_the_stack"
+    },
+    {
+      "label": "Initial Seed Data",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L94",
+      "community": 857,
+      "norm_label": "initial seed data",
+      "id": "road_safety_hackathon_2026_readme_initial_seed_data"
     },
     {
       "label": "2.1 Unit Testing (UT)",
@@ -16872,9 +17655,9 @@
       "source_file": "citizen-app/src/__tests/syncQueueStore.test.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_syncqueuestore_test_ts",
-      "target": "citizen_app_src_api_types_ts",
-      "confidence_score": 1.0
+      "target": "citizen_app_src_api_types_ts"
     },
     {
       "relation": "imports",
@@ -17070,9 +17853,9 @@
       "source_file": "citizen-app/src/__tests/syncQueueStore.test.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_syncqueuestore_test_ts",
-      "target": "api_types_syncaction",
-      "confidence_score": 1.0
+      "target": "api_types_syncaction"
     },
     {
       "relation": "references",
@@ -17707,9 +18490,9 @@
       "source_file": "citizen-app/src/__tests/useComplaintController.test.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_usecomplaintcontroller_test_ts",
-      "target": "citizen_app_src_controllers_usecomplaintcontroller_ts",
-      "confidence_score": 1.0
+      "target": "citizen_app_src_controllers_usecomplaintcontroller_ts"
     },
     {
       "relation": "imports",
@@ -17729,9 +18512,9 @@
       "source_file": "citizen-app/src/__tests/useComplaintController.test.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_usecomplaintcontroller_test_ts",
-      "target": "controllers_usecomplaintcontroller_usecomplaintcontroller",
-      "confidence_score": 1.0
+      "target": "controllers_usecomplaintcontroller_usecomplaintcontroller"
     },
     {
       "relation": "calls",
@@ -17878,9 +18661,9 @@
       "source_file": "citizen-app/src/__tests/authStore.test.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_authstore_test_ts",
-      "target": "citizen_app_src_state_authstore_ts",
-      "confidence_score": 1.0
+      "target": "citizen_app_src_state_authstore_ts"
     },
     {
       "relation": "imports",
@@ -17889,9 +18672,9 @@
       "source_file": "citizen-app/src/__tests/authStore.test.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_authstore_test_ts",
-      "target": "state_authstore_useauthstore",
-      "confidence_score": 1.0
+      "target": "state_authstore_useauthstore"
     },
     {
       "relation": "contains",
@@ -17930,9 +18713,9 @@
       "source_file": "citizen-app/src/__tests/syncQueueStore.test.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_syncqueuestore_test_ts",
-      "target": "citizen_app_src_state_syncqueuestore_ts",
-      "confidence_score": 1.0
+      "target": "citizen_app_src_state_syncqueuestore_ts"
     },
     {
       "relation": "imports_from",
@@ -17941,9 +18724,9 @@
       "source_file": "citizen-app/src/__tests/useComplaintController.test.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_usecomplaintcontroller_test_ts",
-      "target": "citizen_app_src_state_syncqueuestore_ts",
-      "confidence_score": 1.0
+      "target": "citizen_app_src_state_syncqueuestore_ts"
     },
     {
       "relation": "imports",
@@ -17952,9 +18735,9 @@
       "source_file": "citizen-app/src/__tests/syncQueueStore.test.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_syncqueuestore_test_ts",
-      "target": "state_syncqueuestore_usesyncqueuestore",
-      "confidence_score": 1.0
+      "target": "state_syncqueuestore_usesyncqueuestore"
     },
     {
       "relation": "imports",
@@ -17963,9 +18746,9 @@
       "source_file": "citizen-app/src/__tests/useComplaintController.test.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_usecomplaintcontroller_test_ts",
-      "target": "state_syncqueuestore_usesyncqueuestore",
-      "confidence_score": 1.0
+      "target": "state_syncqueuestore_usesyncqueuestore"
     },
     {
       "relation": "contains",
@@ -17973,9 +18756,9 @@
       "source_file": "citizen-app/src/__tests/authStore.test.ts",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_authstore_test_ts",
-      "target": "tests_authstore_test_userpayload",
-      "confidence_score": 1.0
+      "target": "tests_authstore_test_userpayload"
     },
     {
       "relation": "contains",
@@ -17983,9 +18766,9 @@
       "source_file": "citizen-app/src/__tests/jest.setup.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_jest_setup_js",
-      "target": "tests_jest_setup_store",
-      "confidence_score": 1.0
+      "target": "tests_jest_setup_store"
     },
     {
       "relation": "contains",
@@ -17993,9 +18776,9 @@
       "source_file": "citizen-app/src/__tests/jest.setup.js",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_jest_setup_js",
-      "target": "tests_jest_setup_react",
-      "confidence_score": 1.0
+      "target": "tests_jest_setup_react"
     },
     {
       "relation": "contains",
@@ -18003,9 +18786,9 @@
       "source_file": "citizen-app/src/__tests/jest.setup.js",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_jest_setup_js",
-      "target": "tests_jest_setup_view",
-      "confidence_score": 1.0
+      "target": "tests_jest_setup_view"
     },
     {
       "relation": "contains",
@@ -18013,9 +18796,9 @@
       "source_file": "citizen-app/src/__tests/syncQueueStore.test.ts",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_syncqueuestore_test_ts",
-      "target": "tests_syncqueuestore_test_actionitem",
-      "confidence_score": 1.0
+      "target": "tests_syncqueuestore_test_actionitem"
     },
     {
       "relation": "contains",
@@ -18023,9 +18806,9 @@
       "source_file": "citizen-app/src/__tests/syncQueueStore.test.ts",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_syncqueuestore_test_ts",
-      "target": "tests_syncqueuestore_test_storestate",
-      "confidence_score": 1.0
+      "target": "tests_syncqueuestore_test_storestate"
     },
     {
       "relation": "contains",
@@ -18033,9 +18816,9 @@
       "source_file": "citizen-app/src/__tests/syncQueueStore.test.ts",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_syncqueuestore_test_ts",
-      "target": "tests_syncqueuestore_test_item1",
-      "confidence_score": 1.0
+      "target": "tests_syncqueuestore_test_item1"
     },
     {
       "relation": "contains",
@@ -18043,9 +18826,9 @@
       "source_file": "citizen-app/src/__tests/syncQueueStore.test.ts",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_syncqueuestore_test_ts",
-      "target": "tests_syncqueuestore_test_item2",
-      "confidence_score": 1.0
+      "target": "tests_syncqueuestore_test_item2"
     },
     {
       "relation": "contains",
@@ -18053,9 +18836,9 @@
       "source_file": "citizen-app/src/__tests/useComplaintController.test.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_usecomplaintcontroller_test_ts",
-      "target": "tests_usecomplaintcontroller_test_createwrapper",
-      "confidence_score": 1.0
+      "target": "tests_usecomplaintcontroller_test_createwrapper"
     },
     {
       "relation": "contains",
@@ -18063,9 +18846,9 @@
       "source_file": "citizen-app/src/__tests/useComplaintController.test.ts",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "citizen_app_src_tests_usecomplaintcontroller_test_ts",
-      "target": "tests_usecomplaintcontroller_test_result",
-      "confidence_score": 1.0
+      "target": "tests_usecomplaintcontroller_test_result"
     },
     {
       "relation": "contains",
@@ -32492,9 +33275,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "crm_web_src_types_ts",
-      "confidence_score": 1.0
+      "target": "crm_web_src_types_ts"
     },
     {
       "relation": "imports",
@@ -32635,9 +33418,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "src_types_ticket",
-      "confidence_score": 1.0
+      "target": "src_types_ticket"
     },
     {
       "relation": "references",
@@ -32928,9 +33711,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "crm_web_src_api_ticketapi_ts",
-      "confidence_score": 1.0
+      "target": "crm_web_src_api_ticketapi_ts"
     },
     {
       "relation": "imports",
@@ -32950,9 +33733,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "api_ticketapi_ticketapi",
-      "confidence_score": 1.0
+      "target": "api_ticketapi_ticketapi"
     },
     {
       "relation": "contains",
@@ -33108,9 +33891,9 @@
       "source_file": "crm-web/src/__tests/RoleGuard.test.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_roleguard_test_tsx",
-      "target": "crm_web_src_components_roleguard_tsx",
-      "confidence_score": 1.0
+      "target": "crm_web_src_components_roleguard_tsx"
     },
     {
       "relation": "imports",
@@ -33258,9 +34041,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "crm_web_src_components_tickettable_tsx",
-      "confidence_score": 1.0
+      "target": "crm_web_src_components_tickettable_tsx"
     },
     {
       "relation": "imports",
@@ -33269,9 +34052,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "components_tickettable_tickettable",
-      "confidence_score": 1.0
+      "target": "components_tickettable_tickettable"
     },
     {
       "relation": "calls",
@@ -33458,9 +34241,9 @@
       "source_file": "crm-web/src/__tests/setup.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_setup_ts",
-      "target": "crm_web_src_mocks_handlers_ts",
-      "confidence_score": 1.0
+      "target": "crm_web_src_mocks_handlers_ts"
     },
     {
       "relation": "imports",
@@ -33469,9 +34252,9 @@
       "source_file": "crm-web/src/__tests/setup.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_setup_ts",
-      "target": "mocks_handlers_handlers",
-      "confidence_score": 1.0
+      "target": "mocks_handlers_handlers"
     },
     {
       "relation": "imports_from",
@@ -33561,9 +34344,9 @@
       "source_file": "crm-web/src/__tests/authSlice.test.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_authslice_test_ts",
-      "target": "crm_web_src_state_slices_authslice_ts",
-      "confidence_score": 1.0
+      "target": "crm_web_src_state_slices_authslice_ts"
     },
     {
       "relation": "imports_from",
@@ -33572,9 +34355,9 @@
       "source_file": "crm-web/src/__tests/RoleGuard.test.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_roleguard_test_tsx",
-      "target": "crm_web_src_state_slices_authslice_ts",
-      "confidence_score": 1.0
+      "target": "crm_web_src_state_slices_authslice_ts"
     },
     {
       "relation": "imports_from",
@@ -33583,9 +34366,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "crm_web_src_state_slices_authslice_ts",
-      "confidence_score": 1.0
+      "target": "crm_web_src_state_slices_authslice_ts"
     },
     {
       "relation": "contains",
@@ -33634,9 +34417,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "crm_web_src_state_slices_uislice_ts",
-      "confidence_score": 1.0
+      "target": "crm_web_src_state_slices_uislice_ts"
     },
     {
       "relation": "imports_from",
@@ -33645,9 +34428,9 @@
       "source_file": "crm-web/src/__tests/uiSlice.test.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_uislice_test_ts",
-      "target": "crm_web_src_state_slices_uislice_ts",
-      "confidence_score": 1.0
+      "target": "crm_web_src_state_slices_uislice_ts"
     },
     {
       "relation": "contains",
@@ -33655,9 +34438,9 @@
       "source_file": "crm-web/src/__tests/authSlice.test.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_authslice_test_ts",
-      "target": "tests_authslice_test_initialstate",
-      "confidence_score": 1.0
+      "target": "tests_authslice_test_initialstate"
     },
     {
       "relation": "contains",
@@ -33665,9 +34448,9 @@
       "source_file": "crm-web/src/__tests/authSlice.test.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_authslice_test_ts",
-      "target": "tests_authslice_test_payload",
-      "confidence_score": 1.0
+      "target": "tests_authslice_test_payload"
     },
     {
       "relation": "contains",
@@ -33675,9 +34458,9 @@
       "source_file": "crm-web/src/__tests/authSlice.test.ts",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_authslice_test_ts",
-      "target": "tests_authslice_test_nextstate",
-      "confidence_score": 1.0
+      "target": "tests_authslice_test_nextstate"
     },
     {
       "relation": "contains",
@@ -33685,9 +34468,9 @@
       "source_file": "crm-web/src/__tests/authSlice.test.ts",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_authslice_test_ts",
-      "target": "tests_authslice_test_populatedstate",
-      "confidence_score": 1.0
+      "target": "tests_authslice_test_populatedstate"
     },
     {
       "relation": "contains",
@@ -33695,9 +34478,9 @@
       "source_file": "crm-web/src/__tests/RoleGuard.test.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_roleguard_test_tsx",
-      "target": "tests_roleguard_test_renderwithstore",
-      "confidence_score": 1.0
+      "target": "tests_roleguard_test_renderwithstore"
     },
     {
       "relation": "contains",
@@ -33705,9 +34488,9 @@
       "source_file": "crm-web/src/__tests/setup.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_setup_ts",
-      "target": "tests_setup_server",
-      "confidence_score": 1.0
+      "target": "tests_setup_server"
     },
     {
       "relation": "contains",
@@ -33715,9 +34498,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "tests_tickettable_test_mocktickets",
-      "confidence_score": 1.0
+      "target": "tests_tickettable_test_mocktickets"
     },
     {
       "relation": "contains",
@@ -33725,9 +34508,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "tests_tickettable_test_renderwithstore",
-      "confidence_score": 1.0
+      "target": "tests_tickettable_test_renderwithstore"
     },
     {
       "relation": "contains",
@@ -33735,9 +34518,9 @@
       "source_file": "crm-web/src/__tests/TicketTable.test.tsx",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_tickettable_test_tsx",
-      "target": "tests_tickettable_test_handleselect",
-      "confidence_score": 1.0
+      "target": "tests_tickettable_test_handleselect"
     },
     {
       "relation": "contains",
@@ -33745,9 +34528,9 @@
       "source_file": "crm-web/src/__tests/uiSlice.test.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_uislice_test_ts",
-      "target": "tests_uislice_test_initialstate",
-      "confidence_score": 1.0
+      "target": "tests_uislice_test_initialstate"
     },
     {
       "relation": "contains",
@@ -33755,9 +34538,9 @@
       "source_file": "crm-web/src/__tests/uiSlice.test.ts",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_uislice_test_ts",
-      "target": "tests_uislice_test_nextstate",
-      "confidence_score": 1.0
+      "target": "tests_uislice_test_nextstate"
     },
     {
       "relation": "contains",
@@ -33765,9 +34548,9 @@
       "source_file": "crm-web/src/__tests/uiSlice.test.ts",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_uislice_test_ts",
-      "target": "tests_uislice_test_backstate",
-      "confidence_score": 1.0
+      "target": "tests_uislice_test_backstate"
     },
     {
       "relation": "contains",
@@ -33775,9 +34558,9 @@
       "source_file": "crm-web/src/__tests/uiSlice.test.ts",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_uislice_test_ts",
-      "target": "tests_uislice_test_action",
-      "confidence_score": 1.0
+      "target": "tests_uislice_test_action"
     },
     {
       "relation": "contains",
@@ -33785,9 +34568,9 @@
       "source_file": "crm-web/src/__tests/uiSlice.test.ts",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crm_web_src_tests_uislice_test_ts",
-      "target": "tests_uislice_test_activestate",
-      "confidence_score": 1.0
+      "target": "tests_uislice_test_activestate"
     },
     {
       "relation": "contains",
@@ -33867,6 +34650,16 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "readme_md",
+      "target": "road_safety_hackathon_2026_readme_roadwatch_grievance_spatial_routing_budget_transparency_platform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_md",
       "target": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform"
     },
     {
@@ -33876,37 +34669,37 @@
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "source": "road_safety_hackathon_2026_readme_roadwatch_grievance_spatial_routing_budget_transparency_platform",
       "target": "road_safety_hackathon_2026_readme_1_system_architecture_port_map"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L48",
+      "source_location": "L75",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "source": "road_safety_hackathon_2026_readme_roadwatch_grievance_spatial_routing_budget_transparency_platform",
       "target": "road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L80",
+      "source_location": "L99",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "source": "road_safety_hackathon_2026_readme_roadwatch_grievance_spatial_routing_budget_transparency_platform",
       "target": "road_safety_hackathon_2026_readme_3_development_setup_launch"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L104",
+      "source_location": "L136",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "source": "road_safety_hackathon_2026_readme_roadwatch_grievance_spatial_routing_budget_transparency_platform",
       "target": "road_safety_hackathon_2026_readme_4_run_automated_test_suites"
     },
     {
@@ -33918,6 +34711,26 @@
       "confidence_score": 1.0,
       "source": "road_safety_hackathon_2026_readme_1_system_architecture_port_map",
       "target": "road_safety_hackathon_2026_readme_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_1_system_architecture_port_map",
+      "target": "road_safety_hackathon_2026_readme_complete_port_mapping_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "target": "road_safety_hackathon_2026_readme_1_system_architecture_port_map"
     },
     {
       "relation": "contains",
@@ -33938,6 +34751,46 @@
       "confidence_score": 1.0,
       "source": "road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference",
       "target": "road_safety_hackathon_2026_readme_2_2_relational_row_level_security_rls"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference",
+      "target": "road_safety_hackathon_2026_readme_2_3_offline_first_sync_queue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference",
+      "target": "road_safety_hackathon_2026_readme_2_4_double_pane_computer_vision_pow_scanning"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference",
+      "target": "road_safety_hackathon_2026_readme_2_5_roleguard_structural_access_masking"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "target": "road_safety_hackathon_2026_readme_2_core_mechanics_in_depth_reference"
     },
     {
       "relation": "contains",
@@ -33993,6 +34846,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_3_development_setup_launch",
+      "target": "road_safety_hackathon_2026_readme_3_1_spin_up_the_backend_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_3_development_setup_launch",
+      "target": "road_safety_hackathon_2026_readme_3_2_spin_up_the_frontend_applications"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "target": "road_safety_hackathon_2026_readme_3_development_setup_launch"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L89",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -34023,6 +34906,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_3_1_spin_up_the_backend_stack",
+      "target": "road_safety_hackathon_2026_readme_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L90",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -34033,11 +34926,131 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_3_2_spin_up_the_frontend_applications",
+      "target": "road_safety_hackathon_2026_readme_a_govt_crm_web_dashboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L126",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_3_2_spin_up_the_frontend_applications",
+      "target": "road_safety_hackathon_2026_readme_b_citizen_mobile_client"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_a_govt_crm_web_dashboard",
+      "target": "road_safety_hackathon_2026_readme_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L108",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "road_safety_hackathon_2026_readme_4_run_automated_test_suites",
       "target": "road_safety_hackathon_2026_readme_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_b_citizen_mobile_client",
+      "target": "road_safety_hackathon_2026_readme_codeblock_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L138",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_4_run_automated_test_suites",
+      "target": "road_safety_hackathon_2026_readme_4_1_backend_test_suites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_4_run_automated_test_suites",
+      "target": "road_safety_hackathon_2026_readme_4_2_frontend_test_suites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_roadwatch_backend_grievance_budget_transparency_platform",
+      "target": "road_safety_hackathon_2026_readme_4_run_automated_test_suites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_4_1_backend_test_suites",
+      "target": "road_safety_hackathon_2026_readme_codeblock_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_4_2_frontend_test_suites",
+      "target": "road_safety_hackathon_2026_readme_a_crm_web_dashboard_vitest_playwright"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_4_2_frontend_test_suites",
+      "target": "road_safety_hackathon_2026_readme_b_citizen_app_mobile_client_jest_maestro"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_a_crm_web_dashboard_vitest_playwright",
+      "target": "road_safety_hackathon_2026_readme_codeblock_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "road_safety_hackathon_2026_readme_b_citizen_app_mobile_client_jest_maestro",
+      "target": "road_safety_hackathon_2026_readme_codeblock_8"
     },
     {
       "relation": "contains",
@@ -37065,9 +38078,9 @@
       "source_file": "docs/STLC_Test_Plan/02_test_planning.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_02_test_planning_2_test_strategy",
-      "target": "stlc_test_plan_02_test_planning_2_1_backend_testing_strategy",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_02_test_planning_2_1_backend_testing_strategy"
     },
     {
       "relation": "contains",
@@ -37075,9 +38088,9 @@
       "source_file": "docs/STLC_Test_Plan/02_test_planning.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_02_test_planning_2_test_strategy",
-      "target": "stlc_test_plan_02_test_planning_2_2_frontend_testing_strategy",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_02_test_planning_2_2_frontend_testing_strategy"
     },
     {
       "relation": "contains",
@@ -37205,9 +38218,9 @@
       "source_file": "docs/STLC_Test_Plan/03_test_case_development.md",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_03_test_case_development_stlc_stage_3_test_case_development",
-      "target": "stlc_test_plan_03_test_case_development_4_citizen_app_expo_react_native_test_cases",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_03_test_case_development_4_citizen_app_expo_react_native_test_cases"
     },
     {
       "relation": "contains",
@@ -37215,9 +38228,9 @@
       "source_file": "docs/STLC_Test_Plan/03_test_case_development.md",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_03_test_case_development_stlc_stage_3_test_case_development",
-      "target": "stlc_test_plan_03_test_case_development_5_crm_web_react_dashboard_test_cases",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_03_test_case_development_5_crm_web_react_dashboard_test_cases"
     },
     {
       "relation": "contains",
@@ -37315,9 +38328,9 @@
       "source_file": "docs/STLC_Test_Plan/03_test_case_development.md",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_03_test_case_development_4_citizen_app_expo_react_native_test_cases",
-      "target": "stlc_test_plan_03_test_case_development_tc_fe_cit_01_zustand_offline_sync_queue_serialization",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_03_test_case_development_tc_fe_cit_01_zustand_offline_sync_queue_serialization"
     },
     {
       "relation": "contains",
@@ -37325,9 +38338,9 @@
       "source_file": "docs/STLC_Test_Plan/03_test_case_development.md",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_03_test_case_development_4_citizen_app_expo_react_native_test_cases",
-      "target": "stlc_test_plan_03_test_case_development_tc_fe_cit_02_webview_leaflet_coordinate_message_handling",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_03_test_case_development_tc_fe_cit_02_webview_leaflet_coordinate_message_handling"
     },
     {
       "relation": "contains",
@@ -37335,9 +38348,9 @@
       "source_file": "docs/STLC_Test_Plan/03_test_case_development.md",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_03_test_case_development_4_citizen_app_expo_react_native_test_cases",
-      "target": "stlc_test_plan_03_test_case_development_tc_fe_cit_03_custom_hook_offline_fallback_usecomplaintcontroller",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_03_test_case_development_tc_fe_cit_03_custom_hook_offline_fallback_usecomplaintcontroller"
     },
     {
       "relation": "contains",
@@ -37345,9 +38358,9 @@
       "source_file": "docs/STLC_Test_Plan/03_test_case_development.md",
       "source_location": "L152",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_03_test_case_development_5_crm_web_react_dashboard_test_cases",
-      "target": "stlc_test_plan_03_test_case_development_tc_fe_crm_01_roleguard_component_access_masking",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_03_test_case_development_tc_fe_crm_01_roleguard_component_access_masking"
     },
     {
       "relation": "contains",
@@ -37355,9 +38368,9 @@
       "source_file": "docs/STLC_Test_Plan/03_test_case_development.md",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_03_test_case_development_5_crm_web_react_dashboard_test_cases",
-      "target": "stlc_test_plan_03_test_case_development_tc_fe_crm_02_rtk_query_cache_invalidation_in_line_ticket_assignment",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_03_test_case_development_tc_fe_crm_02_rtk_query_cache_invalidation_in_line_ticket_assignment"
     },
     {
       "relation": "contains",
@@ -37365,9 +38378,9 @@
       "source_file": "docs/STLC_Test_Plan/03_test_case_development.md",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_03_test_case_development_5_crm_web_react_dashboard_test_cases",
-      "target": "stlc_test_plan_03_test_case_development_tc_fe_crm_03_proofviewer_image_comparison_pane_msw_interception",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_03_test_case_development_tc_fe_crm_03_proofviewer_image_comparison_pane_msw_interception"
     },
     {
       "relation": "contains",
@@ -37395,9 +38408,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_stlc_stage_4_test_environment_setup",
-      "target": "stlc_test_plan_04_test_environment_setup_2_backend_setup_procedure",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_2_backend_setup_procedure"
     },
     {
       "relation": "contains",
@@ -37415,9 +38428,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_stlc_stage_4_test_environment_setup",
-      "target": "stlc_test_plan_04_test_environment_setup_4_frontend_setup_procedure",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_4_frontend_setup_procedure"
     },
     {
       "relation": "contains",
@@ -37425,9 +38438,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L125",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_stlc_stage_4_test_environment_setup",
-      "target": "stlc_test_plan_04_test_environment_setup_5_test_environment_verification_checklist",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_5_test_environment_verification_checklist"
     },
     {
       "relation": "contains",
@@ -37465,9 +38478,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_2_backend_setup_procedure",
-      "target": "stlc_test_plan_04_test_environment_setup_step_2_1_clone_and_configuration",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_step_2_1_clone_and_configuration"
     },
     {
       "relation": "contains",
@@ -37475,9 +38488,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_2_backend_setup_procedure",
-      "target": "stlc_test_plan_04_test_environment_setup_step_2_2_launch_the_services",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_step_2_2_launch_the_services"
     },
     {
       "relation": "contains",
@@ -37485,9 +38498,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_2_backend_setup_procedure",
-      "target": "stlc_test_plan_04_test_environment_setup_step_2_3_verification_of_database_migrations",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_step_2_3_verification_of_database_migrations"
     },
     {
       "relation": "contains",
@@ -37585,9 +38598,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_4_frontend_setup_procedure",
-      "target": "stlc_test_plan_04_test_environment_setup_4_1_setup_citizen_app_expo_react_native",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_4_1_setup_citizen_app_expo_react_native"
     },
     {
       "relation": "contains",
@@ -37595,9 +38608,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_4_frontend_setup_procedure",
-      "target": "stlc_test_plan_04_test_environment_setup_4_2_setup_crm_web_dashboard_vite_react",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_4_2_setup_crm_web_dashboard_vite_react"
     },
     {
       "relation": "contains",
@@ -37605,9 +38618,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L100",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_4_1_setup_citizen_app_expo_react_native",
-      "target": "stlc_test_plan_04_test_environment_setup_codeblock_6",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_codeblock_6"
     },
     {
       "relation": "contains",
@@ -37615,9 +38628,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_4_1_setup_citizen_app_expo_react_native",
-      "target": "stlc_test_plan_04_test_environment_setup_codeblock_7",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_codeblock_7"
     },
     {
       "relation": "contains",
@@ -37625,9 +38638,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_4_2_setup_crm_web_dashboard_vite_react",
-      "target": "stlc_test_plan_04_test_environment_setup_codeblock_8",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_codeblock_8"
     },
     {
       "relation": "contains",
@@ -37635,9 +38648,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_4_2_setup_crm_web_dashboard_vite_react",
-      "target": "stlc_test_plan_04_test_environment_setup_codeblock_9",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_codeblock_9"
     },
     {
       "relation": "contains",
@@ -37645,9 +38658,9 @@
       "source_file": "docs/STLC_Test_Plan/04_test_environment_setup.md",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_04_test_environment_setup_4_2_setup_crm_web_dashboard_vite_react",
-      "target": "stlc_test_plan_04_test_environment_setup_codeblock_10",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_04_test_environment_setup_codeblock_10"
     },
     {
       "relation": "contains",
@@ -37695,9 +38708,9 @@
       "source_file": "docs/STLC_Test_Plan/05_test_execution.md",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_05_test_execution_stlc_stage_5_test_execution_log_integration_scenarios",
-      "target": "stlc_test_plan_05_test_execution_4_frontend_execution_logs_cli_runbook",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_05_test_execution_4_frontend_execution_logs_cli_runbook"
     },
     {
       "relation": "contains",
@@ -37885,9 +38898,9 @@
       "source_file": "docs/STLC_Test_Plan/05_test_execution.md",
       "source_location": "L123",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_05_test_execution_4_frontend_execution_logs_cli_runbook",
-      "target": "stlc_test_plan_05_test_execution_4_1_executing_citizen_app_test_suites",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_05_test_execution_4_1_executing_citizen_app_test_suites"
     },
     {
       "relation": "contains",
@@ -37895,9 +38908,9 @@
       "source_file": "docs/STLC_Test_Plan/05_test_execution.md",
       "source_location": "L142",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_05_test_execution_4_frontend_execution_logs_cli_runbook",
-      "target": "stlc_test_plan_05_test_execution_4_2_executing_crm_web_dashboard_test_suites",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_05_test_execution_4_2_executing_crm_web_dashboard_test_suites"
     },
     {
       "relation": "contains",
@@ -37905,9 +38918,9 @@
       "source_file": "docs/STLC_Test_Plan/05_test_execution.md",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_05_test_execution_4_1_executing_citizen_app_test_suites",
-      "target": "stlc_test_plan_05_test_execution_codeblock_12",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_05_test_execution_codeblock_12"
     },
     {
       "relation": "contains",
@@ -37915,9 +38928,9 @@
       "source_file": "docs/STLC_Test_Plan/05_test_execution.md",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_05_test_execution_4_1_executing_citizen_app_test_suites",
-      "target": "stlc_test_plan_05_test_execution_codeblock_13",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_05_test_execution_codeblock_13"
     },
     {
       "relation": "contains",
@@ -37925,9 +38938,9 @@
       "source_file": "docs/STLC_Test_Plan/05_test_execution.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_05_test_execution_4_1_executing_citizen_app_test_suites",
-      "target": "stlc_test_plan_05_test_execution_codeblock_14",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_05_test_execution_codeblock_14"
     },
     {
       "relation": "contains",
@@ -37935,9 +38948,9 @@
       "source_file": "docs/STLC_Test_Plan/05_test_execution.md",
       "source_location": "L146",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_05_test_execution_4_2_executing_crm_web_dashboard_test_suites",
-      "target": "stlc_test_plan_05_test_execution_codeblock_15",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_05_test_execution_codeblock_15"
     },
     {
       "relation": "contains",
@@ -37945,9 +38958,9 @@
       "source_file": "docs/STLC_Test_Plan/05_test_execution.md",
       "source_location": "L151",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stlc_test_plan_05_test_execution_4_2_executing_crm_web_dashboard_test_suites",
-      "target": "stlc_test_plan_05_test_execution_codeblock_16",
-      "confidence_score": 1.0
+      "target": "stlc_test_plan_05_test_execution_codeblock_16"
     },
     {
       "relation": "contains",
@@ -38148,6 +39161,666 @@
       "confidence_score": 1.0,
       "source": "stlc_test_plan_07_failure_modes_and_robustness_tc_fail_con_01_concurrency_race_condition_under_bulk_reports",
       "target": "stlc_test_plan_07_failure_modes_and_robustness_codeblock_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_ui_ux_design_citizen_app_spec_md",
+      "target": "ui_ux_design_citizen_app_spec_roadwatch_citizen_app_expo_ui_ux_design_specification_light_theme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_roadwatch_citizen_app_expo_ui_ux_design_specification_light_theme",
+      "target": "ui_ux_design_citizen_app_spec_1_visual_integration_layer_theme_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_roadwatch_citizen_app_expo_ui_ux_design_specification_light_theme",
+      "target": "ui_ux_design_citizen_app_spec_2_screen_by_screen_ui_layouts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_roadwatch_citizen_app_expo_ui_ux_design_specification_light_theme",
+      "target": "ui_ux_design_citizen_app_spec_3_zustand_tanstack_state_ui_mappings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_1_visual_integration_layer_theme_mapping",
+      "target": "ui_ux_design_citizen_app_spec_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_2_screen_by_screen_ui_layouts",
+      "target": "ui_ux_design_citizen_app_spec_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_2_screen_by_screen_ui_layouts",
+      "target": "ui_ux_design_citizen_app_spec_screen_2_1_interactive_map_dashboard_interactivemapscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_2_screen_by_screen_ui_layouts",
+      "target": "ui_ux_design_citizen_app_spec_screen_2_2_file_complaint_screen_filecomplaintscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_2_screen_by_screen_ui_layouts",
+      "target": "ui_ux_design_citizen_app_spec_screen_2_3_live_ticket_chatbot_window_ticketdetailscreen_aihelpchatbot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_2_screen_by_screen_ui_layouts",
+      "target": "ui_ux_design_citizen_app_spec_screen_2_4_open_budgets_explorer_budgetexplorerscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_screen_2_1_interactive_map_dashboard_interactivemapscreen",
+      "target": "ui_ux_design_citizen_app_spec_1_visual_hierarchy_elements_tree",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_screen_2_1_interactive_map_dashboard_interactivemapscreen",
+      "target": "ui_ux_design_citizen_app_spec_2_key_micro_animations_interactions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_screen_2_2_file_complaint_screen_filecomplaintscreen",
+      "target": "ui_ux_design_citizen_app_spec_1_visual_hierarchy_elements_tree_112",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_screen_2_2_file_complaint_screen_filecomplaintscreen",
+      "target": "ui_ux_design_citizen_app_spec_2_key_micro_animations_interactions_140",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_screen_2_3_live_ticket_chatbot_window_ticketdetailscreen_aihelpchatbot",
+      "target": "ui_ux_design_citizen_app_spec_1_visual_hierarchy_elements_tree_150",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_screen_2_3_live_ticket_chatbot_window_ticketdetailscreen_aihelpchatbot",
+      "target": "ui_ux_design_citizen_app_spec_2_key_micro_animations_interactions_174",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/citizen_app_spec.md",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "ui_ux_design_citizen_app_spec_screen_2_4_open_budgets_explorer_budgetexplorerscreen",
+      "target": "ui_ux_design_citizen_app_spec_1_visual_hierarchy_elements_tree_184",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_ui_ux_design_crm_web_spec_md",
+      "target": "ui_ux_design_crm_web_spec_roadwatch_govt_crm_portal_ui_ux_design_specification_light_theme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_roadwatch_govt_crm_portal_ui_ux_design_specification_light_theme",
+      "target": "ui_ux_design_crm_web_spec_1_core_shell_layout_dashboardlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_roadwatch_govt_crm_portal_ui_ux_design_specification_light_theme",
+      "target": "ui_ux_design_crm_web_spec_2_the_four_distinct_dashboard_layouts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_roadwatch_govt_crm_portal_ui_ux_design_specification_light_theme",
+      "target": "ui_ux_design_crm_web_spec_3_high_fidelity_double_pane_ai_verification_panel_proofviewer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_roadwatch_govt_crm_portal_ui_ux_design_specification_light_theme",
+      "target": "ui_ux_design_crm_web_spec_4_state_ui_rtk_query_mappings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_1_core_shell_layout_dashboardlayout",
+      "target": "ui_ux_design_crm_web_spec_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_1_core_shell_layout_dashboardlayout",
+      "target": "ui_ux_design_crm_web_spec_1_1_vertical_sidebar_left_navigation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_1_core_shell_layout_dashboardlayout",
+      "target": "ui_ux_design_crm_web_spec_1_2_horizontal_top_bar_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_2_the_four_distinct_dashboard_layouts",
+      "target": "ui_ux_design_crm_web_spec_layout_2_1_executive_oversight_dashboard_morth_ce_se",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_2_the_four_distinct_dashboard_layouts",
+      "target": "ui_ux_design_crm_web_spec_layout_2_2_operational_division_dashboard_executive_engineer_ee_ward_engineer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_2_the_four_distinct_dashboard_layouts",
+      "target": "ui_ux_design_crm_web_spec_layout_2_3_mobile_responsive_field_portal_junior_engineer_je",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_2_the_four_distinct_dashboard_layouts",
+      "target": "ui_ux_design_crm_web_spec_layout_2_4_contractor_workspace_portal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_layout_2_1_executive_oversight_dashboard_morth_ce_se",
+      "target": "ui_ux_design_crm_web_spec_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_layout_2_1_executive_oversight_dashboard_morth_ce_se",
+      "target": "ui_ux_design_crm_web_spec_1_page_grid_widgets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_layout_2_2_operational_division_dashboard_executive_engineer_ee_ward_engineer",
+      "target": "ui_ux_design_crm_web_spec_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_layout_2_2_operational_division_dashboard_executive_engineer_ee_ward_engineer",
+      "target": "ui_ux_design_crm_web_spec_1_page_grid_widgets_90",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_layout_2_3_mobile_responsive_field_portal_junior_engineer_je",
+      "target": "ui_ux_design_crm_web_spec_1_ui_elements_touch_targets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_layout_2_4_contractor_workspace_portal",
+      "target": "ui_ux_design_crm_web_spec_1_ui_elements_widgets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_3_high_fidelity_double_pane_ai_verification_panel_proofviewer",
+      "target": "ui_ux_design_crm_web_spec_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_3_high_fidelity_double_pane_ai_verification_panel_proofviewer",
+      "target": "ui_ux_design_crm_web_spec_3_1_left_pane_contractor_submission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_3_high_fidelity_double_pane_ai_verification_panel_proofviewer",
+      "target": "ui_ux_design_crm_web_spec_3_2_right_pane_ai_analysis_verdict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/crm_web_spec.md",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "ui_ux_design_crm_web_spec_3_high_fidelity_double_pane_ai_verification_panel_proofviewer",
+      "target": "ui_ux_design_crm_web_spec_3_3_action_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_ui_ux_design_design_system_md",
+      "target": "ui_ux_design_design_system_roadwatch_global_ui_ux_design_system_specification_premium_light_theme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_roadwatch_global_ui_ux_design_system_specification_premium_light_theme",
+      "target": "ui_ux_design_design_system_1_visual_philosophy_design_direction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_roadwatch_global_ui_ux_design_system_specification_premium_light_theme",
+      "target": "ui_ux_design_design_system_2_core_color_tokens_hex_hsl_scales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_roadwatch_global_ui_ux_design_system_specification_premium_light_theme",
+      "target": "ui_ux_design_design_system_3_frosted_glassmorphism_styling_specifications_css_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_roadwatch_global_ui_ux_design_system_specification_premium_light_theme",
+      "target": "ui_ux_design_design_system_4_typography_scale_layout_foundations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_roadwatch_global_ui_ux_design_system_specification_premium_light_theme",
+      "target": "ui_ux_design_design_system_5_mobile_layout_design_bounds_citizen_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_roadwatch_global_ui_ux_design_system_specification_premium_light_theme",
+      "target": "ui_ux_design_design_system_6_micro_animations_dynamic_states_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_1_visual_philosophy_design_direction",
+      "target": "ui_ux_design_design_system_key_principles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_2_core_color_tokens_hex_hsl_scales",
+      "target": "ui_ux_design_design_system_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_2_core_color_tokens_hex_hsl_scales",
+      "target": "ui_ux_design_design_system_2_1_backgrounds_neutral_scale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_2_core_color_tokens_hex_hsl_scales",
+      "target": "ui_ux_design_design_system_2_2_functional_accents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_3_frosted_glassmorphism_styling_specifications_css_rules",
+      "target": "ui_ux_design_design_system_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_4_typography_scale_layout_foundations",
+      "target": "ui_ux_design_design_system_4_1_fonts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_4_typography_scale_layout_foundations",
+      "target": "ui_ux_design_design_system_4_2_hierarchy_chart_standardized",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_5_mobile_layout_design_bounds_citizen_app",
+      "target": "ui_ux_design_design_system_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_5_mobile_layout_design_bounds_citizen_app",
+      "target": "ui_ux_design_design_system_safe_area_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_6_micro_animations_dynamic_states_spec",
+      "target": "ui_ux_design_design_system_6_1_state_transitions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_6_micro_animations_dynamic_states_spec",
+      "target": "ui_ux_design_design_system_6_2_state_spec_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/design_system.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "ui_ux_design_design_system_6_1_state_transitions",
+      "target": "ui_ux_design_design_system_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_ui_ux_design_readme_md",
+      "target": "ui_ux_design_readme_roadwatch_ui_ux_design_system_specifications_premium_light_theme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "ui_ux_design_readme_roadwatch_ui_ux_design_system_specifications_premium_light_theme",
+      "target": "ui_ux_design_readme_directory_contents_navigation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "ui_ux_design_readme_roadwatch_ui_ux_design_system_specifications_premium_light_theme",
+      "target": "ui_ux_design_readme_contextual_prompts_for_ai_design_generators",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "ui_ux_design_readme_directory_contents_navigation",
+      "target": "ui_ux_design_readme_1_global_design_system_spec_file_c_users_grand_codespace_road_safety_hackathon_2026_docs_ui_ux_design_design_system_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "ui_ux_design_readme_directory_contents_navigation",
+      "target": "ui_ux_design_readme_2_citizen_mobile_app_ui_ux_spec_file_c_users_grand_codespace_road_safety_hackathon_2026_docs_ui_ux_design_citizen_app_spec_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "ui_ux_design_readme_directory_contents_navigation",
+      "target": "ui_ux_design_readme_3_govt_crm_portal_ui_ux_spec_file_c_users_grand_codespace_road_safety_hackathon_2026_docs_ui_ux_design_crm_web_spec_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "ui_ux_design_readme_contextual_prompts_for_ai_design_generators",
+      "target": "ui_ux_design_readme_prompt_for_generating_the_react_native_citizen_app_views",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/UI_UX_Design/README.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "ui_ux_design_readme_contextual_prompts_for_ai_design_generators",
+      "target": "ui_ux_design_readme_prompt_for_generating_the_govt_crm_dashboard_views",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -38624,5 +40297,5 @@
       "source_file": "docs/plan.md"
     }
   ],
-  "built_at_commit": "c4cd688c7073e1d12a392b3b0c083da4a8b00c16"
+  "built_at_commit": "7afca7e64a729c73589c0da4053586dfa2fc191d"
 }

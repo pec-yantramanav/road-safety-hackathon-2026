@@ -1,16 +1,16 @@
 # Graph Report - road-safety-hackathon-2026  (2026-05-28)
 
 ## Corpus Check
-- 179 files · ~47,839 words
+- 190 files · ~56,707 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1679 nodes · 2249 edges · 157 communities (99 shown, 58 thin omitted)
+- 1770 nodes · 2379 edges · 164 communities (105 shown, 59 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 89 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c4cd688c`
+- Built from commit: `7afca7e6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,7 +38,14 @@
 - [[_COMMUNITY_Community 25|Community 25]]
 - [[_COMMUNITY_Community 26|Community 26]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_AI Service Operations and DB Engines|AI Service Operations and DB Engines]]
 - [[_COMMUNITY_Core APIs, Gateway, and Authentication|Core APIs, Gateway, and Authentication]]
@@ -174,19 +181,19 @@
 - **Secure Authentication and RBAC Flow** — keycloak, kong_api_gateway, role_based_access_control_rls, crm_core_api [EXTRACTED 1.00]
 - **End-to-End Citizen Grievance Loop** — agentic_ai_chat_interface, master_ticket_clustering, grievance_escalation_pipeline, pow_validation_pipeline [INFERRED 0.85]
 
-## Communities (157 total, 58 thin omitted)
+## Communities (164 total, 59 thin omitted)
 
 ### Community 0 - "Core APIs, Gateway, and Authentication"
 Cohesion: 0.10
 Nodes (30): Agentic AI Multilingual Chatbot Interface, citizen-ai-service (FastAPI Service), citizen-core-api (Spring Boot Service), Competitor & Ecosystem Analysis Document, crm-ai-service (FastAPI Service), crm-core-api (Spring Boot Service), RoadWatch CRM User Personas Document, Grievance Escalation Pipeline (+22 more)
 
 ### Community 1 - "AI Service Operations and DB Engines"
-Cohesion: 0.21
-Nodes (13): ticketApi, TicketTable(), TicketTableProps, useEscalationController(), useTicketListController(), LocationPoint, Ticket, TicketCategory (+5 more)
+Cohesion: 0.05
+Nodes (57): baseQueryWithReauth(), rawBaseQuery, budgetApi, ticketApi, workorderApi, ProofViewer(), ProofViewerProps, RoleGuard() (+49 more)
 
 ### Community 2 - "STLC Test Plan and Quality Assurance"
 Cohesion: 0.05
-Nodes (40): AuthorityType, ChatMessage, LocationPoint, SyncAction, Ticket, TicketCategory, TicketEvent, TicketPriority (+32 more)
+Nodes (46): AuthorityType, ChatMessage, LocationPoint, SyncAction, Ticket, TicketCategory, TicketEvent, TicketPriority (+38 more)
 
 ### Community 3 - "Core APIs, Gateway, and Authentication"
 Cohesion: 0.06
@@ -226,31 +233,55 @@ Nodes (6): compilerOptions, baseUrl, paths, strict, extends, @/*
 
 ### Community 21 - "Community 21"
 Cohesion: 0.13
-Nodes (14): RoleGuard(), RoleGuardProps, Sidebar(), SidebarProps, authSlice, AuthState, initialState, KeycloakTokenPayload (+6 more)
+Nodes (7): AuthorityType, BigDecimal, String, UUID, Test, BudgetScheme, WorkOrderServiceTest
 
 ### Community 22 - "Community 22"
-Cohesion: 0.26
-Nodes (8): baseQueryWithReauth(), rawBaseQuery, budgetApi, workorderApi, BudgetSchemeDetails, WorkOrder, AppDispatch, store
+Cohesion: 0.24
+Nodes (7): Mono, AiIntegrationService, BeforeEach, Test, FilterResponse, GeoResolveResponse, TicketServiceTest
 
 ### Community 23 - "Community 23"
-Cohesion: 0.24
-Nodes (7): ProofViewer(), ProofViewerProps, useBudgetDashboardController(), usePoWValidationController(), GlassCardProps, App(), RootState
+Cohesion: 0.31
+Nodes (8): List, MasterTicket, Object, Optional, Query, MasterTicketRepository, TicketCategory, UUID
 
 ### Community 24 - "Community 24"
-Cohesion: 0.22
-Nodes (7): worker, handlers, mockBudgets, mockTickets, mockWorkOrders, prepareApp(), server
+Cohesion: 0.33
+Nodes (3): AuthorityType, UUID, GeoResolveResponse
 
 ### Community 25 - "Community 25"
-Cohesion: 0.18
-Nodes (9): initialState, ToastAlert, uiSlice, UIState, action, activeState, backState, initialState (+1 more)
+Cohesion: 0.17
+Nodes (11): initialState, savedTheme, ThemeType, ToastAlert, uiSlice, UIState, action, activeState (+3 more)
 
 ### Community 26 - "Community 26"
 Cohesion: 0.50
 Nodes (3): React, store, { View }
 
+### Community 32 - "Community 32"
+Cohesion: 0.09
+Nodes (22): 1.1 Vertical Sidebar (Left Navigation), 1.2 Horizontal Top Bar (Header), 1. Core Shell Layout (`DashboardLayout`), 1. Page Grid & Widgets, 1. Page Grid & Widgets, 1. UI Elements & Touch Targets, 1. UI Elements & Widgets, 2. The Four Distinct Dashboard Layouts (+14 more)
+
+### Community 33 - "Community 33"
+Cohesion: 0.10
+Nodes (19): 1. Visual Philosophy & Design Direction, 2.1 Backgrounds & Neutral Scale, 2.2 Functional Accents, 2. Core Color Tokens (Hex & HSL Scales), 3. Frosted Glassmorphism Styling Specifications (CSS Rules), 4.1 Fonts, 4.2 Hierarchy Chart (Standardized), 4. Typography Scale & Layout Foundations (+11 more)
+
+### Community 34 - "Community 34"
+Cohesion: 0.11
+Nodes (17): 1. Visual Hierarchy & Elements Tree, 1. Visual Hierarchy & Elements Tree, 1. Visual Hierarchy & Elements Tree, 1. Visual Hierarchy & Elements Tree, 1. Visual Integration Layer (`Theme` Mapping), 2. Key Micro-Animations & Interactions, 2. Key Micro-Animations & Interactions, 2. Key Micro-Animations & Interactions (+9 more)
+
+### Community 35 - "Community 35"
+Cohesion: 0.35
+Nodes (7): BudgetController, BudgetScheme, GetMapping, List, ResponseEntity, String, UUID
+
 ### Community 37 - "AI Service Operations and DB Engines"
 Cohesion: 0.39
 Nodes (6): Base, AsyncSession, float, Blackspot, Jurisdiction, resolve_jurisdiction()
+
+### Community 38 - "Community 38"
+Cohesion: 0.22
+Nodes (8): 1. 🎨 [Global Design System Spec](file:///c:/Users/grand/codespace/road-safety-hackathon-2026/docs/UI_UX_Design/design_system.md), 2. 📱 [Citizen Mobile App UI/UX Spec](file:///c:/Users/grand/codespace/road-safety-hackathon-2026/docs/UI_UX_Design/citizen_app_spec.md), 3. 🖥️ [Govt CRM Portal UI/UX Spec](file:///c:/Users/grand/codespace/road-safety-hackathon-2026/docs/UI_UX_Design/crm_web_spec.md), 🤖 Contextual Prompts for AI Design Generators, 📂 Directory Contents & Navigation, Prompt for Generating the Govt CRM Dashboard Views, Prompt for Generating the React Native Citizen App Views, RoadWatch UI/UX Design System & Specifications (Premium Light Theme)
+
+### Community 39 - "Community 39"
+Cohesion: 0.60
+Nodes (3): TicketEvent, UUID, WebSocketService
 
 ### Community 41 - "AI Service Operations and DB Engines"
 Cohesion: 0.70
@@ -309,8 +340,8 @@ Cohesion: 0.53
 Nodes (4): List, TicketEventRepository, TicketEvent, UUID
 
 ### Community 376 - "Core APIs, Gateway, and Authentication"
-Cohesion: 0.05
-Nodes (36): List, MasterTicket, Object, Optional, Query, MasterTicketRepository, TicketCategory, UUID (+28 more)
+Cohesion: 0.17
+Nodes (13): CreateTicketRequest, EventType, List, Map, MasterTicket, Object, Optional, String (+5 more)
 
 ### Community 450 - "AI Service Operations and DB Engines"
 Cohesion: 0.67
@@ -330,15 +361,15 @@ Nodes (3): Bean, WebClientConfig, WebClient
 
 ### Community 497 - "Core APIs, Gateway, and Authentication"
 Cohesion: 0.06
-Nodes (36): BudgetController, DashboardController, BudgetScheme, GetMapping, List, ResponseEntity, String, UUID (+28 more)
+Nodes (35): DashboardController, GetMapping, Map, Object, ResponseEntity, String, UUID, BudgetScheme (+27 more)
 
 ### Community 506 - "Core APIs, Gateway, and Authentication"
 Cohesion: 0.23
 Nodes (11): TicketController, GetMapping, List, MasterTicket, PostMapping, ResponseEntity, String, TicketEvent (+3 more)
 
 ### Community 523 - "Core APIs, Gateway, and Authentication"
-Cohesion: 0.18
-Nodes (15): WorkOrderController, BigDecimal, GetMapping, List, PostMapping, ResponseEntity, String, UUID (+7 more)
+Cohesion: 0.33
+Nodes (9): WorkOrderController, BigDecimal, GetMapping, List, PostMapping, ResponseEntity, String, UUID (+1 more)
 
 ### Community 563 - "Core APIs, Gateway, and Authentication"
 Cohesion: 0.22
@@ -361,8 +392,8 @@ Cohesion: 0.18
 Nodes (5): TicketEvent, EventType, LocalDateTime, String, UUID
 
 ### Community 682 - "Core APIs, Gateway, and Authentication"
-Cohesion: 0.05
-Nodes (24): AuthorityType, BigDecimal, String, UUID, BigDecimal, List, LocalDateTime, String (+16 more)
+Cohesion: 0.08
+Nodes (17): BigDecimal, List, LocalDateTime, String, UUID, WorkOrderStatus, BigDecimal, EventType (+9 more)
 
 ### Community 743 - "Core APIs, Gateway, and Authentication"
 Cohesion: 0.16
@@ -461,21 +492,21 @@ Cohesion: 0.13
 Nodes (14): 1. Failure Mode and Effects Analysis (FMEA) Matrix, 2. Robustness & Negative Test Cases, code:bash (curl -X POST http://localhost:8000/api/v1/citizen/tickets \), code:bash (curl -X POST "http://localhost:8000/api/v1/crm/workorders/{i), code:bash (curl "http://localhost:8000/api/v1/crm/tickets/{ward_99_tick), code:bash (curl -X POST http://localhost:8000/api/v1/citizen/tickets \), code:json ({), code:bash (# Concurrent submits to lat 13.055, lng 80.275) (+6 more)
 
 ## Knowledge Gaps
-- **513 isolated node(s):** `Config`, `AsyncSession`, `AsyncSession`, `float`, `str` (+508 more)
+- **555 isolated node(s):** `Config`, `AsyncSession`, `AsyncSession`, `float`, `str` (+550 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **58 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **59 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `OfficerRole` connect `Core APIs, Gateway, and Authentication` to `Core APIs, Gateway, and Authentication`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `Config`, `AsyncSession`, `AsyncSession` to the rest of the system?**
-  _513 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _555 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Core APIs, Gateway, and Authentication` be split into smaller, more focused modules?**
   _Cohesion score 0.09655172413793103 - nodes in this community are weakly interconnected._
+- **Should `AI Service Operations and DB Engines` be split into smaller, more focused modules?**
+  _Cohesion score 0.05030643513789581 - nodes in this community are weakly interconnected._
 - **Should `STLC Test Plan and Quality Assurance` be split into smaller, more focused modules?**
-  _Cohesion score 0.053923541247484906 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05228105228105228 - nodes in this community are weakly interconnected._
 - **Should `Core APIs, Gateway, and Authentication` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `AI Service Operations and DB Engines` be split into smaller, more focused modules?**

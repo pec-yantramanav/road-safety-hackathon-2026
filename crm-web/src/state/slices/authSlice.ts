@@ -43,13 +43,43 @@ const authSlice = createSlice({
       
       // Fallback for sandboxed developer mock mode credentials injection
       state.token = action.payload.token;
-      state.user = {
-        sub: 'mock-officer-sub-uuid',
-        name: 'Executive Engineer Sharma',
+      
+      let mockUser: KeycloakTokenPayload = {
+        sub: 'mock-ee-sub-uuid',
+        name: 'EE Rajesh Patel (Executive Engineer)',
         roles: ['EE'],
         jurisdiction_id: 'ward-42-id',
         authority_type: 'PWD'
       };
+
+      const tokenValue = action.payload.token.trim().toUpperCase();
+      if (tokenValue === 'JE') {
+        mockUser = {
+          sub: 'mock-je-sub-uuid',
+          name: 'JE Amit Sharma (Section Junior Engineer)',
+          roles: ['JE'],
+          jurisdiction_id: 'ward-42-id',
+          authority_type: 'MUNICIPAL'
+        };
+      } else if (tokenValue === 'CE' || tokenValue === 'SE' || tokenValue === 'COMMISSIONER') {
+        mockUser = {
+          sub: 'mock-ce-sub-uuid',
+          name: 'CE Vikram Seth (State Chief PWD Engineer)',
+          roles: [tokenValue as OfficerRole],
+          jurisdiction_id: 'pwd-circle-chennai',
+          authority_type: 'PWD'
+        };
+      } else if (tokenValue === 'CONTRACTOR') {
+        mockUser = {
+          sub: 'mock-contractor-sub-uuid',
+          name: 'ABC Infra Builders (Empanelled Contractor)',
+          roles: ['CONTRACTOR'],
+          jurisdiction_id: 'ward-42-id',
+          authority_type: 'MUNICIPAL'
+        };
+      }
+
+      state.user = mockUser;
       state.isAuthenticated = true;
     },
     logout: (state) => {

@@ -5,9 +5,29 @@
 @layer base {
   :root {
     --font-sans: 'Outfit', sans-serif;
+    
+    /* Frosted Light Theme CSS Tokens (Default) */
+    --bg-dark: #F8FAFC;
+    --panel-glass: rgba(255, 255, 255, 0.7);
+    --border-glass: rgba(15, 23, 42, 0.08);
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --bg-surface: #FFFFFF;
+    
+    --accent-neon: #4F46E5;
+    --warning-neon: #D97706;
+    --success-neon: #16A34A;
+    --danger-neon: #DC2626;
+  }
+
+  .dark-mode {
+    /* Legacy Dark Slate Theme CSS Tokens */
     --bg-dark: #070a13;
     --panel-glass: rgba(20, 26, 48, 0.4);
     --border-glass: rgba(255, 255, 255, 0.05);
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --bg-surface: #10162A;
     
     --accent-neon: #3b82f6;
     --warning-neon: #eab308;
@@ -18,9 +38,11 @@
   body {
     background-color: var(--bg-dark);
     font-family: var(--font-sans);
-    color: #f3f4f6;
+    color: var(--text-primary);
     margin: 0;
     overflow-x: hidden;
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -36,6 +58,12 @@
 
 .glass-panel:hover {
   transform: translateY(-2px);
+  border-color: rgba(79, 70, 229, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 
+              0 4px 12px 0 rgba(15, 23, 42, 0.04);
+}
+
+.dark-mode .glass-panel:hover {
   border-color: rgba(59, 130, 246, 0.25);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 
               0 0 15px -3px rgba(59, 130, 246, 0.15);

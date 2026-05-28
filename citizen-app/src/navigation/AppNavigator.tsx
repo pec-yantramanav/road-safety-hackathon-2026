@@ -1,24 +1,40 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, ScrollView, ActivityIndicator, Image } from 'react-native';
 import { useAuthController } from '../controllers/useAuthController';
 import { useComplaintController } from '../controllers/useComplaintController';
 import { useOfflineSyncController } from '../controllers/useOfflineSyncController';
 import { useChatSessionController } from '../controllers/useChatSessionController';
+import { useBudgetController } from '../controllers/useBudgetController';
+import { useThemeStore } from '../state/themeStore';
 import { LeafletMap } from '../components/LeafletMap';
 import { ChatBubble } from '../components/ChatBubble';
 import { GlassCard } from '../components/GlassCard';
-import { TicketCategory, LocationPoint } from '../api/types';
-import { MapPin, MessageSquare, Send, FileText, WifiOff, LogOut } from 'lucide-react-native';
+import { TicketTimeline } from '../components/TicketTimeline';
+import { TicketCategory, LocationPoint, Ticket } from '../api/types';
+import { MapPin, MessageSquare, Send, FileText, WifiOff, LogOut, Sun, Moon, DollarSign, Award, Clock, Heart } from 'lucide-react-native';
 
 export const AppNavigator: React.FC = () => {
   const { isAuthenticated, user, isLoggingIn, login, logout } = useAuthController();
-  const { submitComplaint, isSubmitting, useNearbyTickets, isSavedOffline } = useComplaintController();
+  const { 
+    submitComplaint, 
+    isSubmitting, 
+    useNearbyTickets, 
+    useTicketEvents,
+    contributeComplaint,
+    isContributing,
+    isSavedOffline 
+  } = useComplaintController();
   const { queueLength, isSyncing, triggerManualSync } = useOfflineSyncController();
   const { messages, isStreaming, sendMessage } = useChatSessionController();
+  const { budgets, summary: budgetSummary, isLoading: loadingBudgets } = useBudgetController();
+  const { theme, toggleTheme } = useThemeStore();
 
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState('');
-  const [currentTab, setCurrentTab] = useState<'MAP' | 'REPORT' | 'CHAT'>('MAP');
+  const [currentTab, setCurrentTab] = useState<'MAP' | 'REPORT' | 'CHAT' | 'BUDGET'>('MAP');
+
+  // Selected Ticket overlay drawer state
+  const [selectedTicket, setSelectedTicket] = useState<Ticket | null>(null);
 
   // New Ticket State
   const [category, setCategory] = useState<TicketCategory>('POTHOLE');
@@ -30,6 +46,9 @@ export const AppNavigator: React.FC = () => {
     latitude: 12.9716,
     longitude: 77.5946
   });
+
+  // Load events timeline for selected ticket overlay
+  const { data: selectedTicketEvents = [], isLoading: loadingEvents } = useTicketEvents(selectedTicket?.id || '');
 
   const [chatInput, setChatInput] = useState('');
 
@@ -57,26 +76,43 @@ export const AppNavigator: React.FC = () => {
     }
   };
 
+  const handleContribute = async (ticketId: string) => {
+    try {
+      const updated = await contributeComplaint({
+        id: ticketId,
+        description: 'Upvoted and supported by citizen verification.',
+        photoUrls: []
+      });
+      setSelectedTicket(updated);
+      alert('Your support was logged! Authorities notified of increased severity.');
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   const handleChatSend = () => {
     if (!chatInput.trim()) return;
     sendMessage(chatInput);
     setChatInput('');
   };
 
+  const activeIconColor = '#4F46E5';
+  const inactiveIconColor = theme === 'dark' ? '#9CA3AF' : '#475569';
+
   if (!isAuthenticated) {
     return (
-      <View className="flex-1 bg-background justify-center px-6">
+      <View className={`flex-1 justify-center px-6 ${theme === 'dark' ? 'bg-darkBackground' : 'bg-background'}`}>
         <GlassCard className="space-y-6">
           <View className="items-center mb-6">
             <Text className="text-accent font-bold text-3xl tracking-tight">RoadWatch</Text>
-            <Text className="text-textSecondary text-xs mt-1">Citizen Empowerment Portal</Text>
+            <Text className="text-textSecondary dark:text-darkTextSecondary text-xs mt-1">Citizen Empowerment Portal</Text>
           </View>
 
           <View className="space-y-4">
             <View>
-              <Text className="text-textPrimary text-xs font-bold mb-2">PHONE NUMBER</Text>
+              <Text className="text-textPrimary dark:text-darkTextPrimary text-xs font-bold mb-2">PHONE NUMBER</Text>
               <TextInput
-                className="bg-[#121829] text-textPrimary border border-borderBg rounded-xl px-4 py-3"
+                className="bg-white dark:bg-[#121829] text-textPrimary dark:text-darkTextPrimary border border-borderBg dark:border-darkBorderBg rounded-xl px-4 py-3"
                 placeholder="+91 99999 99999"
                 placeholderTextColor="#6B7280"
                 keyboardType="phone-pad"
@@ -86,9 +122,9 @@ export const AppNavigator: React.FC = () => {
             </View>
 
             <View className="mt-4">
-              <Text className="text-textPrimary text-xs font-bold mb-2">ENTER OTP</Text>
+              <Text className="text-textPrimary dark:text-darkTextPrimary text-xs font-bold mb-2">ENTER OTP</Text>
               <TextInput
-                className="bg-[#121829] text-textPrimary border border-borderBg rounded-xl px-4 py-3"
+                className="bg-white dark:bg-[#121829] text-textPrimary dark:text-darkTextPrimary border border-borderBg dark:border-darkBorderBg rounded-xl px-4 py-3"
                 placeholder="123456"
                 placeholderTextColor="#6B7280"
                 secureTextEntry
@@ -106,7 +142,7 @@ export const AppNavigator: React.FC = () => {
               {isLoggingIn ? (
                 <ActivityIndicator color="#FFFFFF" size="small" />
               ) : (
-                <Text className="text-textPrimary font-bold text-base">Verify & Register</Text>
+                <Text className="text-white font-bold text-base">Verify & Register</Text>
               )}
             </TouchableOpacity>
           </View>
@@ -116,16 +152,27 @@ export const AppNavigator: React.FC = () => {
   }
 
   return (
-    <View className="flex-1 bg-background pt-12">
+    <View className={`flex-1 pt-12 ${theme === 'dark' ? 'bg-darkBackground' : 'bg-background'}`}>
       {/* Header Panel */}
-      <View className="px-6 pb-4 border-b border-borderBg flex-row justify-between items-center">
+      <View className="px-6 pb-4 border-b border-borderBg dark:border-darkBorderBg flex-row justify-between items-center">
         <View>
-          <Text className="text-textPrimary font-bold text-lg">Welcome, {user?.name}</Text>
-          <Text className="text-textSecondary text-xs">{user?.phone}</Text>
+          <Text className="text-textPrimary dark:text-darkTextPrimary font-bold text-lg">Welcome, {user?.name}</Text>
+          <Text className="text-textSecondary dark:text-darkTextSecondary text-xs">{user?.phone}</Text>
         </View>
-        <TouchableOpacity onPress={logout}>
-          <LogOut size={20} color="#EF4444" />
-        </TouchableOpacity>
+        
+        <View className="flex-row items-center">
+          {/* Dynamic Theme Toggle Switch */}
+          <TouchableOpacity 
+            onPress={toggleTheme} 
+            className="p-2 bg-cardBg dark:bg-darkCardBg border border-borderBg dark:border-darkBorderBg rounded-xl mr-3"
+          >
+            {theme === 'dark' ? <Sun size={18} color="#F59E0B" /> : <Moon size={18} color="#4F46E5" />}
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={logout}>
+            <LogOut size={20} color="#EF4444" />
+          </TouchableOpacity>
+        </View>
       </View>
 
       {/* Offline Sync Banner if actions queued */}
@@ -148,33 +195,105 @@ export const AppNavigator: React.FC = () => {
       {/* Dynamic Tab Body rendering */}
       <ScrollView className="flex-1 px-4 mt-4">
         {currentTab === 'MAP' && (
-          <View className="space-y-4">
-            <Text className="text-textPrimary font-bold text-lg mb-2">Nearby Grid Grievances</Text>
+          <View className="space-y-4 pb-12">
+            <Text className="text-textPrimary dark:text-darkTextPrimary font-bold text-lg mb-2">Nearby Grid Grievances</Text>
             {isLoadingTickets ? (
               <ActivityIndicator color="#4F46E5" size="large" />
             ) : (
               <LeafletMap
                 nearbyTickets={nearbyTickets}
                 center={{ latitude: 12.9716, longitude: 77.5946 }}
-                onLocationSelect={setSelectedPoint}
+                onLocationSelect={(point) => {
+                  setSelectedPoint(point);
+                  setSelectedTicket(null); // Close active ticket when maps clicked
+                }}
+                onTicketSelect={setSelectedTicket}
               />
             )}
             
-            <GlassCard className="mt-4">
-              <Text className="text-textPrimary font-bold text-sm mb-2">Selected Location</Text>
-              <Text className="text-textSecondary text-xs">
-                Lat: {selectedPoint.latitude.toFixed(6)} | Lng: {selectedPoint.longitude.toFixed(6)}
-              </Text>
-            </GlassCard>
+            {/* Ticket details sliding drawer card if marker is clicked */}
+            {selectedTicket ? (
+              <GlassCard className="mt-4 border-l-4 border-l-accent shadow-xl animate-slide-in">
+                <View className="flex-row justify-between items-start mb-2 border-b border-borderBg dark:border-darkBorderBg pb-3">
+                  <View className="flex-1">
+                    <Text className="text-[10px] text-textSecondary dark:text-darkTextSecondary font-bold uppercase tracking-wider">
+                      Ticket {selectedTicket.id}
+                    </Text>
+                    <Text className="text-textPrimary dark:text-darkTextPrimary font-bold text-sm mt-0.5">
+                      {selectedTicket.title}
+                    </Text>
+                  </View>
+                  <TouchableOpacity 
+                    onPress={() => setSelectedTicket(null)}
+                    className="p-1 rounded bg-borderBg dark:bg-darkBorderBg"
+                  >
+                    <Text className="text-textSecondary dark:text-darkTextSecondary text-[10px] font-bold px-1.5 py-0.5">Close</Text>
+                  </TouchableOpacity>
+                </View>
+
+                {/* Left side thumbnail and detail specs */}
+                <View className="flex-row items-center space-x-3 mb-4">
+                  {selectedTicket.photoUrls && selectedTicket.photoUrls[0] && (
+                    <Image 
+                      source={{ uri: selectedTicket.photoUrls[0] }} 
+                      className="w-16 h-16 rounded-xl bg-slate-200"
+                    />
+                  )}
+                  <View className="flex-1">
+                    <Text className="text-textSecondary dark:text-darkTextSecondary text-xs leading-relaxed" numberOfLines={2}>
+                      {selectedTicket.description}
+                    </Text>
+                    <View className="flex-row items-center space-x-2 mt-1.5">
+                      <Clock size={12} color={inactiveIconColor} />
+                      <Text className="text-[10px] text-textSecondary dark:text-darkTextSecondary font-semibold">
+                        SLA Limit: {new Date(selectedTicket.slaDeadline).toLocaleDateString()}
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+
+                {/* dynamic workflow timeline updates */}
+                <Text className="text-textPrimary dark:text-darkTextPrimary text-xs font-bold mb-1 tracking-wider uppercase">Grievance Progress timeline</Text>
+                {loadingEvents ? (
+                  <ActivityIndicator color="#4F46E5" size="small" className="py-4" />
+                ) : (
+                  <TicketTimeline events={selectedTicketEvents} />
+                )}
+
+                {/* Contribute upvote buttons */}
+                <View className="flex-row items-center justify-between pt-3 border-t border-borderBg dark:border-darkBorderBg mt-3">
+                  <View className="flex-row items-center space-x-1.5">
+                    <Heart size={14} color="#EF4444" fill="#EF4444" />
+                    <Text className="text-xs text-textSecondary dark:text-darkTextSecondary font-bold">
+                      {selectedTicket.contributorCount} citizens upvoted
+                    </Text>
+                  </View>
+                  <TouchableOpacity
+                    onPress={() => handleContribute(selectedTicket.id)}
+                    disabled={isContributing}
+                    className="px-4 py-2 bg-accent dark:bg-darkAccent rounded-xl flex-row items-center"
+                  >
+                    <Text className="text-white text-xs font-bold">Me Too (Upvote)</Text>
+                  </TouchableOpacity>
+                </View>
+              </GlassCard>
+            ) : (
+              <GlassCard className="mt-4">
+                <Text className="text-textPrimary dark:text-darkTextPrimary font-bold text-sm mb-2">Selected Coordinates</Text>
+                <Text className="text-textSecondary dark:text-darkTextSecondary text-xs font-semibold">
+                  Lat: {selectedPoint.latitude.toFixed(6)} | Lng: {selectedPoint.longitude.toFixed(6)}
+                </Text>
+              </GlassCard>
+            )}
           </View>
         )}
 
         {currentTab === 'REPORT' && (
           <View className="space-y-4">
-            <Text className="text-textPrimary font-bold text-lg mb-2">Report Road Grievance</Text>
+            <Text className="text-textPrimary dark:text-darkTextPrimary font-bold text-lg mb-2">Report Road Grievance</Text>
             
             <View>
-              <Text className="text-textPrimary text-xs font-bold mb-2">CATEGORY</Text>
+              <Text className="text-textPrimary dark:text-darkTextPrimary text-xs font-bold mb-2">CATEGORY</Text>
               <View className="flex-row flex-wrap gap-2">
                 {(['POTHOLE', 'LIGHTING', 'SIGNAGE', 'ROAD_QUALITY', 'OTHER'] as TicketCategory[]).map((cat) => (
                   <TouchableOpacity
@@ -182,20 +301,20 @@ export const AppNavigator: React.FC = () => {
                     className={`px-4 py-2 rounded-lg border ${
                       category === cat
                         ? 'bg-accent border-accent'
-                        : 'bg-[#121829] border-borderBg'
+                        : 'bg-white dark:bg-[#121829] border-borderBg dark:border-darkBorderBg'
                     }`}
                     onPress={() => setCategory(cat)}
                   >
-                    <Text className="text-textPrimary text-xs font-bold">{cat}</Text>
+                    <Text className={`text-xs font-bold ${category === cat ? 'text-white' : 'text-textPrimary dark:text-darkTextPrimary'}`}>{cat}</Text>
                   </TouchableOpacity>
                 ))}
               </View>
             </View>
 
             <View className="mt-4">
-              <Text className="text-textPrimary text-xs font-bold mb-2">DESCRIPTION</Text>
+              <Text className="text-textPrimary dark:text-darkTextPrimary text-xs font-bold mb-2">DESCRIPTION</Text>
               <TextInput
-                className="bg-[#121829] text-textPrimary border border-borderBg rounded-xl px-4 py-3 h-24"
+                className="bg-white dark:bg-[#121829] text-textPrimary dark:text-darkTextPrimary border border-borderBg dark:border-darkBorderBg rounded-xl px-4 py-3 h-24"
                 placeholder="Detail the issue size, visibility, or safety hazards..."
                 placeholderTextColor="#6B7280"
                 multiline
@@ -213,7 +332,7 @@ export const AppNavigator: React.FC = () => {
               {isSubmitting ? (
                 <ActivityIndicator color="#FFFFFF" size="small" />
               ) : (
-                <Text className="text-textPrimary font-bold text-base">File Grievance</Text>
+                <Text className="text-white font-bold text-base">File Grievance</Text>
               )}
             </TouchableOpacity>
           </View>
@@ -228,9 +347,9 @@ export const AppNavigator: React.FC = () => {
               {isStreaming && <ActivityIndicator color="#4F46E5" size="small" className="self-start m-2" />}
             </ScrollView>
 
-            <View className="flex-row items-center border-t border-borderBg pt-4 mt-2">
+            <View className="flex-row items-center border-t border-borderBg dark:border-darkBorderBg pt-4 mt-2">
               <TextInput
-                className="flex-1 bg-[#121829] text-textPrimary border border-borderBg rounded-xl px-4 py-3"
+                className="flex-1 bg-white dark:bg-[#121829] text-textPrimary dark:text-darkTextPrimary border border-borderBg dark:border-darkBorderBg rounded-xl px-4 py-3"
                 placeholder="Ask AI or type issue to submit..."
                 placeholderTextColor="#6B7280"
                 value={chatInput}
@@ -245,16 +364,89 @@ export const AppNavigator: React.FC = () => {
             </View>
           </View>
         )}
+
+        {/* 4th Navigation Tab: Budgets Explorer */}
+        {currentTab === 'BUDGET' && (
+          <View className="space-y-6 pb-12">
+            <View>
+              <Text className="text-textPrimary dark:text-darkTextPrimary font-bold text-lg">Open Budgets</Text>
+              <Text className="text-textSecondary dark:text-darkTextSecondary text-xs mt-0.5">Jurisdiction: Central PWD Division</Text>
+            </View>
+
+            {/* Financial aggregations card summaries */}
+            <View className="grid gap-4">
+              <GlassCard className="flex-row justify-between items-center py-5">
+                <View>
+                  <Text className="text-[10px] text-textSecondary dark:text-darkTextSecondary font-bold uppercase tracking-wider">Sanctioned Funding</Text>
+                  <Text className="text-2xl font-black text-textPrimary dark:text-darkTextPrimary mt-1">₹{(budgetSummary.totalSanctioned / 10000000).toFixed(1)} Cr</Text>
+                </View>
+                <View className="p-2.5 bg-accent/15 rounded-xl border border-accent/20">
+                  <DollarSign size={20} color="#4F46E5" />
+                </View>
+              </GlassCard>
+
+              <GlassCard className="flex-row justify-between items-center py-5">
+                <View>
+                  <Text className="text-[10px] text-textSecondary dark:text-darkTextSecondary font-bold uppercase tracking-wider">Spent & Utilized</Text>
+                  <Text className="text-2xl font-black text-success dark:text-darkSuccess mt-1">₹{(budgetSummary.totalUtilized / 10000000).toFixed(1)} Cr</Text>
+                </View>
+                <View className="p-2.5 bg-success/15 rounded-xl border border-success/20">
+                  <Award size={20} color="#16A34A" />
+                </View>
+              </GlassCard>
+            </View>
+
+            {/* Dynamic scheme checklists */}
+            <GlassCard className="space-y-4">
+              <Text className="text-textPrimary dark:text-darkTextPrimary font-bold text-sm tracking-wider uppercase border-b border-borderBg dark:border-darkBorderBg pb-2 mb-2">Allocation Schemes</Text>
+              {loadingBudgets ? (
+                <ActivityIndicator color="#4F46E5" size="small" />
+              ) : (
+                budgets.map((scheme, idx) => {
+                  const utilPercent = (scheme.utilizedAmount / scheme.releasedAmount) * 100;
+                  return (
+                    <View key={idx} className="p-4 rounded-xl bg-white dark:bg-[#121829] border border-borderBg dark:border-darkBorderBg space-y-3">
+                      <View className="flex-row justify-between items-start">
+                        <View className="flex-1">
+                          <Text className="text-xs font-bold text-textPrimary dark:text-darkTextPrimary">{scheme.schemeName}</Text>
+                          <Text className="text-[9px] text-accent font-bold mt-1 uppercase">{scheme.authorityType}</Text>
+                        </View>
+                        <Text className="text-[10px] text-textSecondary dark:text-darkTextSecondary font-semibold">{scheme.financialYear}</Text>
+                      </View>
+
+                      {/* Progress bar and utilization */}
+                      <View className="space-y-1">
+                        <View className="flex-row justify-between text-[10px] font-bold">
+                          <Text className="text-textSecondary dark:text-darkTextSecondary">Utilization Rate</Text>
+                          <Text className="text-success">{utilPercent.toFixed(1)}%</Text>
+                        </View>
+                        <View className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                          <View 
+                            className="h-full bg-success rounded-full" 
+                            style={{ width: `${utilPercent}%` }}
+                          />
+                        </View>
+                      </View>
+                    </View>
+                  );
+                })
+              )}
+            </GlassCard>
+          </View>
+        )}
       </ScrollView>
 
       {/* Tab Navigation Controls */}
-      <View className="flex-row border-t border-borderBg bg-cardBg py-4 px-6 justify-between">
+      <View className="flex-row border-t border-borderBg dark:border-darkBorderBg bg-cardBg dark:bg-darkCardBg py-4 px-6 justify-between">
         <TouchableOpacity
           className="items-center flex-1"
-          onPress={() => setCurrentTab('MAP')}
+          onPress={() => {
+            setCurrentTab('MAP');
+            setSelectedTicket(null);
+          }}
         >
-          <MapPin size={20} color={currentTab === 'MAP' ? '#4F46E5' : '#9CA3AF'} />
-          <Text className={`text-[10px] mt-1 ${currentTab === 'MAP' ? 'text-accent font-bold' : 'text-textSecondary'}`}>
+          <MapPin size={20} color={currentTab === 'MAP' ? activeIconColor : inactiveIconColor} />
+          <Text className={`text-[10px] mt-1 ${currentTab === 'MAP' ? 'text-accent font-bold' : 'text-textSecondary dark:text-darkTextSecondary'}`}>
             Explore
           </Text>
         </TouchableOpacity>
@@ -263,8 +455,8 @@ export const AppNavigator: React.FC = () => {
           className="items-center flex-1"
           onPress={() => setCurrentTab('REPORT')}
         >
-          <FileText size={20} color={currentTab === 'REPORT' ? '#4F46E5' : '#9CA3AF'} />
-          <Text className={`text-[10px] mt-1 ${currentTab === 'REPORT' ? 'text-accent font-bold' : 'text-textSecondary'}`}>
+          <FileText size={20} color={currentTab === 'REPORT' ? activeIconColor : inactiveIconColor} />
+          <Text className={`text-[10px] mt-1 ${currentTab === 'REPORT' ? 'text-accent font-bold' : 'text-textSecondary dark:text-darkTextSecondary'}`}>
             File ticket
           </Text>
         </TouchableOpacity>
@@ -273,12 +465,24 @@ export const AppNavigator: React.FC = () => {
           className="items-center flex-1"
           onPress={() => setCurrentTab('CHAT')}
         >
-          <MessageSquare size={20} color={currentTab === 'CHAT' ? '#4F46E5' : '#9CA3AF'} />
-          <Text className={`text-[10px] mt-1 ${currentTab === 'CHAT' ? 'text-accent font-bold' : 'text-textSecondary'}`}>
+          <MessageSquare size={20} color={currentTab === 'CHAT' ? activeIconColor : inactiveIconColor} />
+          <Text className={`text-[10px] mt-1 ${currentTab === 'CHAT' ? 'text-accent font-bold' : 'text-textSecondary dark:text-darkTextSecondary'}`}>
             AI Helper
+          </Text>
+        </TouchableOpacity>
+
+        {/* 4th Tab Navigation control button */}
+        <TouchableOpacity
+          className="items-center flex-1"
+          onPress={() => setCurrentTab('BUDGET')}
+        >
+          <DollarSign size={20} color={currentTab === 'BUDGET' ? activeIconColor : inactiveIconColor} />
+          <Text className={`text-[10px] mt-1 ${currentTab === 'BUDGET' ? 'text-accent font-bold' : 'text-textSecondary dark:text-darkTextSecondary'}`}>
+            Budgets
           </Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 };
+export default AppNavigator;

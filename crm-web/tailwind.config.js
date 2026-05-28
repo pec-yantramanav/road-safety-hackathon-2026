@@ -7,12 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#070a13',
-        glassBg: 'rgba(20, 26, 48, 0.4)',
-        glassBorder: 'rgba(255, 255, 255, 0.05)',
-        accentNeon: '#3b82f6',
-        warningNeon: '#eab308',
-        successNeon: '#10b981',
+        background: 'var(--bg-dark)',
+        glassBg: 'var(--panel-glass)',
+        glassBorder: 'var(--border-glass)',
+        textPrimary: 'var(--text-primary)',
+        textSecondary: 'var(--text-secondary)',
+        surface: 'var(--bg-surface)',
+        accentNeon: 'var(--accent-neon)',
+        warningNeon: 'var(--warning-neon)',
+        successNeon: 'var(--success-neon)',
+        dangerNeon: 'var(--danger-neon)',
       },
       fontFamily: {
         sans: ['Outfit', 'sans-serif'],
