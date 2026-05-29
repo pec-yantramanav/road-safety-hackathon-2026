@@ -1,0 +1,4 @@
+
+> citizen-app@1.0.0 ts:check
+> tsc
+

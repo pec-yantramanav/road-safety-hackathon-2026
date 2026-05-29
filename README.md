@@ -101,7 +101,7 @@ graph TD
 ### Prerequisites
 Create a `.env` file in the root directory:
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 ```
 *(Leave blank to run the entire backend fully offline using AI fallback loops).*
 

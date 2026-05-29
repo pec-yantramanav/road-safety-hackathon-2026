@@ -4,6 +4,8 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "postgresql+asyncpg://roadwatch:dev123@postgres:5432/roadwatch"
     REDIS_URL: str = "redis://redis:6379/1"
     OPENAI_API_KEY: str = ""
+    GROQ_API_KEY: str = ""
+    GROQ_API_URL: str = "https://api.groq.com/v1"
     CORE_API_BASE_URL: str = "http://crm-core-api:8081/api/v1/crm"
     CHAT_SESSION_TTL_HOURS: int = 24
     SLA_SCAN_INTERVAL_MINUTES: int = 30

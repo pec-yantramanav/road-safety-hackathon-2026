@@ -1,54 +1,72 @@
 import os
-from openai import OpenAI
+import httpx
 from app.config import settings
+
 
 class LlmClient:
     def __init__(self):
-        self.api_key = settings.OPENAI_API_KEY or os.getenv("OPENAI_API_KEY", "")
+        # Use GROQ credentials and URL; fall back to env vars
+        self.api_key = settings.GROQ_API_KEY or os.getenv("GROQ_API_KEY", "")
+        self.api_url = settings.GROQ_API_URL or os.getenv("GROQ_API_URL", "https://api.groq.com/v1")
         self.client = None
         if self.api_key:
             try:
-                self.client = OpenAI(api_key=self.api_key)
+                self.client = httpx.Client(timeout=20.0)
             except Exception:
                 self.client = None
 
     def chat(self, system_prompt: str, messages: list, tools: list = None) -> dict:
+        # If no GROQ key / client configured, use existing mock fallback
         if not self.client:
             return self._mock_chat_response(messages)
 
         try:
-            formatted_messages = [{"role": "system", "content": system_prompt}] + messages
-            kwargs = {
-                "model": "gpt-4o-mini",
-                "messages": formatted_messages,
-                "temperature": 0.3
+            # Groq-compatible request body is provider-dependent; here we send a simple formatted prompt
+            prompt = self._format_prompt(system_prompt, messages)
+            payload = {
+                "model": "groq-1",
+                "input": prompt,
+                "temperature": 0.3,
             }
-            if tools:
-                kwargs["tools"] = tools
+            headers = {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
 
-            response = self.client.chat.completions.create(**kwargs)
-            choice = response.choices[0].message
-            
+            # Attempt call to configured GROQ endpoint
+            resp = self.client.post(f"{self.api_url}/chat/completions", json=payload, headers=headers)
+            resp.raise_for_status()
+            data = resp.json()
+
+            # Try to extract text and any tool call structure; providers vary so we fallback safely
+            content = ""
             tool_calls = []
-            if choice.tool_calls:
-                for call in choice.tool_calls:
-                    tool_calls.append({
-                        "id": call.id,
-                        "name": call.function.name,
-                        "arguments": call.function.arguments
-                    })
-                    
-            return {
-                "content": choice.content or "",
-                "tool_calls": tool_calls
-            }
+            if isinstance(data, dict):
+                # common shape: { choices: [{ message: { content: ... } }] }
+                choices = data.get("choices") or data.get("outputs") or []
+                if choices and isinstance(choices, list):
+                    first = choices[0]
+                    msg = first.get("message") or first.get("output") or first
+                    if isinstance(msg, dict):
+                        content = msg.get("content") or msg.get("text") or str(msg)
+                    else:
+                        content = str(msg)
+
+                # provider-specific tool calls
+                if "tool_calls" in data:
+                    tool_calls = data["tool_calls"]
+
+            return {"content": content or "", "tool_calls": tool_calls}
         except Exception as e:
             return self._mock_chat_response(messages, error=str(e))
+
+    def _format_prompt(self, system_prompt: str, messages: list) -> str:
+        parts = [f"System: {system_prompt}"]
+        for m in messages:
+            parts.append(f"{m.get('role','user').capitalize()}: {m.get('content','')}")
+        return "\n\n".join(parts)
 
     def _mock_chat_response(self, messages: list, error: str = None) -> dict:
         # Heuristic chat fallback for robust hackathon testing
         user_msg = messages[-1]["content"].lower() if messages else ""
-        
+
         # Pothole submission simulation
         if "pothole" in user_msg or "broken road" in user_msg or "report" in user_msg:
             return {
@@ -77,5 +95,6 @@ class LlmClient:
                 "content": "Hello! I am RoadWatch's Citizen AI assistant. I can help you report road issues (potholes, signage, lighting), check local spending budgets, or track active tickets. How can I help you today?",
                 "tool_calls": []
             }
+
 
 llm_client = LlmClient()
