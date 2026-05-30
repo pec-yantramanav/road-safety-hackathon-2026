@@ -9,6 +9,8 @@ from app.api import officer_chat, sla, workorder, uc
 from app.jobs.sla_scanner import scan_at_risk_tickets
 from app.config import settings
 
+os.makedirs("static/uc", exist_ok=True)
+
 def run_async_scanner():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
@@ -61,7 +63,7 @@ def health_check():
 def readiness_check():
     return {"status": "ready"}
 
-app.include_router(officer_chat.router, prefix="/api/v1/ai/crm", tags=["Chat"])
-app.include_router(sla.router, prefix="/api/v1/ai/crm", tags=["SLA"])
-app.include_router(workorder.router, prefix="/api/v1/ai/crm", tags=["WorkOrder"])
-app.include_router(uc.router, prefix="/api/v1/ai/crm", tags=["UC"])
+app.include_router(officer_chat.router, prefix="", tags=["Chat"])
+app.include_router(sla.router, prefix="", tags=["SLA"])
+app.include_router(workorder.router, prefix="", tags=["WorkOrder"])
+app.include_router(uc.router, prefix="", tags=["UC"])
