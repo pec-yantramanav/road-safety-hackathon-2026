@@ -1,4 +1,3 @@
-version: "3.9"
 
 services:
   postgres:
@@ -80,7 +79,7 @@ services:
       dockerfile: Dockerfile
     container_name: crm-core-api
     ports:
-      - "8081:8081"
+      - "8082:8081"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/roadwatch
       SPRING_DATASOURCE_USERNAME: roadwatch
