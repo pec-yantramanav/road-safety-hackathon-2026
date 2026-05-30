@@ -32,6 +32,7 @@ public class MasterTicket {
     @Column(columnDefinition = "geometry(Point,4326)", nullable = false)
     private Point location;
 
+    @Column(name = "cluster_radius_m")
     private int clusterRadiusM = 50;
 
     @Column(columnDefinition = "text[]")

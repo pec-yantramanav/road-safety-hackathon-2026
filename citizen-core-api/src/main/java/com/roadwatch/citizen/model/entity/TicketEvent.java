@@ -2,6 +2,8 @@ package com.roadwatch.citizen.model.entity;
 
 import com.roadwatch.citizen.model.enums.EventType;
 import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -21,6 +23,7 @@ public class TicketEvent {
     @Column(nullable = false)
     private EventType eventType;
 
+    @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "jsonb")
     private String payload;
 
