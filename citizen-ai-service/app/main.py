@@ -27,6 +27,6 @@ def readiness_check():
     return {"status": "ready"}
 
 # Register routers with prefixes matching HLD/Kong config
-app.include_router(chat.router, prefix="/api/v1/ai/citizen", tags=["Chat"])
-app.include_router(geo.router, prefix="/api/v1/ai/citizen", tags=["Geo"])
-app.include_router(filter.router, prefix="/api/v1/ai/citizen", tags=["Filter"])
+app.include_router(chat.router, prefix="", tags=["Chat"])
+app.include_router(geo.router, prefix="", tags=["Geo"])
+app.include_router(filter.router, prefix="", tags=["Filter"])
